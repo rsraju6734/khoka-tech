@@ -153,7 +153,7 @@ function renderTemplates() {
   <a class="pic" href="${d(f)}" style="background:${f.paper}" aria-label="${esc(t("det"))}: ${esc(f.name)}"><img src="${f.thumb}" alt="${esc(f.name)} — ${esc(cat(f))}" width="640" height="400" loading="lazy"></a>
   <div class="cap"><div><span class="meta">${esc(cat(f))} · ${esc(f.fonts)}</span><h3><a href="${d(f)}">${esc(f.name)}</a></h3><p>${esc(f.short[lang] || f.short.en)}</p></div>
   <div class="price num">$${f.price}<small>${esc(t("price"))}</small></div></div>
-  <div class="tpl-actions"><a class="btn sm" href="${f.demo}" target="_blank" rel="noopener">${esc(t("prev"))} ↗</a><a class="btn sm" href="${d(f)}">${esc(t("det"))}</a><a class="btn primary sm" href="${d(f)}&order=1">${esc(t("ord"))}</a></div>
+  <div class="tpl-actions"><a class="btn sm" href="${f.demo}" target="_blank" rel="noopener">${esc(t("prev"))} ↗</a><a class="btn sm" href="${d(f)}">${esc(t("det"))}</a><a class="btn primary sm" href="templates/order.html?id=${f.id}">${esc(t("ord"))}</a></div>
  </article>
  <div class="tpl-list">
   ${rest.map(x => `<a class="tpl-row" href="${d(x)}"><span class="mini" style="background:${x.paper}"><img src="${x.thumb}" alt="" width="640" height="400" loading="lazy"></span><span><b>${esc(x.name)}</b><span class="meta">${esc(cat(x))}</span></span><span class="p num">$${x.price}</span></a>`).join("")}

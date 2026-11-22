@@ -28,15 +28,15 @@ ul,ol{margin:0;padding:0;list-style:none}
 .nav-toggle{display:none;cursor:pointer}
 
 /* KHOKA demo bar — hidden automatically inside the marketplace preview iframe */
-.kt-bar{position:relative;z-index:500;display:flex;align-items:center;justify-content:space-between;gap:12px;height:40px;padding:0 16px;background:#080D19;color:#fff;font:500 12.5px/1 Inter,system-ui,sans-serif;border-bottom:1px solid rgba(166,176,195,.18)}
+.kt-bar{position:relative;z-index:500;display:flex;align-items:center;justify-content:space-between;gap:12px;height:40px;padding:0 16px;background:#0F1F16;color:#fff;font:500 12.5px/1 Inter,system-ui,sans-serif;border-bottom:1px solid rgba(232,220,196,.18)}
 .kt-bar a{color:#fff}
 .kt-brand{display:flex;align-items:center;gap:8px;font-weight:700;letter-spacing:.06em;white-space:nowrap}
-.kt-brand i{width:18px;height:18px;border-radius:4px;background:#2675F5;display:grid;place-items:center;font-style:normal;font-size:11px}
-.kt-mid{color:#A6B0C3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.kt-brand i{width:18px;height:18px;border-radius:4px;background:#8B5CF6;display:grid;place-items:center;font-style:normal;font-size:11px}
+.kt-mid{color:#D6CBB4;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .kt-actions{display:flex;gap:6px}
-.kt-actions a{padding:6px 10px;border:1px solid rgba(166,176,195,.3);border-radius:4px;white-space:nowrap}
+.kt-actions a{padding:6px 10px;border:1px solid rgba(232,220,196,.3);border-radius:4px;white-space:nowrap}
 .kt-actions a:hover{border-color:#fff}
-.kt-actions .kt-buy{background:#2675F5;border-color:#2675F5}
+.kt-actions .kt-buy{background:#7C3AED;border-color:#7C3AED}
 html.kt-framed .kt-bar{display:none}
 
 @media(max-width:700px){.kt-mid{display:none}.kt-back span{display:none}}

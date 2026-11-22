@@ -4,16 +4,17 @@
    colour used for actions only, Manrope for display, Inter for reading.
    ========================================================================== */
 :root{
-  --ink:#080D19;          /* Midnight Black — page */
-  --ink-2:#0C1428;        /* raised surface */
-  --navy:#101F40;         /* Deep Navy — one deliberate band */
-  --blue:#2675F5;         /* Electric Blue — actions */
-  --sky:#55A0FF;          /* Sky Blue — links, markers */
-  --white:#FFFFFF;
-  --gray:#A6B0C3;         /* Soft Gray — body copy */
-  --gray-2:#6E7890;       /* meta text */
-  --rule:rgba(166,176,195,.14);
-  --rule-2:rgba(166,176,195,.28);
+  /* Brand palette: Forest #1F3D2B · Cream #E8DCC4 · Violet #8B5CF6 */
+  --ink:#0F1F16;          /* page — deepest shade of Forest */
+  --ink-2:#16291E;        /* raised surfaces, inputs */
+  --navy:#1F3D2B;         /* Forest — the one highlighted band, panels */
+  --blue:#7C3AED;         /* darker Violet — buttons and actions (white text 5.7:1) */
+  --sky:#B9A3FB;          /* light Violet — links and small markers (readable on Forest) */
+  --white:#E8DCC4;        /* Cream — headings and emphasised text */
+  --gray:#D6CBB4;         /* soft Cream — body copy */
+  --gray-2:#A39A87;       /* muted Cream — meta text */
+  --rule:rgba(232,220,196,.14);
+  --rule-2:rgba(232,220,196,.28);
   --r:6px;
   --display:"Manrope","Noto Sans Bengali","Noto Sans Devanagari",system-ui,sans-serif;
   --text:"Inter","Noto Sans Bengali","Noto Sans Devanagari",system-ui,sans-serif;
@@ -60,8 +61,8 @@ p{max-width:62ch}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:0 20px;border-radius:var(--r);border:1px solid var(--rule-2);background:transparent;color:var(--white);font-weight:600;font-size:.95rem;cursor:pointer;transition:background .2s,border-color .2s,color .2s,transform .2s var(--ease);white-space:nowrap;font-family:var(--text)}
 .btn:hover{border-color:var(--white)}
 .btn:active{transform:translateY(1px)}
-.btn.primary{background:var(--blue);border-color:var(--blue)}
-.btn.primary:hover{background:#1F66DB;border-color:#1F66DB}
+.btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn.primary:hover{background:#6D28D9;border-color:#6D28D9}
 .btn.sm{min-height:38px;padding:0 14px;font-size:.88rem}
 .btn .arr{transition:transform .2s var(--ease)}
 .btn:hover .arr{transform:translateX(3px)}
@@ -69,8 +70,8 @@ p{max-width:62ch}
 .link:hover{border-color:var(--sky);color:var(--sky)}
 
 /* ---------- header ---------- */
-.nav{position:sticky;top:0;z-index:50;background:rgba(8,13,25,.94);border-bottom:1px solid var(--rule)}
-@supports (backdrop-filter:blur(1px)){.nav{background:rgba(8,13,25,.82);backdrop-filter:saturate(1.4) blur(12px)}}
+.nav{position:sticky;top:0;z-index:50;background:rgba(15,31,22,.94);border-bottom:1px solid var(--rule)}
+@supports (backdrop-filter:blur(1px)){.nav{background:rgba(15,31,22,.82);backdrop-filter:saturate(1.4) blur(12px)}}
 .nav-in{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
 .brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;color:var(--white);letter-spacing:-.01em;font-size:1.02rem;white-space:nowrap}
 .brand svg{flex:0 0 auto}
@@ -93,13 +94,13 @@ p{max-width:62ch}
 form{display:grid;gap:18px}
 label>span{display:block;font-size:.85rem;font-weight:500;color:var(--white);margin-bottom:8px}
 input,select,textarea{width:100%;background:var(--ink-2);border:1px solid var(--rule-2);border-radius:var(--r);padding:12px 14px;color:var(--white);transition:border-color .2s,background .2s}
-input:hover,select:hover,textarea:hover{border-color:rgba(166,176,195,.45)}
-input:focus,select:focus,textarea:focus{outline:none;border-color:var(--sky);background:#0E1830}
+input:hover,select:hover,textarea:hover{border-color:rgba(232,220,196,.45)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--sky);background:#1A2F22}
 select option{background:var(--ink)}
 textarea{resize:vertical;min-height:120px}
 [aria-invalid="true"]{border-color:#F07178}
 .err{display:block;color:#F49A9F;font-size:.82rem;min-height:1.2em;margin-top:6px}
-.notice{border-left:2px solid var(--sky);padding:10px 14px;background:rgba(85,160,255,.06);color:var(--gray);font-size:.88rem;border-radius:0 var(--r) var(--r) 0}
+.notice{border-left:2px solid var(--sky);padding:10px 14px;background:rgba(185,163,251,.06);color:var(--gray);font-size:.88rem;border-radius:0 var(--r) var(--r) 0}
 #status{color:var(--sky);font-size:.92rem;min-height:1.4em}
 
 /* ---------- toast ---------- */
@@ -124,7 +125,7 @@ textarea{resize:vertical;min-height:120px}
 .frame-bar i{flex:0 0 7px;height:7px;border-radius:50%;background:#C9CDD6}
 .frame-bar span{flex:1;text-align:center;background:#fff;border-radius:4px;padding:2px 8px;margin-right:24px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .frame img{width:100%;height:auto}
-.phone{position:absolute;left:-14%;bottom:0;width:31%;border-radius:16px;overflow:hidden;border:5px solid #11151F;background:#11151F;box-shadow:0 24px 50px -10px rgba(0,0,0,.8)}
+.phone{position:absolute;left:-14%;bottom:0;width:31%;border-radius:16px;overflow:hidden;border:5px solid #0B1710;background:#0B1710;box-shadow:0 24px 50px -10px rgba(0,0,0,.8)}
 .phone img{width:100%;aspect-ratio:9/17;object-fit:cover;object-position:18% 0;border-radius:10px}
 .showcase figcaption{margin-top:18px;padding-left:22%;font-size:.8rem;color:var(--gray-2)}
 .showcase figcaption a{color:var(--gray)}
@@ -151,8 +152,8 @@ textarea{resize:vertical;min-height:120px}
 .svc-row ul li::before{content:"";display:inline-block;width:5px;height:5px;background:var(--blue);margin-right:8px;vertical-align:middle}
 
 /* templates band — the only filled band on the page */
-.band{background:var(--navy)}
-.band .rule-top,.band .tpl-row{border-color:rgba(166,176,195,.18)}
+.band{background:var(--navy);--gray-2:#BCB29E}  /* lighter meta text on the Forest band for contrast */
+.band .rule-top,.band .tpl-row{border-color:rgba(232,220,196,.18)}
 .tpl-head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:48px}
 .tpl-head h2{max-width:18ch}
 .tpl-head p{margin-top:16px}
@@ -166,7 +167,7 @@ textarea{resize:vertical;min-height:120px}
 .price{font-family:var(--display);color:var(--white);font-weight:700;font-size:1.4rem;white-space:nowrap;text-align:right;line-height:1.1}
 .price small{display:block;font-family:var(--text);font-size:.7rem;font-weight:500;color:var(--gray-2);letter-spacing:.06em;text-transform:uppercase;margin-top:4px}
 .tpl-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
-.tpl-list{grid-column:9 / span 4;border-top:1px solid rgba(166,176,195,.18)}
+.tpl-list{grid-column:9 / span 4;border-top:1px solid rgba(232,220,196,.18)}
 .tpl-row{display:grid;grid-template-columns:84px 1fr auto;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--rule)}
 .tpl-row .mini{aspect-ratio:16/10;border-radius:4px;overflow:hidden;padding:6px}
 .tpl-row .mini img{width:100%;height:100%;object-fit:cover;border-radius:2px}

@@ -26,7 +26,7 @@
       '<a class="kt-brand" href="../index.html"><i aria-hidden="true">K</i>KHOKA TEMPLATES</a>' +
       '<span class="kt-mid">' + T.live + ": " + name + " · " + T.note + "</span>" +
       '<span class="kt-actions"><a class="kt-back" href="../details.html?id=' + id + '">← <span>' + T.details + "</span></a>" +
-      '<a class="kt-buy" href="../details.html?id=' + id + '&amp;order=1">' + T.order + "</a></span>";
+      '<a class="kt-buy" href="../order.html?id=' + id + '">' + T.order + "</a></span>";
     document.body.prepend(bar);
   }
 
