@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maya Sen, Product Designer — Portfolio Website Template Demo | KHOKA TEMPLATES</title>
+<meta name="description" content="Live demo of Folio Mono by KHOKA TEMPLATES: an editorial portfolio with a project index, case-study panels and a light/dark theme.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F2F0EB">
+<link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/demo.css">
+<script>try{if(localStorage.getItem("folio-theme")==="dark")document.documentElement.dataset.theme="dark"}catch(e){}</script>
+<style>
+:root{--bg:#F2F0EB;--fg:#111;--muted:#6F6B63;--line:#D9D5CC;--red:#E63B2E;--card:#E8E5DE;--serif:"Instrument Serif",Georgia,serif;--sans:"Inter",system-ui,sans-serif;--scroll-pad:70px}
+html[data-theme="dark"]{--bg:#111110;--fg:#EDEAE3;--muted:#8F8A80;--line:#2B2A27;--card:#1B1A18}
+body{background:var(--bg);color:var(--fg);font:400 .98rem/1.6 var(--sans);transition:background .35s,color .35s}
+.c{width:min(1360px,100% - 48px);margin-inline:auto}
+p{color:var(--muted)}
+::selection{background:var(--red);color:#fff}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.small{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+
+header.site{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line);transition:background .35s}
+header.site .c{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:60px;gap:16px}
+.who{font-weight:600}
+.who i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--red);margin-right:8px}
+.mid{font-size:.85rem;color:var(--muted)}
+.right{display:flex;justify-content:flex-end;align-items:center;gap:22px}
+.nav-panel{display:flex;gap:22px;font-size:.9rem}
+.nav-panel a{position:relative}
+.nav-panel a::before{content:"";position:absolute;left:-12px;top:50%;width:5px;height:5px;border-radius:50%;background:var(--red);transform:translateY(-50%) scale(0);transition:transform .2s}
+.nav-panel a:hover::before{transform:translateY(-50%) scale(1)}
+.theme{background:none;border:1px solid var(--line);color:var(--fg);height:32px;padding:0 12px;border-radius:999px;font-size:.78rem;cursor:pointer}
+.nav-toggle{background:none;border:0;font-size:.85rem;font-weight:600;color:var(--fg)}
+
+/* masthead */
+.mast{padding:40px 0 0;border-bottom:1px solid var(--fg)}
+.mast h1{font:400 clamp(5.4rem,19vw,17rem)/.82 var(--serif);letter-spacing:-.04em;margin-left:-.04em}
+.mast h1 span{display:block}
+.mast h1 em{color:var(--red)}
+.mast-foot{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;padding:36px 0 40px}
+.mast-foot .intro{grid-column:6 / span 5;font:400 clamp(1.4rem,1.1rem + 1vw,2rem)/1.25 var(--serif);color:var(--fg)}
+.mast-foot .meta{grid-column:1 / span 3;font-size:.88rem;display:grid;gap:4px;align-content:start}
+.mast-foot .meta b{font-weight:600}
+.mast-foot .meta span{color:var(--muted)}
+.avail{display:inline-flex;align-items:center;gap:8px;margin-top:10px;font-size:.85rem}
+.avail i{width:8px;height:8px;border-radius:50%;background:#2E9E5B}
+
+/* index */
+.idx{padding:72px 0 96px}
+.idx-top{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:20px}
+.idx-top h2{font:400 clamp(2.4rem,1.6rem + 3vw,4.2rem)/1 var(--serif)}
+.pf{display:flex;gap:16px;font-size:.88rem}
+.pf button{background:none;border:0;padding:4px 0;color:var(--muted);cursor:pointer;border-bottom:1px solid transparent}
+.pf button.active{color:var(--fg);border-color:var(--fg)}
+.thead,.row{display:grid;grid-template-columns:60px 2.4fr 1.4fr 1.4fr 70px;gap:20px;align-items:baseline}
+.thead{padding:10px 0;border-bottom:1px solid var(--fg)}
+.row{width:100%;background:none;border:0;border-bottom:1px solid var(--line);padding:22px 0;text-align:left;cursor:pointer;color:var(--fg);transition:padding .3s cubic-bezier(.2,.7,.2,1),color .2s}
+.row .n{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.row .t{font:400 clamp(1.6rem,1.2rem + 1.4vw,2.6rem)/1.05 var(--serif)}
+.row .t em{font-size:.5em;color:var(--red);vertical-align:super;margin-left:6px;font-family:var(--sans);font-style:normal}
+.row .d,.row .y{font-size:.9rem;color:var(--muted)}
+.row .y{text-align:right}
+.row:hover{padding-left:16px}
+.row:hover .t{color:var(--red)}
+.peek{position:fixed;left:0;top:0;width:300px;aspect-ratio:4/3;pointer-events:none;z-index:40;opacity:0;transform:translate(-50%,-50%) scale(.92);transition:opacity .2s,transform .25s;overflow:hidden;border-radius:2px;box-shadow:0 20px 40px rgba(0,0,0,.25)}
+.peek.on{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.peek svg{width:100%;height:100%}
+@media (hover:none),(pointer:coarse){.peek{display:none}}
+
+/* about */
+.about{border-top:1px solid var(--fg);padding:80px 0}
+.about .c{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
+.portrait{grid-column:1 / span 4;aspect-ratio:3/4;background:var(--card);position:relative;overflow:hidden}
+.portrait svg{position:absolute;inset:0;width:100%;height:100%}
+.about .txt{grid-column:6 / span 7}
+.about .txt p.big{font:400 clamp(1.6rem,1.2rem + 1.4vw,2.5rem)/1.2 var(--serif);color:var(--fg)}
+.about .txt p.big em{color:var(--red)}
+.about .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;padding-top:20px;border-top:1px solid var(--line)}
+.cols h3{font:500 .75rem var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.cols li{padding:3px 0}
+
+/* contact */
+.contact{border-top:1px solid var(--fg);padding:80px 0 40px}
+.mail{display:inline-block;font:400 clamp(2.4rem,1rem + 7vw,7.5rem)/1 var(--serif);letter-spacing:-.03em;border-bottom:2px solid var(--fg);transition:color .2s,border-color .2s;word-break:break-word}
+.mail:hover{color:var(--red);border-color:var(--red)}
+.cgrid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;margin-top:64px}
+.cgrid form{grid-column:1 / span 6}
+.cgrid ul{grid-column:8 / span 5}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:.8rem;color:var(--muted);margin-bottom:4px}
+.input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);padding:10px 0;color:var(--fg);border-radius:0}
+.input:focus{outline:none;border-color:var(--fg)}
+.send{background:var(--fg);color:var(--bg);border:0;height:46px;padding:0 22px;border-radius:999px;cursor:pointer;font-weight:500}
+.send:hover{background:var(--red);color:#fff}
+.cgrid li{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);font-size:.92rem}
+.cgrid li span:first-child{color:var(--muted)}
+.note{font-size:.78rem;margin-top:10px}
+footer.site{padding:24px 0 32px;font-size:.82rem;color:var(--muted)}
+footer .c{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px}
+
+/* case dialog */
+dialog.case{border:0;padding:0;width:min(980px,100% - 24px);max-height:calc(100dvh - 24px);background:var(--bg);color:var(--fg)}
+dialog.case::backdrop{background:rgba(17,17,17,.7)}
+.case-hero{aspect-ratio:16/7}
+.case-hero svg{width:100%;height:100%}
+.case-b{padding:32px 36px 40px;display:grid;grid-template-columns:2fr 1fr;gap:40px}
+.case-b h2{font:400 clamp(2rem,1.4rem + 2vw,3.2rem)/1 var(--serif);margin:8px 0 16px}
+.case-b dl div{padding:10px 0;border-bottom:1px solid var(--line);font-size:.9rem}
+.case-b dt{color:var(--muted);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+.cx{position:absolute;top:12px;right:12px;width:40px;height:40px;border-radius:50%;border:0;background:var(--bg);color:var(--fg);font-size:1.3rem;cursor:pointer}
+
+@media(max-width:900px){
+  .mid{display:none}
+  header.site .c{grid-template-columns:1fr auto}
+  .nav-toggle{display:block}
+  .nav-panel{position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;gap:0;padding:0 24px 16px;border-bottom:1px solid var(--line);display:none}
+  .nav-panel.open{display:flex}
+  .nav-panel a{padding:14px 0;border-bottom:1px solid var(--line);font:400 1.6rem var(--serif)}
+  .nav-panel a::before{display:none}
+  .mast-foot .intro{grid-column:1 / -1}
+  .mast-foot .meta{grid-column:1 / -1;order:2}
+  .thead{display:none}
+  .row{grid-template-columns:40px 1fr auto;gap:6px 14px}
+  .row .d{grid-column:2 / 3}
+  .row .y{grid-row:1;grid-column:3}
+  .row>span:nth-child(3){grid-column:2 / 3;font-size:.85rem;color:var(--muted)}
+  .portrait{grid-column:1 / span 12;aspect-ratio:16/10}
+  .about .txt{grid-column:1 / span 12}
+  .cgrid form,.cgrid ul{grid-column:1 / -1}
+  .case-b{grid-template-columns:1fr;padding:24px}
+}
+@media(max-width:560px){
+  .c{width:calc(100% - 32px)}
+  .about .cols{grid-template-columns:1fr 1fr}
+  .pf{gap:12px}
+}
+</style>
+</head>
+<body data-template="portfolio" data-name="Folio Mono">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site">
+ <div class="c">
+  <a class="who" href="#top" id="top"><i></i>Maya Sen</a>
+  <span class="mid">Product designer · Dhaka &amp; remote</span>
+  <div class="right">
+   <nav class="nav-panel" id="nav-links" aria-label="Main"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+   <button class="theme" id="theme" aria-pressed="false">Dark</button>
+   <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-links">Menu</button>
+  </div>
+ </div>
+</header>
+
+<main id="main">
+<section class="mast">
+ <div class="c">
+  <h1><span>Maya</span><span>Sen<em>.</em></span></h1>
+  <div class="mast-foot">
+   <div class="meta"><b>Independent product designer</b><span>Apps, websites and design systems</span><span class="avail"><i></i>Taking projects from February</span></div>
+   <p class="intro">I help small teams turn rough ideas into products that feel calm and obvious to use — from the first sketch to the last pixel handed to engineering.</p>
+  </div>
+ </div>
+</section>
+
+<section class="idx" id="work">
+ <div class="c">
+  <div class="idx-top">
+   <h2>Index of work</h2>
+   <div class="pf" id="pf" role="group" aria-label="Filter projects"><button class="active" data-f="all" aria-pressed="true">All</button><button data-f="product" aria-pressed="false">Product</button><button data-f="web" aria-pressed="false">Web</button><button data-f="identity" aria-pressed="false">Identity</button></div>
+  </div>
+  <div class="thead small" aria-hidden="true"><span>No.</span><span>Project</span><span>Client</span><span>Discipline</span><span style="text-align:right">Year</span></div>
+  <div id="rows"></div>
+  <p class="note">Sample projects for this template.</p>
+ </div>
+</section>
+
+<section class="about" id="about">
+ <div class="c">
+  <div class="portrait reveal" role="img" aria-label="Illustrated portrait placeholder">
+   <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="300" height="400" fill="currentColor" opacity="0"/><circle cx="150" cy="150" r="62" fill="none" stroke="var(--fg)" stroke-width="1.5"/><path d="M50 400c0-80 45-130 100-130s100 50 100 130" fill="none" stroke="var(--fg)" stroke-width="1.5"/><path d="M96 130c10-50 98-60 112 6" fill="none" stroke="var(--red)" stroke-width="10" stroke-linecap="round"/><text x="20" y="380" font-family="Inter" font-size="11" fill="var(--muted)">Replace with your portrait</text></svg>
+  </div>
+  <div class="txt reveal">
+   <p class="small">About</p>
+   <p class="big" style="margin-top:14px">Eight years designing products with startups and studios. I like small teams, <em>clear problems</em>, and working closely with the people who build the thing.</p>
+   <p style="margin-top:22px;max-width:56ch">Before going independent I led design for a fintech app and spent three years at a branding studio. Today I split my time between product work and teaching design basics to students.</p>
+   <div class="cols">
+    <div><h3>Services</h3><ul><li>Product &amp; UX design</li><li>Design systems</li><li>Website design</li></ul></div>
+    <div><h3>Tools</h3><ul><li>Figma</li><li>Framer</li><li>HTML &amp; CSS</li></ul></div>
+    <div><h3>Elsewhere</h3><ul><li>Dribbble</li><li>LinkedIn</li><li>Read.cv</li></ul></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="c">
+  <p class="small" style="margin-bottom:18px">Have a project in mind?</p>
+  <a class="mail" href="#contact-form">hello@maya.example</a>
+  <div class="cgrid">
+   <form id="contact-form" data-demo-form data-success="Thanks — I'll reply within two working days.">
+    <div class="field"><label for="p-name">Name</label><input class="input" id="p-name" autocomplete="name" required><small class="field-error"></small></div>
+    <div class="field"><label for="p-email">Email</label><input class="input" id="p-email" type="email" autocomplete="email" required><small class="field-error"></small></div>
+    <div class="field"><label for="p-msg">A few lines about the project</label><textarea class="input" id="p-msg" rows="3" required></textarea><small class="field-error"></small></div>
+    <button class="send" type="submit">Send →</button>
+    <p class="form-status" role="status" hidden></p>
+    <p class="note">Template demo — nothing is sent.</p>
+   </form>
+   <ul>
+    <li><span>Based in</span><span>Dhaka, working remotely</span></li>
+    <li><span>Replies</span><span>Within two working days</span></li>
+    <li><span>Rate</span><span>Project or weekly</span></li>
+    <li><span>Languages</span><span>English, বাংলা</span></li>
+   </ul>
+  </div>
+ </div>
+</section>
+</main>
+<footer class="site"><div class="c"><span>© <span data-year>2026</span> Maya Sen — sample persona.</span><a href="#top">Back to top ↑</a><span>Website template by KHOKA TECH</span></div></footer>
+
+<div class="peek" id="peek" aria-hidden="true"></div>
+<dialog class="case" id="case" aria-labelledby="case-t">
+ <button class="cx" id="cx" aria-label="Close case study">×</button>
+ <div class="case-hero" id="case-hero"></div>
+ <div class="case-b">
+  <div><p class="small" id="case-k"></p><h2 id="case-t"></h2><p id="case-d"></p><p id="case-o" style="margin-top:14px;color:var(--fg)"></p></div>
+  <dl><div><dt>Client</dt><dd id="case-c"></dd></div><div><dt>Role</dt><dd id="case-r"></dd></div><div><dt>Timeline</dt><dd id="case-l"></dd></div></dl>
+ </div>
+</dialog>
+
+<script src="../../assets/js/demo.js"></script>
+<script>
+(function(){
+ const art={
+  pulse:'<rect width="400" height="300" fill="#1B1B1B"/><rect x="150" y="28" width="100" height="244" rx="16" fill="#2B2B2B"/><rect x="162" y="56" width="76" height="70" rx="8" fill="#E63B2E"/><path d="M170 92h12l6-14 10 28 8-14h22" stroke="#fff" stroke-width="3" fill="none"/><rect x="162" y="140" width="76" height="8" rx="3" fill="#555"/><rect x="162" y="156" width="50" height="8" rx="3" fill="#444"/>',
+  ember:'<rect width="400" height="300" fill="#E63B2E"/><circle cx="200" cy="130" r="58" fill="none" stroke="#F2F0EB" stroke-width="3"/><path d="M200 92c18 22 18 44 0 66-18-22-18-44 0-66z" fill="#F2F0EB"/><text x="200" y="240" text-anchor="middle" font-family="Georgia" font-style="italic" font-size="34" fill="#F2F0EB">Ember</text>',
+  green:'<rect width="400" height="300" fill="#2D4A3E"/><rect x="40" y="40" width="200" height="12" fill="#C9C1B0"/><rect x="40" y="66" width="150" height="34" fill="#F2F0EB"/><rect x="40" y="108" width="110" height="34" fill="#F2F0EB"/><path d="M220 260l60-90 40 50 30-30 50 70z" fill="#C9C1B0"/>',
+  ledger:'<rect width="400" height="300" fill="#D9D5CC"/><rect x="40" y="36" width="320" height="228" fill="#F7F5F0"/><rect x="40" y="36" width="320" height="22" fill="#111"/><rect x="60" y="80" width="140" height="14" fill="#111"/><g fill="#E63B2E"><rect x="240" y="150" width="16" height="40"/><rect x="264" y="130" width="16" height="60"/><rect x="288" y="110" width="16" height="80"/><rect x="312" y="90" width="16" height="100"/></g><rect x="60" y="210" width="280" height="2" fill="#D9D5CC"/>',
+  nori:'<rect width="400" height="300" fill="#111"/><text x="200" y="170" text-anchor="middle" font-family="Georgia" font-style="italic" font-size="78" fill="#F2F0EB">Nori</text><rect x="160" y="196" width="80" height="3" fill="#E63B2E"/>',
+  basket:'<rect width="400" height="300" fill="#E8E5DE"/><rect x="96" y="36" width="96" height="228" rx="14" fill="#111"/><rect x="208" y="66" width="96" height="198" rx="14" fill="#E63B2E"/><rect x="108" y="60" width="72" height="44" rx="6" fill="#2D4A3E"/><rect x="220" y="90" width="72" height="10" rx="3" fill="#F2F0EB"/><rect x="220" y="108" width="44" height="10" rx="3" fill="#F2F0EB" opacity=".6"/>'
+ };
+ const W=[
+  {n:"Pulse",c:"Pulse Health",k:"product",kd:"Product design",y:"2026",a:"pulse",tag:"New",d:"A fitness companion built around short, achievable daily sessions instead of long programmes.",o:"Onboarding went from nine steps to three, and the first workout starts within a minute of installing.",r:"Lead product designer",l:"10 weeks"},
+  {n:"Ledger",c:"Ledger Finance",k:"product",kd:"Web app · Design system",y:"2025",a:"ledger",d:"Clear cash-flow dashboards for small business owners who are not accountants.",o:"A shared component library let the team ship new reports without new design work.",r:"Product designer",l:"12 weeks"},
+  {n:"Greenline",c:"Greenline Travel",k:"web",kd:"Website",y:"2025",a:"green",d:"An editorial website for slow-travel itineraries, led by photography and long-form writing.",o:"Built as a lightweight static site the editors update themselves.",r:"Designer & front-end",l:"6 weeks"},
+  {n:"Ember",c:"Ember Coffee",k:"identity",kd:"Identity",y:"2024",a:"ember",d:"A warm identity for a neighbourhood roastery, from cup sleeves to the shop sign.",o:"One flexible mark that works stamped, printed or painted.",r:"Brand designer",l:"4 weeks"},
+  {n:"Basket",c:"Basket Grocery",k:"product",kd:"Mobile app",y:"2024",a:"basket",d:"Weekly grocery ordering with lists that learn what you buy.",o:"Repeat orders became noticeably faster in usability testing.",r:"UX / UI designer",l:"8 weeks"},
+  {n:"Nori",c:"Nori Architects",k:"identity",kd:"Identity · Website",y:"2023",a:"nori",d:"A quiet, typographic identity for an architecture studio.",o:"Stationery, signage and a portfolio website from one type system.",r:"Art director",l:"5 weeks"}
+ ];
+ const svg=a=>'<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'+art[a]+'</svg>';
+ const rows=document.getElementById("rows");
+ rows.innerHTML=W.map((w,i)=>`<button class="row" data-i="${i}" data-cat="${w.k}"><span class="n">${String(i+1).padStart(2,"0")}</span><span class="t">${w.n}${w.tag?`<em>${w.tag}</em>`:""}</span><span class="d">${w.c}</span><span class="d">${w.kd}</span><span class="y">${w.y}</span></button>`).join("");
+ // filter
+ document.getElementById("pf").addEventListener("click",e=>{const b=e.target.closest("[data-f]");if(!b)return;
+  document.querySelectorAll("#pf button").forEach(x=>{const on=x===b;x.classList.toggle("active",on);x.setAttribute("aria-pressed",on)});
+  rows.querySelectorAll(".row").forEach(r=>r.hidden=!(b.dataset.f==="all"||r.dataset.cat===b.dataset.f));});
+ // cursor preview
+ const peek=document.getElementById("peek");
+ rows.addEventListener("mouseover",e=>{const r=e.target.closest(".row");if(!r)return;peek.innerHTML=svg(W[r.dataset.i].a);peek.classList.add("on")});
+ rows.addEventListener("mouseleave",()=>peek.classList.remove("on"));
+ window.addEventListener("mousemove",e=>{const x=e.clientX+190>innerWidth-160?e.clientX-190:e.clientX+190;peek.style.left=x+"px";peek.style.top=Math.max(120,Math.min(innerHeight-120,e.clientY))+"px"},{passive:true});
+ // case study
+ const dlg=document.getElementById("case");
+ rows.addEventListener("click",e=>{const r=e.target.closest(".row");if(!r)return;const w=W[r.dataset.i];
+  document.getElementById("case-hero").innerHTML=svg(w.a);
+  const set=(id,v)=>document.getElementById(id).textContent=v;
+  set("case-k",w.kd);set("case-t",w.n);set("case-d",w.d);set("case-o",w.o);set("case-c",w.c);set("case-r",w.r);set("case-l",w.l);
+  peek.classList.remove("on");dlg.showModal();});
+ document.getElementById("cx").addEventListener("click",()=>dlg.close());
+ dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close()});
+ // theme
+ const btn=document.getElementById("theme"),root=document.documentElement;
+ const sync=()=>{const d=root.dataset.theme==="dark";btn.textContent=d?"Light":"Dark";btn.setAttribute("aria-pressed",d);btn.setAttribute("aria-label",d?"Switch to light theme":"Switch to dark theme")};
+ btn.addEventListener("click",()=>{root.dataset.theme=root.dataset.theme==="dark"?"light":"dark";try{localStorage.setItem("folio-theme",root.dataset.theme)}catch(e){}sync()});sync();
+})();
+</script>
+</body>
+</html>

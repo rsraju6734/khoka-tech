@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nexora Advisory — Business Website Template Demo | KHOKA TEMPLATES</title>
+<meta name="description" content="Live demo of Nexora Business by KHOKA TEMPLATES: a serif-led website for advisory firms with practice areas, approach, insights, engagement models and contact.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1E3A2F">
+<link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/demo.css">
+<style>
+:root{
+  --paper:#F4F1EA;--paper-2:#ECE7DC;--white:#FFFDF8;--forest:#1E3A2F;--forest-2:#16302A;--brass:#B08D57;--ink:#1B1B1B;--muted:#5D5A52;--rule:#D8D2C4;
+  --serif:"Source Serif 4",Georgia,serif;--sans:"Inter",system-ui,sans-serif;--w:1200px;--scroll-pad:96px;
+}
+body{background:var(--paper);color:var(--ink);font:400 1rem/1.7 var(--sans)}
+.c{width:min(var(--w),100% - 48px);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;color:var(--ink)}
+p{color:var(--muted)}
+.caps{font:600 .72rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--brass)}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;background:var(--forest);color:#fff;font-weight:500;font-size:.95rem;border:1px solid var(--forest);transition:background .2s}
+.btn:hover{background:var(--forest-2)}
+.tlink{font-weight:500;border-bottom:1px solid var(--brass);padding-bottom:2px;transition:color .2s}
+.tlink:hover{color:var(--forest)}
+
+/* utility + header */
+.util{background:var(--forest);color:#D9E2DC;font-size:.78rem}
+.util .c{display:flex;justify-content:space-between;gap:16px;height:34px;align-items:center}
+.util span+span{opacity:.75}
+header.site{position:sticky;top:0;z-index:50;background:rgba(244,241,234,.96);border-bottom:1px solid var(--rule)}
+header.site .c{display:flex;align-items:center;justify-content:space-between;height:80px;gap:24px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font:600 1.6rem/1 var(--serif);letter-spacing:-.02em;color:var(--forest)}
+.logo small{font:600 .62rem/1 var(--sans);letter-spacing:.32em;color:var(--brass);margin-top:5px}
+.nav-panel{display:flex;align-items:center;gap:34px;font-size:.93rem}
+.nav-panel a:not(.btn){position:relative;color:#3B3A36}
+.nav-panel a:not(.btn)::after{content:"";position:absolute;left:0;right:100%;bottom:-6px;height:1px;background:var(--brass);transition:right .25s}
+.nav-panel a:not(.btn):hover::after{right:0}
+.nav-panel .btn{min-height:42px;padding:0 18px}
+.nav-toggle{background:none;border:1px solid var(--rule);width:44px;height:40px;font-size:.78rem;font-weight:600;letter-spacing:.08em}
+
+/* hero */
+.hero{padding:88px 0 0}
+.hero .c{display:grid;grid-template-columns:7fr 5fr;gap:64px;align-items:center}
+.hero h1{font-size:clamp(2.5rem,1.6rem + 3.2vw,4.3rem);line-height:1.06;margin:22px 0 26px;max-width:14ch}
+.hero h1 i{font-style:italic;color:var(--forest)}
+.hero p.lead{font-size:1.15rem;max-width:46ch}
+.hero .acts{display:flex;align-items:center;gap:28px;flex-wrap:wrap;margin-top:36px}
+.doc-wrap{position:relative;padding:0 0 28px 28px}
+.doc-wrap::before{content:"";position:absolute;left:0;bottom:0;width:78%;height:82%;background:var(--forest)}
+.doc{position:relative;background:var(--white);box-shadow:0 24px 50px -24px rgba(30,58,47,.45);padding:30px 30px 26px;font-size:.8rem}
+.doc-top{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--brass);padding-bottom:10px}
+.doc-top b{font:600 1.1rem var(--serif)}
+.doc-top span{color:var(--muted);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
+.doc table{width:100%;border-collapse:collapse;margin:14px 0 18px}
+.doc td{padding:7px 0;border-bottom:1px solid #E8E2D6;color:#3B3A36}
+.doc td:last-child{text-align:right;font-variant-numeric:tabular-nums;font-weight:500}
+.doc .up{color:#2F6B4F}.doc .dn{color:#9A3B2F}
+.chart{display:flex;align-items:flex-end;gap:8px;height:84px;border-bottom:1px solid #D8D2C4;padding:0 4px}
+.chart i{flex:1;background:#C9D3CC}
+.chart i.k{background:var(--forest)}
+.doc figcaption{margin-top:10px;color:var(--muted);font-size:.7rem;font-style:italic;font-family:var(--serif)}
+.moments{margin-top:96px;border-top:1px solid var(--rule)}
+.moments .c{display:grid;grid-template-columns:200px repeat(3,1fr)}
+.moments .c>*{padding:26px 24px 30px 0}
+.moments .c>div{border-left:1px solid var(--rule);padding-left:24px}
+.moments h2{font:600 .72rem/1.5 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--brass)}
+.moments b{display:block;font:500 1.15rem/1.3 var(--serif);color:var(--ink);margin-bottom:6px}
+.moments p{font-size:.9rem}
+
+/* practice areas */
+.sec{padding:112px 0}
+.split{display:grid;grid-template-columns:4fr 7fr;gap:80px;align-items:start}
+.split h2{font-size:clamp(2rem,1.5rem + 1.6vw,2.9rem);line-height:1.12;margin:18px 0 20px}
+.split .side{position:sticky;top:120px}
+.areas{border-top:1px solid var(--ink)}
+.area{border-bottom:1px solid var(--rule)}
+.area button{display:grid;grid-template-columns:52px 1fr 24px;width:100%;align-items:baseline;gap:0;background:none;border:0;padding:24px 0;text-align:left;cursor:pointer}
+.area button span{color:var(--brass);font-size:.85rem;font-variant-numeric:tabular-nums}
+.area button b{font:500 1.45rem/1.2 var(--serif);transition:color .2s}
+.area button:hover b{color:var(--forest)}
+.area button i{font-style:normal;font-size:1.2rem;color:var(--forest);transition:transform .25s}
+.area button[aria-expanded="true"] i{transform:rotate(45deg)}
+.area-body{padding:0 24px 28px 52px;display:grid;grid-template-columns:1.4fr 1fr;gap:32px}
+.area-body ul li{font-size:.88rem;padding:4px 0;border-bottom:1px dotted var(--rule);color:#3B3A36}
+.area-body h4{font:600 .7rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+
+/* approach band */
+.approach{background:var(--forest);color:#E4EAE6}
+.approach h2{color:#fff;font-size:clamp(2rem,1.5rem + 1.6vw,2.9rem);max-width:20ch;margin-top:18px}
+.approach p{color:#B9C8BF}
+.stages{display:grid;grid-template-columns:repeat(4,1fr);margin-top:64px;border-top:1px solid rgba(255,255,255,.18)}
+.stage{padding:28px 28px 8px 0}
+.stage+.stage{padding-left:28px;border-left:1px solid rgba(255,255,255,.18)}
+.stage em{display:block;font:italic 400 2.4rem/1 var(--serif);color:var(--brass);margin-bottom:22px}
+.stage h3{color:#fff;font-size:1.3rem;margin-bottom:10px}
+.stage p{font-size:.92rem}
+.stage small{display:block;margin-top:14px;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:#8FA79A}
+
+/* insights */
+.ins-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:48px}
+.ins-head h2{font-size:clamp(2rem,1.5rem + 1.6vw,2.9rem);margin-top:16px}
+.ins{display:grid;grid-template-columns:7fr 5fr;gap:48px}
+.post .cover{aspect-ratio:16/10;background:var(--paper-2);position:relative;overflow:hidden}
+.post .cover svg{width:100%;height:100%}
+.post .meta{display:flex;gap:14px;font-size:.78rem;color:var(--muted);margin:18px 0 8px;letter-spacing:.02em}
+.post .meta b{color:var(--brass);font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:.7rem}
+.post h3{font-size:1.65rem;line-height:1.2;transition:color .2s}
+.post a:hover h3{color:var(--forest)}
+.post p{margin-top:10px}
+.post-sm{display:grid;grid-template-columns:140px 1fr;gap:22px;padding-bottom:28px;border-bottom:1px solid var(--rule)}
+.post-sm+.post-sm{padding-top:28px}
+.post-sm .cover{aspect-ratio:1}
+.post-sm h3{font-size:1.2rem}
+.post-sm .meta{margin-top:0}
+
+/* engagement table */
+.engage{background:var(--white);border-block:1px solid var(--rule)}
+.engage h2{font-size:clamp(2rem,1.5rem + 1.6vw,2.9rem);margin:16px 0 14px}
+.tbl-wrap{overflow-x:auto;margin-top:48px}
+table.cmp{width:100%;border-collapse:collapse;min-width:720px}
+.cmp th,.cmp td{text-align:left;padding:18px 20px 18px 0;border-bottom:1px solid var(--rule);vertical-align:top;font-size:.95rem}
+.cmp thead th{font:500 1.35rem/1.2 var(--serif);border-bottom:2px solid var(--ink);padding-bottom:16px}
+.cmp thead th small{display:block;font:400 .82rem var(--sans);color:var(--muted);margin-top:4px}
+.cmp tbody th{font:600 .72rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);width:18%;padding-top:21px}
+.cmp td{color:#3B3A36}
+.cmp .fee{font:500 1.2rem var(--serif);color:var(--ink)}
+.cmp-note{margin-top:16px;font-size:.82rem;font-style:italic;font-family:var(--serif)}
+
+/* people */
+.people{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:56px}
+.person .mono{aspect-ratio:4/5;background:var(--paper-2);display:grid;place-items:center;font:400 4.6rem var(--serif);color:var(--forest);position:relative}
+.person .mono::after{content:"";position:absolute;inset:14px;border:1px solid var(--rule)}
+.person h3{font-size:1.3rem;margin-top:18px}
+.person span{font-size:.85rem;color:var(--brass);font-weight:500}
+.person p{font-size:.92rem;margin-top:8px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:5fr 6fr;gap:80px}
+.contact h2{font-size:clamp(2rem,1.5rem + 1.6vw,2.9rem);margin:16px 0 16px}
+.offices{margin-top:36px;border-top:1px solid var(--ink)}
+.offices div{display:grid;grid-template-columns:120px 1fr;padding:16px 0;border-bottom:1px solid var(--rule);font-size:.92rem}
+.offices dt{font:500 1.05rem var(--serif)}
+.offices dd{color:var(--muted)}
+.form{background:var(--white);padding:40px;border:1px solid var(--rule)}
+.form h3{font-size:1.5rem;margin-bottom:24px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:.8rem;font-weight:600;letter-spacing:.04em;margin-bottom:6px;color:#3B3A36}
+.input{width:100%;background:transparent;border:0;border-bottom:1px solid #BDB5A4;padding:10px 0;border-radius:0;transition:border-color .2s}
+.input:focus{outline:none;border-color:var(--forest)}
+select.input{appearance:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%231B1B1B' fill='none'/%3E%3C/svg%3E") no-repeat right 4px center}
+.form .note{font-size:.78rem;margin-top:14px}
+.form-status{color:var(--forest)}
+
+footer.site{background:var(--forest-2);color:#B9C8BF;padding:72px 0 28px;font-size:.9rem}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+footer .logo b{color:#fff}
+footer h4{font:600 .7rem var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin-bottom:14px}
+footer li{margin-bottom:8px}
+footer a:hover{color:#fff}
+.fb{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:56px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:.8rem}
+
+@media(max-width:1000px){
+  .hero .c,.split,.contact,.ins{grid-template-columns:1fr;gap:48px}
+  .split .side{position:static}
+  .doc-wrap{max-width:520px}
+  .moments .c{grid-template-columns:1fr 1fr 1fr}
+  .moments h2{grid-column:1/-1;padding-bottom:0!important}
+  .moments .c>div:nth-of-type(1){border-left:0;padding-left:0}
+  .stages{grid-template-columns:1fr 1fr}
+  .stage:nth-child(3){padding-left:0;border-left:0}
+  .stage:nth-child(n+3){border-top:1px solid rgba(255,255,255,.18)}
+  .fg{grid-template-columns:1fr 1fr}
+}
+@media(max-width:860px){
+  .nav-toggle{display:block}
+  .nav-panel{position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--rule);flex-direction:column;align-items:stretch;gap:0;padding:8px 24px 24px;display:none}
+  .nav-panel.open{display:flex}
+  .nav-panel a:not(.btn){padding:14px 0;border-bottom:1px solid var(--rule);font-family:var(--serif);font-size:1.15rem}
+  .nav-panel .btn{margin-top:16px;justify-content:center}
+  .util span+span{display:none}
+}
+@media(max-width:640px){
+  .sec{padding:80px 0}
+  .hero{padding-top:56px}
+  .moments .c{grid-template-columns:1fr}
+  .moments .c>div{border-left:0;padding-left:0;border-top:1px solid var(--rule)}
+  .area-body{grid-template-columns:1fr;padding-left:0;padding-right:0}
+  .stages,.people,.row2{grid-template-columns:1fr}
+  .stage,.stage+.stage{padding-left:0;border-left:0;border-top:1px solid rgba(255,255,255,.18)}
+  .stage:first-child{border-top:0}
+  .post-sm{grid-template-columns:96px 1fr}
+  .people{gap:32px}
+  .person .mono{aspect-ratio:16/9}
+  .form{padding:26px}
+  .offices div{grid-template-columns:96px 1fr}
+  .fg{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body data-template="business" data-name="Nexora Business">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="util"><div class="c"><span>Strategy &amp; operations advisory for growing companies</span><span>Mon–Fri · 9:00–18:00</span></div></div>
+<header class="site">
+ <div class="c">
+  <a class="logo" href="#top" id="top" aria-label="Nexora Advisory home"><b>Nexora</b><small>ADVISORY</small></a>
+  <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-links">MENU</button>
+  <nav class="nav-panel" id="nav-links" aria-label="Main">
+   <a href="#practice">Practice areas</a><a href="#approach">Approach</a><a href="#insights">Insights</a><a href="#engage">Engagements</a>
+   <a class="btn" href="#contact">Arrange a call</a>
+  </nav>
+ </div>
+</header>
+
+<main id="main">
+<section class="hero">
+ <div class="c">
+  <div>
+   <p class="caps">Strategy · Finance · Operations</p>
+   <h1>Considered advice for companies at a <i>turning point.</i></h1>
+   <p class="lead">We help owners and leadership teams decide what to do next — and then make it happen, with clear numbers, a realistic plan and people who stay until the work is done.</p>
+   <div class="acts"><a class="btn" href="#contact">Arrange an introductory call <span aria-hidden="true">→</span></a><a class="tlink" href="#practice">See our practice areas</a></div>
+  </div>
+  <figure class="doc-wrap">
+   <div class="doc" role="img" aria-label="Sample page from a client operating review">
+    <div class="doc-top"><b>Operating Review</b><span>Q3 · Summary</span></div>
+    <table>
+     <tr><td>Revenue vs plan</td><td class="up">+6.2%</td></tr>
+     <tr><td>Gross margin</td><td>38.4%</td></tr>
+     <tr><td>Operating costs vs plan</td><td class="dn">+3.1%</td></tr>
+     <tr><td>Cash runway</td><td>14 months</td></tr>
+    </table>
+    <div class="chart" aria-hidden="true"><i style="height:40%"></i><i style="height:46%"></i><i style="height:44%"></i><i style="height:58%"></i><i style="height:62%"></i><i class="k" style="height:71%"></i><i class="k" style="height:78%"></i><i class="k" style="height:84%"></i></div>
+    <figcaption>Illustrative figures — the format we use for quarterly client reviews.</figcaption>
+   </div>
+  </figure>
+ </div>
+ <div class="moments">
+  <div class="c">
+   <h2>When clients usually call us</h2>
+   <div><b>Before raising or borrowing</b><p>Getting the numbers, story and plan ready for investors or lenders.</p></div>
+   <div><b>When growth outpaces systems</b><p>Processes, people and tools that worked at ten staff no longer do at fifty.</p></div>
+   <div><b>During a change of leadership</b><p>Succession, a new CEO, or founders stepping back from day-to-day work.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec" id="practice">
+ <div class="c split">
+  <div class="side">
+   <p class="caps">Practice areas</p>
+   <h2>Six areas, one team that sees the whole picture.</h2>
+   <p>Most engagements touch more than one area. We staff each project with the people who know the problem, not whoever is free.</p>
+  </div>
+  <div class="areas">
+   <div class="area"><button data-acc aria-expanded="true" aria-controls="a1"><span>01</span><b>Corporate strategy</b><i aria-hidden="true">+</i></button>
+    <div class="area-body" id="a1"><p>Where to compete, what to stop doing, and how to fund the plan. We work from your data and market evidence rather than templates.</p><div><h4>Typical outputs</h4><ul><li>Three-year strategic plan</li><li>Market entry assessment</li><li>Board strategy session</li></ul></div></div></div>
+   <div class="area"><button data-acc aria-expanded="false" aria-controls="a2"><span>02</span><b>Financial planning &amp; analysis</b><i aria-hidden="true">+</i></button>
+    <div class="area-body" id="a2" hidden><p>Budgets, forecasts and reporting your leadership team will actually use each month.</p><div><h4>Typical outputs</h4><ul><li>Rolling 18-month forecast</li><li>Management reporting pack</li><li>Pricing review</li></ul></div></div></div>
+   <div class="area"><button data-acc aria-expanded="false" aria-controls="a3"><span>03</span><b>Operations &amp; process</b><i aria-hidden="true">+</i></button>
+    <div class="area-body" id="a3" hidden><p>We map how work really flows, remove the steps that add nothing, and set simple measures to keep it that way.</p><div><h4>Typical outputs</h4><ul><li>Process maps and controls</li><li>Supplier review</li><li>Operating dashboard</li></ul></div></div></div>
+   <div class="area"><button data-acc aria-expanded="false" aria-controls="a4"><span>04</span><b>Technology &amp; systems</b><i aria-hidden="true">+</i></button>
+    <div class="area-body" id="a4" hidden><p>Choosing and introducing software without disrupting the business — from accounting systems to customer platforms.</p><div><h4>Typical outputs</h4><ul><li>Systems selection</li><li>Implementation plan</li><li>Data migration oversight</li></ul></div></div></div>
+   <div class="area"><button data-acc aria-expanded="false" aria-controls="a5"><span>05</span><b>Organisation &amp; leadership</b><i aria-hidden="true">+</i></button>
+    <div class="area-body" id="a5" hidden><p>Structures, roles and decision rights that let a growing company move quickly without losing control.</p><div><h4>Typical outputs</h4><ul><li>Organisation design</li><li>Leadership hiring plan</li><li>Succession planning</li></ul></div></div></div>
+   <div class="area"><button data-acc aria-expanded="false" aria-controls="a6"><span>06</span><b>Governance &amp; risk</b><i aria-hidden="true">+</i></button>
+    <div class="area-body" id="a6" hidden><p>Board practices, policies and internal controls proportionate to your size and ambitions.</p><div><h4>Typical outputs</h4><ul><li>Board effectiveness review</li><li>Risk register</li><li>Policy framework</li></ul></div></div></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec approach" id="approach">
+ <div class="c">
+  <p class="caps">Our approach</p>
+  <h2>We stay through delivery, not just the recommendations.</h2>
+  <div class="stages">
+   <div class="stage reveal"><em>I.</em><h3>Understand</h3><p>Interviews, data review and site visits. We agree the questions that matter before proposing answers.</p><small>2–3 weeks</small></div>
+   <div class="stage reveal"><em>II.</em><h3>Decide</h3><p>Options with costs, risks and trade-offs laid out plainly, so leadership can choose with confidence.</p><small>1–2 weeks</small></div>
+   <div class="stage reveal"><em>III.</em><h3>Implement</h3><p>We work inside your team on the changes — plans, hiring, systems — with weekly progress reviews.</p><small>6–16 weeks</small></div>
+   <div class="stage reveal"><em>IV.</em><h3>Hand over</h3><p>Documentation, training and measures your team owns. We check in at 90 days.</p><small>Ongoing</small></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec" id="insights">
+ <div class="c">
+  <div class="ins-head"><div><p class="caps">Insights</p><h2>Notes from recent work</h2></div><a class="tlink" href="#insights">All articles</a></div>
+  <div class="ins">
+   <article class="post reveal"><a href="#insights">
+    <div class="cover"><svg viewBox="0 0 700 440" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="700" height="440" fill="#1E3A2F"/><g fill="none" stroke="#B08D57" stroke-width="1.2" opacity=".7"><path d="M0 330 C140 300 220 220 340 230 S560 120 700 90"/><path d="M0 360 C140 330 230 260 350 265 S560 170 700 140" opacity=".6"/><path d="M0 390 C150 360 240 300 360 300 S560 220 700 190" opacity=".4"/></g><g fill="#F4F1EA" opacity=".9"><circle cx="340" cy="230" r="5"/><circle cx="560" cy="133" r="5"/></g><text x="48" y="80" font-family="Georgia" font-style="italic" font-size="30" fill="#F4F1EA">Cash, not profit</text></svg></div>
+    <div class="meta"><b>Finance</b><span>Sample article · 6 min read</span></div>
+    <h3>Why profitable companies still run out of cash — and the three numbers to watch every week</h3>
+    <p>Growth ties up money in stock and receivables long before it shows on the profit line. A simple weekly view prevents most surprises.</p></a></article>
+   <div>
+    <article class="post post-sm reveal"><a href="#insights" style="display:contents"><div class="cover"><svg viewBox="0 0 200 200" aria-hidden="true"><rect width="200" height="200" fill="#ECE7DC"/><g fill="#1E3A2F"><rect x="40" y="110" width="22" height="50"/><rect x="72" y="90" width="22" height="70"/><rect x="104" y="70" width="22" height="90"/><rect x="136" y="50" width="22" height="110" fill="#B08D57"/></g></svg></div><div><div class="meta"><b>Strategy</b><span>Sample · 4 min</span></div><h3>Saying no: how focused companies choose what not to sell</h3></div></a></article>
+    <article class="post post-sm reveal"><a href="#insights" style="display:contents"><div class="cover"><svg viewBox="0 0 200 200" aria-hidden="true"><rect width="200" height="200" fill="#ECE7DC"/><g fill="none" stroke="#1E3A2F" stroke-width="2"><circle cx="70" cy="100" r="34"/><circle cx="130" cy="100" r="34"/></g><circle cx="100" cy="100" r="8" fill="#B08D57"/></svg></div><div><div class="meta"><b>Leadership</b><span>Sample · 5 min</span></div><h3>Founder to chair: a practical guide to stepping back</h3></div></a></article>
+    <article class="post post-sm reveal"><a href="#insights" style="display:contents"><div class="cover"><svg viewBox="0 0 200 200" aria-hidden="true"><rect width="200" height="200" fill="#ECE7DC"/><g stroke="#1E3A2F" stroke-width="2"><path d="M40 60h120M40 90h90M40 120h110M40 150h70"/></g><rect x="140" y="140" width="20" height="20" fill="#B08D57"/></svg></div><div><div class="meta"><b>Operations</b><span>Sample · 3 min</span></div><h3>The one-page process map every team should have</h3></div></a></article>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="sec engage" id="engage">
+ <div class="c">
+  <p class="caps">Engagements</p>
+  <h2>Three ways to work with us</h2>
+  <p style="max-width:58ch">Choose the model that fits the problem. We confirm scope and fees in writing before any work begins.</p>
+  <div class="tbl-wrap">
+   <table class="cmp">
+    <caption class="sr-only">Comparison of engagement models (sample figures)</caption>
+    <thead><tr><td></td><th scope="col">Advisory retainer<small>A senior adviser on call</small></th><th scope="col">Defined project<small>A specific question, answered</small></th><th scope="col">Interim leadership<small>Hands-on cover for a key role</small></th></tr></thead>
+    <tbody>
+     <tr><th scope="row">Best for</th><td>Owners who want a regular sounding board and monthly review.</td><td>Strategy, pricing, systems choice or a fundraising plan.</td><td>Gaps in finance or operations leadership during change.</td></tr>
+     <tr><th scope="row">Typical length</th><td>6–12 months, monthly rolling</td><td>6–12 weeks</td><td>3–9 months</td></tr>
+     <tr><th scope="row">Who you work with</th><td>One partner</td><td>Partner plus one or two consultants</td><td>One experienced executive</td></tr>
+     <tr><th scope="row">Indicative fees</th><td class="fee">from $1,500 / month</td><td class="fee">from $12,000</td><td class="fee">from $6,000 / month</td></tr>
+     <tr><th scope="row"></th><td><a class="tlink" href="#contact">Discuss a retainer</a></td><td><a class="tlink" href="#contact">Describe your project</a></td><td><a class="tlink" href="#contact">Ask about availability</a></td></tr>
+    </tbody>
+   </table>
+  </div>
+  <p class="cmp-note">Sample figures for this template. Replace with your own pricing or remove the fees row.</p>
+ </div>
+</section>
+
+<section class="sec" id="people">
+ <div class="c">
+  <p class="caps">Leadership</p>
+  <h2 style="font-size:clamp(2rem,1.5rem + 1.6vw,2.9rem);margin-top:16px;max-width:22ch">The partners who lead every engagement</h2>
+  <div class="people">
+   <div class="person reveal"><div class="mono" aria-hidden="true">FA</div><h3>Farah Anwar</h3><span>Managing Partner · Strategy</span><p>Previously ran operations for a regional distribution group. Leads strategy and board work.</p></div>
+   <div class="person reveal"><div class="mono" aria-hidden="true">DM</div><h3>Daniel Mendes</h3><span>Partner · Finance</span><p>Chartered accountant focused on forecasting, fundraising preparation and pricing.</p></div>
+   <div class="person reveal"><div class="mono" aria-hidden="true">RS</div><h3>Ritu Sharma</h3><span>Partner · Operations &amp; Systems</span><p>Has led system introductions in retail, healthcare and logistics businesses.</p></div>
+  </div>
+  <p class="cmp-note">Sample people for this template.</p>
+ </div>
+</section>
+
+<section class="sec engage" id="contact">
+ <div class="c contact">
+  <div>
+   <p class="caps">Contact</p>
+   <h2>Start with a 30-minute introductory call.</h2>
+   <p>Tell us a little about your company and the decision in front of you. A partner will reply within two working days.</p>
+   <dl class="offices">
+    <div><dt>Dhaka</dt><dd>Level 9, Sample Tower, Gulshan Avenue</dd></div>
+    <div><dt>Singapore</dt><dd>Sample House, 12 Marina View</dd></div>
+    <div><dt>Email</dt><dd>partners@nexora.example</dd></div>
+   </dl>
+  </div>
+  <form class="form" data-demo-form data-success="Thank you — a partner will reply within two working days.">
+   <h3>Request an introduction</h3>
+   <div class="row2">
+    <div class="field"><label for="b-name">Full name</label><input class="input" id="b-name" autocomplete="name" required><small class="field-error"></small></div>
+    <div class="field"><label for="b-co">Company</label><input class="input" id="b-co" autocomplete="organization" required><small class="field-error"></small></div>
+   </div>
+   <div class="row2">
+    <div class="field"><label for="b-email">Work email</label><input class="input" id="b-email" type="email" autocomplete="email" required><small class="field-error"></small></div>
+    <div class="field"><label for="b-area">Area of interest</label><select class="input" id="b-area" required><option value="">Select</option><option>Corporate strategy</option><option>Financial planning</option><option>Operations &amp; process</option><option>Technology &amp; systems</option><option>Organisation &amp; leadership</option><option>Governance &amp; risk</option></select><small class="field-error"></small></div>
+   </div>
+   <div class="field"><label for="b-msg">What decision are you facing?</label><textarea class="input" id="b-msg" rows="3" required></textarea><small class="field-error"></small></div>
+   <button class="btn" type="submit">Send request <span aria-hidden="true">→</span></button>
+   <p class="form-status" role="status" hidden></p>
+   <p class="note">Template demo — this form checks your input but does not send it anywhere.</p>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer class="site">
+ <div class="c">
+  <div class="fg">
+   <div><a class="logo" href="#top"><b>Nexora</b><small>ADVISORY</small></a><p style="margin-top:18px;color:#B9C8BF;max-width:32ch">Strategy and operations advice for owner-led and growing companies.</p></div>
+   <div><h4>Firm</h4><ul><li><a href="#approach">Approach</a></li><li><a href="#people">Leadership</a></li><li><a href="#insights">Insights</a></li></ul></div>
+   <div><h4>Work with us</h4><ul><li><a href="#practice">Practice areas</a></li><li><a href="#engage">Engagements</a></li><li><a href="#contact">Contact</a></li></ul></div>
+   <div><h4>Offices</h4><ul><li>Dhaka</li><li>Singapore</li></ul></div>
+  </div>
+  <div class="fb"><span>© <span data-year>2026</span> Nexora Advisory — a sample brand.</span><span>Website template by KHOKA TECH</span></div>
+ </div>
+</footer>
+<script src="../../assets/js/demo.js"></script>
+</body>
+</html>

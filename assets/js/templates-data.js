@@ -1,0 +1,182 @@
+/* KHOKA TEMPLATES — catalogue data (single source of truth for homepage, marketplace and details).
+   Paths are relative to the site root. Prices are DEMO prices and are always labelled as such.
+   paper / ink / accent drive each template's own card colours in the store. */
+window.KT_CATEGORIES = {
+  business:   { en: "Business",   bn: "ব্যবসা",     hi: "बिज़नेस" },
+  ecommerce:  { en: "E-commerce", bn: "ই-কমার্স",   hi: "ई-कॉमर्स" },
+  education:  { en: "Education",  bn: "শিক্ষা",      hi: "शिक्षा" },
+  portfolio:  { en: "Portfolio",  bn: "পোর্টফোলিও", hi: "पोर्टफोलियो" },
+  restaurant: { en: "Restaurant", bn: "রেস্টুরেন্ট",  hi: "रेस्टोरेंट" },
+  agency:     { en: "Agency",     bn: "এজেন্সি",     hi: "एजेंसी" }
+};
+
+window.KT_TEMPLATES = [
+  {
+    id: "business", name: "Nexora Business", category: "business", price: 39, order: 1, version: "2.0",
+    demo: "templates/demos/business.html", thumb: "assets/images/templates/business.svg",
+    paper: "#F4F1EA", ink: "#1E3A2F", accent: "#B08D57",
+    palette: ["#F4F1EA", "#1E3A2F", "#B08D57", "#1B1B1B"], fonts: "Source Serif 4 · Inter",
+    tech: ["HTML5", "CSS3", "Vanilla JavaScript", "Google Fonts"],
+    tags: ["corporate", "consulting", "advisory", "firm", "finance", "law", "accounting"],
+    short: {
+      en: "A composed, serif-led site for advisory firms, consultancies and professional services.",
+      bn: "অ্যাডভাইজরি ফার্ম, কনসালটেন্সি ও পেশাদার সেবার জন্য সংযত, সেরিফ-নির্ভর সাইট।",
+      hi: "एडवाइज़री फ़र्म, कंसल्टेंसी और प्रोफ़ेशनल सेवाओं के लिए संतुलित, सेरिफ़-आधारित साइट।"
+    },
+    long: {
+      en: "Nexora is designed for firms whose clients value judgement over noise. A quiet ivory palette, forest green and brass, and a serif headline face give it the feel of a well-made annual report. It covers practice areas, a four-stage approach, published insights, a plain comparison of engagement models and a contact page with office details.",
+      bn: "Nexora এমন প্রতিষ্ঠানের জন্য, যাদের ক্লায়েন্ট হইচইয়ের চেয়ে বিচারবুদ্ধিকে বেশি মূল্য দেয়। আইভরি, বনসবুজ ও ব্রাস রং এবং সেরিফ শিরোনাম একে একটি যত্নে তৈরি বার্ষিক প্রতিবেদনের মতো অনুভূতি দেয়। এতে আছে প্র্যাকটিস এরিয়া, চার ধাপের কাজের পদ্ধতি, প্রকাশিত লেখা, এনগেজমেন্ট মডেলের সরল তুলনা এবং অফিস তথ্যসহ যোগাযোগ।",
+      hi: "Nexora उन फ़र्मों के लिए है जिनके क्लाइंट शोर से ज़्यादा समझदारी को महत्व देते हैं। आइवरी, फ़ॉरेस्ट ग्रीन और ब्रास रंग तथा सेरिफ़ शीर्षक इसे एक सलीके से बनी वार्षिक रिपोर्ट जैसा एहसास देते हैं। इसमें प्रैक्टिस एरिया, चार चरणों की कार्यप्रणाली, प्रकाशित लेख, एंगेजमेंट मॉडल की सीधी तुलना और ऑफ़िस विवरण सहित संपर्क पेज है।"
+    },
+    sections: {
+      en: ["Split hero with report preview", "Practice areas index", "Four-stage approach", "Insights", "Engagement models table", "Leadership", "Contact & offices"],
+      bn: ["রিপোর্ট প্রিভিউসহ স্প্লিট হিরো", "প্র্যাকটিস এরিয়া সূচি", "চার ধাপের পদ্ধতি", "ইনসাইটস", "এনগেজমেন্ট মডেল টেবিল", "নেতৃত্ব", "যোগাযোগ ও অফিস"],
+      hi: ["रिपोर्ट प्रीव्यू वाला स्प्लिट हीरो", "प्रैक्टिस एरिया सूची", "चार-चरण कार्यप्रणाली", "इनसाइट्स", "एंगेजमेंट मॉडल टेबल", "नेतृत्व", "संपर्क व ऑफ़िस"]
+    },
+    features: {
+      en: ["Accessible accordion for practice areas", "Comparison table instead of sales-style pricing cards", "Article cards for publishing insights", "Validated enquiry form", "Print-friendly typography", "No framework, no build step"],
+      bn: ["প্র্যাকটিস এরিয়ার জন্য অ্যাক্সেসিবল অ্যাকর্ডিয়ন", "বিক্রয়-ধাঁচের কার্ডের বদলে তুলনামূলক টেবিল", "লেখা প্রকাশের জন্য আর্টিকেল কার্ড", "যাচাইসহ জিজ্ঞাসা ফর্ম", "প্রিন্ট-বান্ধব টাইপোগ্রাফি", "কোনো ফ্রেমওয়ার্ক বা বিল্ড ধাপ নেই"],
+      hi: ["प्रैक्टिस एरिया के लिए एक्सेसिबल अकॉर्डियन", "सेल्स-स्टाइल कार्ड के बजाय तुलना टेबल", "इनसाइट प्रकाशित करने के लिए आर्टिकल कार्ड", "वैलिडेशन सहित पूछताछ फ़ॉर्म", "प्रिंट-अनुकूल टाइपोग्राफी", "कोई फ़्रेमवर्क या बिल्ड स्टेप नहीं"]
+    }
+  },
+  {
+    id: "ecommerce", name: "Bazaar Pro Store", category: "ecommerce", price: 59, order: 2, version: "2.0",
+    demo: "templates/demos/ecommerce.html", thumb: "assets/images/templates/ecommerce.svg",
+    paper: "#F3EFE8", ink: "#1A1A1A", accent: "#C4552D",
+    palette: ["#FAF8F4", "#1A1A1A", "#C4552D", "#8A9A7B"], fonts: "Archivo",
+    tech: ["HTML5", "CSS3", "Vanilla JavaScript", "In-memory cart (no backend)", "Google Fonts"],
+    tags: ["shop", "store", "homeware", "products", "cart", "online store", "retail"],
+    short: {
+      en: "A product-first storefront with filters, sorting and a working cart drawer.",
+      bn: "ফিল্টার, সাজানো ও কার্যকর কার্ট ড্রয়ারসহ প্রোডাক্ট-কেন্দ্রিক অনলাইন স্টোর।",
+      hi: "फ़िल्टर, सॉर्टिंग और काम करने वाली कार्ट ड्रॉअर के साथ प्रोडक्ट-केंद्रित स्टोर।"
+    },
+    long: {
+      en: "Bazaar puts products first: a hero built around one featured item, clear category navigation, a filterable and sortable grid, and a cart drawer with quantity controls, a free-delivery progress bar and live totals. Shown here as a homeware shop. Checkout is intentionally disabled in the demo and is connected to your chosen payment provider during customisation.",
+      bn: "Bazaar প্রোডাক্টকে প্রথমে রাখে: একটি ফিচার্ড পণ্যকে ঘিরে হিরো, স্পষ্ট ক্যাটাগরি নেভিগেশন, ফিল্টার ও সাজানো যায় এমন গ্রিড, এবং পরিমাণ নিয়ন্ত্রণ, ফ্রি ডেলিভারি প্রগ্রেস বার ও মোটসহ কার্ট ড্রয়ার। এখানে একটি গৃহসজ্জা দোকান হিসেবে দেখানো হয়েছে। ডেমোতে চেকআউট বন্ধ; কাস্টমাইজেশনের সময় আপনার পেমেন্ট সেবা যুক্ত করা হয়।",
+      hi: "Bazaar प्रोडक्ट को सबसे आगे रखता है: एक फ़ीचर्ड आइटम पर बना हीरो, साफ़ कैटेगरी नेविगेशन, फ़िल्टर और सॉर्ट होने वाला ग्रिड, और मात्रा नियंत्रण, फ़्री-डिलीवरी प्रोग्रेस बार व कुल राशि वाली कार्ट ड्रॉअर। यहाँ इसे होमवेयर शॉप के रूप में दिखाया गया है। डेमो में चेकआउट बंद है; कस्टमाइज़ेशन के समय आपका पेमेंट प्रदाता जोड़ा जाता है।"
+    },
+    sections: {
+      en: ["Featured-product hero", "Category navigation", "Filter & sort product grid", "Cart drawer", "Materials story", "Delivery & returns", "Newsletter"],
+      bn: ["ফিচার্ড-প্রোডাক্ট হিরো", "ক্যাটাগরি নেভিগেশন", "ফিল্টার ও সাজানো প্রোডাক্ট গ্রিড", "কার্ট ড্রয়ার", "উপাদানের গল্প", "ডেলিভারি ও রিটার্ন", "নিউজলেটার"],
+      hi: ["फ़ीचर्ड-प्रोडक्ट हीरो", "कैटेगरी नेविगेशन", "फ़िल्टर व सॉर्ट प्रोडक्ट ग्रिड", "कार्ट ड्रॉअर", "मटीरियल स्टोरी", "डिलीवरी व रिटर्न", "न्यूज़लेटर"]
+    },
+    features: {
+      en: ["Category filter, search and price sorting", "Cart with quantities, totals and free-delivery progress", "Keyboard-accessible cart drawer", "Sale and stock labels", "Checkout ready to connect to your provider", "Products defined in one small data list"],
+      bn: ["ক্যাটাগরি ফিল্টার, সার্চ ও মূল্য অনুযায়ী সাজানো", "পরিমাণ, মোট ও ফ্রি-ডেলিভারি প্রগ্রেসসহ কার্ট", "কীবোর্ডে ব্যবহারযোগ্য কার্ট ড্রয়ার", "সেল ও স্টক লেবেল", "আপনার পেমেন্ট সেবার সাথে যুক্ত করার উপযোগী চেকআউট", "একটি ছোট ডেটা তালিকায় সব প্রোডাক্ট"],
+      hi: ["कैटेगरी फ़िल्टर, सर्च और मूल्य सॉर्टिंग", "मात्रा, कुल और फ़्री-डिलीवरी प्रोग्रेस वाली कार्ट", "कीबोर्ड से चलने वाली कार्ट ड्रॉअर", "सेल और स्टॉक लेबल", "आपके प्रदाता से जोड़ने के लिए तैयार चेकआउट", "सभी प्रोडक्ट एक छोटी डेटा सूची में"]
+    }
+  },
+  {
+    id: "education", name: "EduSphere Academy", category: "education", price: 49, order: 3, version: "2.0",
+    demo: "templates/demos/education.html", thumb: "assets/images/templates/education.svg",
+    paper: "#FFF8E7", ink: "#1B2A4A", accent: "#E85D3F",
+    palette: ["#FFFDF6", "#1B2A4A", "#E85D3F", "#1E7F74"], fonts: "Figtree",
+    tech: ["HTML5", "CSS3", "Vanilla JavaScript", "Google Fonts"],
+    tags: ["school", "courses", "coaching", "training", "academy", "tuition", "college"],
+    short: {
+      en: "A friendly, well-organised site for coaching centres, schools and course providers.",
+      bn: "কোচিং সেন্টার, স্কুল ও কোর্স প্রদানকারীদের জন্য বন্ধুসুলভ, গোছানো সাইট।",
+      hi: "कोचिंग सेंटर, स्कूल और कोर्स प्रदाताओं के लिए मैत्रीपूर्ण, व्यवस्थित साइट।"
+    },
+    long: {
+      en: "EduSphere is built around the questions parents and students actually ask: what can I study, when are the classes, who teaches, and how do I join? The hero shows a real weekly timetable, the course catalogue can be searched and filtered by subject, and admissions questions are answered before the enquiry form.",
+      bn: "EduSphere তৈরি হয়েছে অভিভাবক ও শিক্ষার্থীদের আসল প্রশ্ন ঘিরে: কী পড়তে পারি, ক্লাস কখন, কে পড়ান, কীভাবে ভর্তি হব? হিরোতে সাপ্তাহিক রুটিন, কোর্স তালিকা বিষয় অনুযায়ী খোঁজা ও ফিল্টার করা যায়, এবং ভর্তি সংক্রান্ত প্রশ্নের উত্তর ফর্মের আগেই দেওয়া আছে।",
+      hi: "EduSphere उन सवालों पर बना है जो अभिभावक और छात्र सच में पूछते हैं: क्या पढ़ सकते हैं, कक्षाएँ कब हैं, कौन पढ़ाता है, और कैसे जुड़ें? हीरो में साप्ताहिक टाइमटेबल है, कोर्स सूची विषय के अनुसार खोजी और फ़िल्टर की जा सकती है, और एडमिशन के सवालों के जवाब फ़ॉर्म से पहले दिए गए हैं।"
+    },
+    sections: {
+      en: ["Hero with weekly timetable", "Searchable course catalogue", "Programme levels", "Instructors", "Batch schedule", "Admissions FAQ", "Enquiry form"],
+      bn: ["সাপ্তাহিক রুটিনসহ হিরো", "খোঁজা যায় এমন কোর্স তালিকা", "প্রোগ্রাম লেভেল", "শিক্ষকবৃন্দ", "ব্যাচের সময়সূচি", "ভর্তি প্রশ্নোত্তর", "জিজ্ঞাসা ফর্ম"],
+      hi: ["साप्ताहिक टाइमटेबल वाला हीरो", "खोजने योग्य कोर्स सूची", "प्रोग्राम लेवल", "इंस्ट्रक्टर", "बैच शेड्यूल", "एडमिशन FAQ", "पूछताछ फ़ॉर्म"]
+    },
+    features: {
+      en: ["Course search plus subject filter", "Enrol links pre-fill the enquiry form", "Readable schedule table on mobile", "Admissions FAQ accordion", "Clear programme levels", "Friendly, high-contrast palette"],
+      bn: ["কোর্স সার্চ ও বিষয় ফিল্টার", "ভর্তি লিংক ফর্মে কোর্স আগেই বেছে দেয়", "মোবাইলে পড়ার উপযোগী সময়সূচি টেবিল", "ভর্তি প্রশ্নোত্তর অ্যাকর্ডিয়ন", "স্পষ্ট প্রোগ্রাম লেভেল", "বন্ধুসুলভ, উচ্চ-কনট্রাস্ট রং"],
+      hi: ["कोर्स सर्च और विषय फ़िल्टर", "एनरोल लिंक फ़ॉर्म में कोर्स पहले से भर देते हैं", "मोबाइल पर पढ़ने योग्य शेड्यूल टेबल", "एडमिशन FAQ अकॉर्डियन", "स्पष्ट प्रोग्राम लेवल", "मैत्रीपूर्ण, हाई-कॉन्ट्रास्ट रंग"]
+    }
+  },
+  {
+    id: "portfolio", name: "Folio Mono", category: "portfolio", price: 29, order: 4, version: "2.0",
+    demo: "templates/demos/portfolio.html", thumb: "assets/images/templates/portfolio.svg",
+    paper: "#EBE8E1", ink: "#111111", accent: "#E63B2E",
+    palette: ["#F2F0EB", "#111111", "#E63B2E", "#D9D5CC"], fonts: "Instrument Serif · Inter",
+    tech: ["HTML5", "CSS3", "Vanilla JavaScript", "Native <dialog>", "Google Fonts"],
+    tags: ["designer", "developer", "freelancer", "photographer", "resume", "cv", "personal"],
+    short: {
+      en: "An editorial portfolio built around a project index, for designers and independents.",
+      bn: "ডিজাইনার ও স্বাধীন পেশাজীবীদের জন্য প্রজেক্ট সূচি-কেন্দ্রিক এডিটোরিয়াল পোর্টফোলিও।",
+      hi: "डिज़ाइनरों और स्वतंत्र पेशेवरों के लिए प्रोजेक्ट इंडेक्स पर आधारित एडिटोरियल पोर्टफोलियो।"
+    },
+    long: {
+      en: "Folio Mono treats a portfolio like a magazine contents page. A large typographic masthead introduces the person, and the work is listed as an index — number, project, client, discipline, year — with a preview that follows the cursor. Each project opens a case-study panel. Includes a light/dark switch that remembers the visitor's choice.",
+      bn: "Folio Mono পোর্টফোলিওকে ম্যাগাজিনের সূচিপত্রের মতো সাজায়। বড় টাইপোগ্রাফিক মাস্টহেড মানুষটিকে পরিচয় করায়, আর কাজগুলো সূচি আকারে থাকে — নম্বর, প্রজেক্ট, ক্লায়েন্ট, বিভাগ, বছর — কার্সরের সাথে চলা প্রিভিউসহ। প্রতিটি প্রজেক্ট কেস-স্টাডি প্যানেলে খোলে। দর্শকের পছন্দ মনে রাখা লাইট/ডার্ক সুইচও আছে।",
+      hi: "Folio Mono पोर्टफोलियो को पत्रिका की विषय-सूची की तरह रखता है। बड़ा टाइपोग्राफ़िक मास्टहेड व्यक्ति का परिचय देता है, और काम इंडेक्स के रूप में है — नंबर, प्रोजेक्ट, क्लाइंट, विधा, वर्ष — कर्सर के साथ चलने वाले प्रीव्यू सहित। हर प्रोजेक्ट केस-स्टडी पैनल में खुलता है। विज़िटर की पसंद याद रखने वाला लाइट/डार्क स्विच भी है।"
+    },
+    sections: {
+      en: ["Typographic masthead", "Project index with previews", "Case-study panel", "About & services", "Tools", "Contact"],
+      bn: ["টাইপোগ্রাফিক মাস্টহেড", "প্রিভিউসহ প্রজেক্ট সূচি", "কেস-স্টাডি প্যানেল", "পরিচিতি ও সেবা", "টুলস", "যোগাযোগ"],
+      hi: ["टाइपोग्राफ़िक मास्टहेड", "प्रीव्यू सहित प्रोजेक्ट इंडेक्स", "केस-स्टडी पैनल", "परिचय व सेवाएँ", "टूल्स", "संपर्क"]
+    },
+    features: {
+      en: ["Project index with cursor-following preview", "Filter projects by discipline", "Case studies in an accessible dialog", "Remembered light / dark theme", "Large editorial type that scales cleanly", "Simple contact form"],
+      bn: ["কার্সর-অনুসারী প্রিভিউসহ প্রজেক্ট সূচি", "বিভাগ অনুযায়ী প্রজেক্ট ফিল্টার", "অ্যাক্সেসিবল ডায়ালগে কেস স্টাডি", "মনে রাখা লাইট / ডার্ক থিম", "সুন্দরভাবে স্কেল হওয়া বড় এডিটোরিয়াল টাইপ", "সহজ যোগাযোগ ফর্ম"],
+      hi: ["कर्सर के साथ चलने वाले प्रीव्यू वाला प्रोजेक्ट इंडेक्स", "विधा के अनुसार प्रोजेक्ट फ़िल्टर", "एक्सेसिबल डायलॉग में केस स्टडी", "याद रखी जाने वाली लाइट / डार्क थीम", "साफ़ स्केल होने वाला बड़ा एडिटोरियल टाइप", "सरल संपर्क फ़ॉर्म"]
+    }
+  },
+  {
+    id: "restaurant", name: "Saffron Table", category: "restaurant", price: 35, order: 5, version: "2.0",
+    demo: "templates/demos/restaurant.html", thumb: "assets/images/templates/restaurant.svg",
+    paper: "#1E140E", ink: "#F3E9DA", accent: "#D9A441",
+    palette: ["#140D09", "#F3E9DA", "#D9A441", "#7A2E1B"], fonts: "Cormorant Garamond · Jost",
+    tech: ["HTML5", "CSS3", "Vanilla JavaScript", "Google Fonts"],
+    tags: ["cafe", "food", "menu", "reservation", "bistro", "dining", "bar"],
+    short: {
+      en: "A warm, atmospheric site for restaurants, with a printed-style menu and table booking.",
+      bn: "প্রিন্টেড-ধাঁচের মেনু ও টেবিল বুকিংসহ রেস্টুরেন্টের জন্য উষ্ণ, আবহময় সাইট।",
+      hi: "प्रिंटेड-स्टाइल मेनू और टेबल बुकिंग के साथ रेस्टोरेंट के लिए गर्म, माहौल भरी साइट।"
+    },
+    long: {
+      en: "Saffron Table is designed to feel like the room itself: low light, warm materials and a menu you could hold. The menu sits on a cream card with tabs for each course, seasonal dishes get their own spread, and the reservation form checks the date, time and party size before a guest sends anything.",
+      bn: "Saffron Table এমনভাবে তৈরি যেন রেস্টুরেন্টের ঘরটাই অনুভব করা যায়: মৃদু আলো, উষ্ণ উপকরণ আর হাতে ধরার মতো মেনু। ক্রিম কার্ডে প্রতিটি কোর্সের ট্যাবসহ মেনু, মৌসুমি খাবারের আলাদা অংশ, এবং রিজার্ভেশন ফর্ম তারিখ, সময় ও অতিথি সংখ্যা যাচাই করে।",
+      hi: "Saffron Table ऐसे बना है जैसे रेस्टोरेंट का कमरा ही महसूस हो: धीमी रोशनी, गर्म सामग्री और हाथ में पकड़ने जैसा मेनू। क्रीम कार्ड पर हर कोर्स के टैब वाला मेनू, मौसमी व्यंजनों का अलग हिस्सा, और रिज़र्वेशन फ़ॉर्म तारीख, समय और मेहमानों की संख्या जाँचता है।"
+    },
+    sections: {
+      en: ["Full-screen hero", "Printed-style menu with tabs", "Seasonal dishes", "The kitchen", "Private dining", "Hours & location", "Reservations"],
+      bn: ["ফুল-স্ক্রিন হিরো", "ট্যাবসহ প্রিন্টেড-ধাঁচের মেনু", "মৌসুমি খাবার", "রান্নাঘর", "প্রাইভেট ডাইনিং", "সময় ও অবস্থান", "রিজার্ভেশন"],
+      hi: ["फ़ुल-स्क्रीन हीरो", "टैब वाला प्रिंटेड-स्टाइल मेनू", "मौसमी व्यंजन", "रसोई", "प्राइवेट डाइनिंग", "समय व लोकेशन", "रिज़र्वेशन"]
+    },
+    features: {
+      en: ["Accessible menu tabs", "Dietary labels on dishes", "Reservation form rejects past dates", "Party size and time validation", "Opening hours block", "Atmospheric serif typography"],
+      bn: ["অ্যাক্সেসিবল মেনু ট্যাব", "খাবারে খাদ্যাভ্যাস লেবেল", "রিজার্ভেশন ফর্ম অতীতের তারিখ নেয় না", "অতিথি সংখ্যা ও সময় যাচাই", "খোলার সময়ের অংশ", "আবহময় সেরিফ টাইপোগ্রাফি"],
+      hi: ["एक्सेसिबल मेनू टैब", "व्यंजनों पर डाइट लेबल", "रिज़र्वेशन फ़ॉर्म पिछली तारीख़ स्वीकार नहीं करता", "मेहमान संख्या व समय की जाँच", "खुलने के समय का हिस्सा", "माहौल भरी सेरिफ़ टाइपोग्राफी"]
+    }
+  },
+  {
+    id: "agency", name: "Pixelforge Agency", category: "agency", price: 45, order: 6, version: "2.0",
+    demo: "templates/demos/agency.html", thumb: "assets/images/templates/agency.svg",
+    paper: "#E4E2DB", ink: "#0E0E0E", accent: "#FF4F00",
+    palette: ["#EDECE7", "#0E0E0E", "#FF4F00", "#C9C7BF"], fonts: "Bricolage Grotesque · Inter",
+    tech: ["HTML5", "CSS3", "Vanilla JavaScript", "Google Fonts"],
+    tags: ["creative", "studio", "marketing", "design", "branding", "strategy", "digital agency"],
+    short: {
+      en: "A strict-grid, high-contrast site for strategy-led creative and digital agencies.",
+      bn: "কৌশলনির্ভর ক্রিয়েটিভ ও ডিজিটাল এজেন্সির জন্য কড়া গ্রিড ও উচ্চ কনট্রাস্টের সাইট।",
+      hi: "रणनीति-आधारित क्रिएटिव और डिजिटल एजेंसियों के लिए सख़्त ग्रिड, हाई-कॉन्ट्रास्ट साइट।"
+    },
+    long: {
+      en: "Pixelforge borrows from Swiss graphic design: a visible column grid, one signal colour and type set large but tight. It explains what the agency does and how it thinks — capabilities, an asymmetric case-study grid, a four-phase process and working principles — and ends with a project brief form that asks for services, budget and timing.",
+      bn: "Pixelforge সুইস গ্রাফিক ডিজাইন থেকে অনুপ্রাণিত: দৃশ্যমান কলাম গ্রিড, একটি সিগন্যাল রং এবং বড় কিন্তু আঁটসাঁট টাইপ। এজেন্সি কী করে ও কীভাবে ভাবে — সক্ষমতা, অসম কেস-স্টাডি গ্রিড, চার ধাপের প্রক্রিয়া ও কাজের নীতি — তা ব্যাখ্যা করে, আর শেষ হয় সেবা, বাজেট ও সময় জানতে চাওয়া প্রজেক্ট ব্রিফ ফর্মে।",
+      hi: "Pixelforge स्विस ग्राफ़िक डिज़ाइन से प्रेरित है: दिखने वाला कॉलम ग्रिड, एक सिग्नल रंग और बड़ा पर कसा हुआ टाइप। यह बताता है कि एजेंसी क्या करती है और कैसे सोचती है — क्षमताएँ, असममित केस-स्टडी ग्रिड, चार चरणों की प्रक्रिया और कार्य-सिद्धांत — और अंत में सेवाएँ, बजट व समय पूछने वाला प्रोजेक्ट ब्रीफ़ फ़ॉर्म है।"
+    },
+    sections: {
+      en: ["Grid statement hero", "Capabilities", "Selected work", "Process", "Principles", "Studio", "Project brief form"],
+      bn: ["গ্রিড স্টেটমেন্ট হিরো", "সক্ষমতা", "নির্বাচিত কাজ", "প্রক্রিয়া", "নীতি", "স্টুডিও", "প্রজেক্ট ব্রিফ ফর্ম"],
+      hi: ["ग्रिड स्टेटमेंट हीरो", "क्षमताएँ", "चुनिंदा काम", "प्रक्रिया", "सिद्धांत", "स्टूडियो", "प्रोजेक्ट ब्रीफ़ फ़ॉर्म"]
+    },
+    features: {
+      en: ["Visible 12-column grid system", "Asymmetric case-study layout", "Four-phase process section", "Brief form with service and budget choices", "One-colour accent system that is easy to rebrand", "Restrained, purposeful motion"],
+      bn: ["দৃশ্যমান ১২-কলাম গ্রিড", "অসম কেস-স্টাডি লেআউট", "চার ধাপের প্রক্রিয়া সেকশন", "সেবা ও বাজেট বাছাইসহ ব্রিফ ফর্ম", "সহজে রিব্র্যান্ড করা যায় এমন এক-রঙা অ্যাকসেন্ট", "সংযত, উদ্দেশ্যপূর্ণ মোশন"],
+      hi: ["दिखने वाला 12-कॉलम ग्रिड", "असममित केस-स्टडी लेआउट", "चार चरणों की प्रक्रिया", "सेवा और बजट विकल्पों वाला ब्रीफ़ फ़ॉर्म", "आसानी से रीब्रांड होने वाला एक-रंग एक्सेंट", "संयमित, उद्देश्यपूर्ण मोशन"]
+    }
+  }
+];

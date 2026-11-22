@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EduSphere Academy — Education Website Template Demo | KHOKA TEMPLATES</title>
+<meta name="description" content="Live demo of EduSphere Academy by KHOKA TEMPLATES: weekly timetable, searchable course catalogue, programme levels, instructors, schedule and admissions.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1B2A4A">
+<link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/demo.css">
+<style>
+:root{--bg:#FFFDF6;--navy:#1B2A4A;--muted:#5A6378;--tomato:#E85D3F;--teal:#1E7F74;--butter:#FFE7A3;--sky:#DCEBFF;--mint:#D6F0EA;--blush:#FCE1DA;--rule:#E8E3D3;--r:14px;--f:"Figtree",system-ui,sans-serif;--scroll-pad:90px}
+body{background:var(--bg);color:var(--navy);font:400 1.02rem/1.65 var(--f)}
+.c{width:min(1200px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-weight:800;letter-spacing:-.02em;line-height:1.12}
+p{color:var(--muted)}
+:focus-visible{outline:3px solid var(--tomato);outline-offset:2px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:50px;padding:0 22px;border-radius:12px;background:var(--tomato);color:#fff;font-weight:700;border:2px solid var(--tomato);cursor:pointer;transition:transform .15s,background .2s}
+.btn:hover{background:#D44E31;border-color:#D44E31}
+.btn:active{transform:translateY(1px)}
+.btn.alt{background:transparent;color:var(--navy);border-color:var(--navy)}
+.btn.alt:hover{background:var(--navy);color:#fff}
+.label{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.85rem;color:var(--teal)}
+.label::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.sec{padding:96px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+.sec-head h2{font-size:clamp(1.9rem,1.4rem + 1.6vw,2.7rem);margin-top:10px;max-width:20ch}
+
+header.site{position:sticky;top:0;z-index:50;background:rgba(255,253,246,.95);border-bottom:1px solid var(--rule)}
+header.site .c{display:flex;justify-content:space-between;align-items:center;height:76px;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.25rem}
+.logo svg{width:34px;height:34px}
+.nav-panel{display:flex;align-items:center;gap:26px;font-weight:600;font-size:.95rem}
+.nav-panel a:not(.btn):hover{color:var(--tomato)}
+.nav-panel .btn{height:44px;font-size:.9rem}
+.nav-toggle{background:var(--navy);color:#fff;border:0;border-radius:10px;height:40px;padding:0 14px;font-weight:700}
+
+/* hero */
+.hero{padding:64px 0 40px}
+.hero .c{display:grid;grid-template-columns:5fr 6fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.3rem,1.5rem + 3vw,3.8rem);margin:16px 0 18px}
+.hero h1 u{text-decoration:none;background:linear-gradient(transparent 62%,var(--butter) 62%)}
+.hero p.lead{font-size:1.12rem;max-width:44ch}
+.search{display:flex;gap:8px;margin-top:28px;max-width:480px}
+.search input{flex:1;min-width:0;height:52px;border:2px solid var(--navy);border-radius:12px;padding:0 16px;background:#fff}
+.search input:focus{outline:none;border-color:var(--tomato)}
+.quick{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;font-size:.88rem;color:var(--muted);align-items:center}
+.quick button{background:none;border:0;padding:0;color:var(--navy);font-weight:600;text-decoration:underline;text-decoration-color:var(--tomato);text-underline-offset:3px;cursor:pointer}
+.tt{background:#fff;border:2px solid var(--navy);border-radius:18px;padding:22px;box-shadow:8px 8px 0 var(--navy)}
+.tt-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px}
+.tt-head b{font-size:1.05rem}
+.tt-head span{font-size:.8rem;color:var(--muted)}
+.tt-grid{display:grid;grid-template-columns:46px repeat(6,1fr);gap:4px;font-size:.72rem}
+.tt-grid .d{text-align:center;font-weight:700;color:var(--muted);padding-bottom:4px}
+.tt-grid .t{color:var(--muted);padding-top:6px}
+.tt-grid .cell{min-height:44px;border-radius:8px;background:#F6F3EA}
+.tt-grid .k{padding:6px 7px;font-weight:700;line-height:1.2;color:var(--navy)}
+.k.web{background:var(--sky)}.k.eng{background:var(--mint)}.k.math{background:var(--butter)}.k.des{background:var(--blush)}
+.tt-key{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px;font-size:.76rem;color:var(--muted)}
+.tt-key i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+
+/* subjects strip */
+.subjects{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:56px}
+.subj{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-radius:var(--r);border:0;cursor:pointer;text-align:left;font-weight:700;color:var(--navy);transition:transform .15s}
+.subj:hover{transform:translateY(-2px)}
+.subj span{font-weight:500;font-size:.85rem;color:var(--muted)}
+
+/* catalogue */
+.cat-tools{display:flex;gap:16px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:18px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;background:#F3EFE2;padding:5px;border-radius:12px}
+.tabs button{border:0;background:none;padding:8px 14px;border-radius:9px;font-weight:700;color:var(--muted);cursor:pointer}
+.tabs button.active{background:#fff;color:var(--navy);box-shadow:0 1px 3px rgba(27,42,74,.15)}
+.found{font-size:.9rem;color:var(--muted)}
+.courses{border:2px solid var(--navy);border-radius:18px;overflow:hidden;background:#fff}
+.chead,.course{display:grid;grid-template-columns:2.6fr 1fr 1fr 1.3fr .8fr 120px;gap:16px;align-items:center;padding:16px 22px}
+.chead{background:var(--navy);color:#fff;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.course{border-top:1px solid var(--rule);transition:background .15s}
+.course:hover{background:#FFFBEF}
+.course h3{font-size:1.08rem;display:flex;align-items:center;gap:10px}
+.course h3 i{width:12px;height:12px;border-radius:4px;flex:0 0 12px}
+.course p{font-size:.86rem;margin-top:2px}
+.course .v{font-size:.92rem;font-weight:600}
+.course .fee{font-weight:800;font-size:1.05rem}
+.course a{justify-self:end;font-weight:700;color:var(--tomato);border:2px solid var(--tomato);border-radius:10px;padding:7px 12px;font-size:.88rem;white-space:nowrap}
+.course a:hover{background:var(--tomato);color:#fff}
+.lbl-m{display:none;font-size:.72rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.nores{padding:36px 22px;text-align:center;border-top:1px solid var(--rule)}
+
+/* levels — a staircase */
+.levels{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:end}
+.lvl{border-radius:18px;padding:28px;color:var(--navy)}
+.lvl:nth-child(1){background:var(--mint);min-height:280px}
+.lvl:nth-child(2){background:var(--butter);min-height:330px}
+.lvl:nth-child(3){background:var(--navy);color:#fff;min-height:380px}
+.lvl:nth-child(3) p,.lvl:nth-child(3) li{color:#C8D1E6}
+.lvl small{font-weight:800;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;opacity:.7}
+.lvl h3{font-size:1.5rem;margin:8px 0 10px}
+.lvl ul{margin-top:14px}
+.lvl li{font-size:.9rem;padding:3px 0}
+.lvl li::before{content:"→ ";font-weight:700}
+
+/* people */
+.people{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.tch .av{width:96px;height:96px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:1.6rem;color:var(--navy);margin-bottom:16px;border:2px solid var(--navy)}
+.tch h3{font-size:1.15rem}
+.tch span{display:inline-block;font-size:.8rem;font-weight:700;color:var(--teal);margin:4px 0 8px}
+.tch p{font-size:.9rem}
+
+/* schedule */
+.sched{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden}
+.sched th,.sched td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--rule);font-size:.94rem}
+.sched th{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:#F6F3EA}
+.sched tr:last-child td{border-bottom:0}
+.seat{font-size:.8rem;font-weight:700;padding:3px 9px;border-radius:999px}
+.seat.ok{background:var(--mint);color:#13594F}.seat.low{background:var(--blush);color:#A33A22}
+.tw{overflow-x:auto;border:2px solid var(--navy);border-radius:16px}
+
+/* admissions */
+.adm{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.faq-i{border-bottom:2px solid var(--rule)}
+.faq-i button{width:100%;display:flex;justify-content:space-between;gap:16px;background:none;border:0;padding:18px 0;font-weight:700;font-size:1.04rem;text-align:left;cursor:pointer;color:var(--navy)}
+.faq-i button::after{content:"+";font-size:1.4rem;line-height:1;color:var(--tomato);transition:transform .2s}
+.faq-i button[aria-expanded="true"]::after{transform:rotate(45deg)}
+.faq-i div{padding:0 0 18px}
+.form{background:#fff;border:2px solid var(--navy);border-radius:18px;padding:32px;box-shadow:8px 8px 0 var(--butter)}
+.form h3{font-size:1.4rem;margin-bottom:4px}
+.r2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{margin-top:14px}
+.field label{display:block;font-weight:700;font-size:.88rem;margin-bottom:6px}
+.input{width:100%;height:48px;border:2px solid #D9D4C4;border-radius:10px;padding:0 14px;background:#FFFEFA}
+.input:focus{outline:none;border-color:var(--navy)}
+.form .btn{width:100%;margin-top:20px}
+.form .note{font-size:.8rem;margin-top:10px;text-align:center}
+.form-status{color:var(--teal)}
+
+footer.site{background:var(--navy);color:#C8D1E6;padding:64px 0 24px;font-size:.92rem}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer .logo{color:#fff}
+footer h4{color:#fff;font-size:.95rem;margin-bottom:12px}
+footer li{margin-bottom:6px}
+footer a:hover{color:var(--butter)}
+.fb{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:44px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);font-size:.82rem}
+
+@media(max-width:1000px){
+  .hero .c,.adm{grid-template-columns:1fr}
+  .tt{max-width:620px}
+  .subjects{grid-template-columns:1fr 1fr}
+  .people{grid-template-columns:1fr 1fr}
+  .chead{display:none}
+  .course{grid-template-columns:1fr 1fr 1fr;gap:10px 16px;padding:18px}
+  .course>div:first-child{grid-column:1/-1}
+  .course a{grid-column:1/-1;justify-self:start}
+  .lbl-m{display:block}
+  .fg{grid-template-columns:1fr 1fr}
+}
+@media(max-width:860px){
+  .nav-toggle{display:block}
+  .nav-panel{position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;align-items:stretch;gap:0;padding:6px 20px 20px;border-bottom:1px solid var(--rule);display:none}
+  .nav-panel.open{display:flex}
+  .nav-panel a:not(.btn){padding:13px 0;border-bottom:1px solid var(--rule);font-size:1.08rem}
+  .nav-panel .btn{margin-top:14px}
+  .levels{grid-template-columns:1fr}
+  .lvl{min-height:0!important}
+}
+@media(max-width:560px){
+  .sec{padding:72px 0}
+  .tt{padding:14px;box-shadow:5px 5px 0 var(--navy)}
+  .tt-grid{grid-template-columns:34px repeat(6,1fr);gap:3px;font-size:.62rem}
+  .tt-grid .k{padding:4px;font-size:.6rem}
+  .subjects,.people,.r2{grid-template-columns:1fr}
+  .course{grid-template-columns:1fr 1fr}
+  .search{flex-direction:column}
+  .form{padding:22px}
+  .fg{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body data-template="education" data-name="EduSphere Academy">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site">
+ <div class="c">
+  <a class="logo" href="#top" id="top"><svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#1B2A4A"/><path d="M17 1a16 16 0 0116 16H17z" fill="#E85D3F"/><path d="M1 17h16v16A16 16 0 011 17z" fill="#FFE7A3"/></svg>EduSphere</a>
+  <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-links">Menu</button>
+  <nav class="nav-panel" id="nav-links" aria-label="Main">
+   <a href="#courses">Courses</a><a href="#levels">Levels</a><a href="#teachers">Teachers</a><a href="#schedule">Schedule</a><a href="#admissions">Admissions</a>
+   <a class="btn" href="#admissions">Book a free session</a>
+  </nav>
+ </div>
+</header>
+
+<main id="main">
+<section class="hero">
+ <div class="c">
+  <div>
+   <span class="label">January batches — enquiries open</span>
+   <h1>Learn with a <u>timetable</u> that fits your week.</h1>
+   <p class="lead">Small evening and weekend classes in technology, languages and school subjects. Every course has a named teacher and a fixed schedule, so you always know what's next.</p>
+   <form class="search" id="hero-search" role="search">
+    <label class="sr-only" for="cq">Search courses</label>
+    <input id="cq" type="search" placeholder="Try “English” or “web”" autocomplete="off">
+    <button class="btn" type="submit">Find a course</button>
+   </form>
+   <p class="quick">Popular: <button type="button" data-q="web">Web development</button> · <button type="button" data-q="english">Spoken English</button> · <button type="button" data-q="math">Mathematics</button></p>
+  </div>
+  <div class="tt" role="img" aria-label="Sample weekly class timetable">
+   <div class="tt-head"><b>This week at EduSphere</b><span>Sample timetable</span></div>
+   <div class="tt-grid" aria-hidden="true">
+    <span></span><span class="d">Sat</span><span class="d">Sun</span><span class="d">Mon</span><span class="d">Tue</span><span class="d">Wed</span><span class="d">Thu</span>
+    <span class="t">10:00</span><span class="cell k math">Maths 9–10</span><span class="cell"></span><span class="cell"></span><span class="cell"></span><span class="cell"></span><span class="cell"></span>
+    <span class="t">16:00</span><span class="cell k math">Maths</span><span class="cell k des">Design</span><span class="cell k math">Maths</span><span class="cell"></span><span class="cell k des">Design</span><span class="cell"></span>
+    <span class="t">18:00</span><span class="cell"></span><span class="cell"></span><span class="cell k eng">English</span><span class="cell"></span><span class="cell k eng">English</span><span class="cell"></span>
+    <span class="t">19:00</span><span class="cell"></span><span class="cell k web">Web dev</span><span class="cell"></span><span class="cell k web">Web dev</span><span class="cell"></span><span class="cell k web">Web dev</span>
+   </div>
+   <div class="tt-key"><span><i style="background:#DCEBFF"></i>Technology</span><span><i style="background:#D6F0EA"></i>Languages</span><span><i style="background:#FFE7A3"></i>Academic</span><span><i style="background:#FCE1DA"></i>Design</span></div>
+  </div>
+ </div>
+ <div class="c">
+  <div class="subjects">
+   <button class="subj" style="background:var(--sky)" data-go="tech">Technology <span>3 courses</span></button>
+   <button class="subj" style="background:var(--mint)" data-go="lang">Languages <span>1 course</span></button>
+   <button class="subj" style="background:var(--butter)" data-go="acad">Academic <span>2 courses</span></button>
+   <button class="subj" style="background:var(--blush)" data-go="biz">Business <span>1 course</span></button>
+  </div>
+ </div>
+</section>
+
+<section class="sec" id="courses">
+ <div class="c">
+  <div class="sec-head"><div><span class="label">Course catalogue</span><h2>Every course, its level, length and fee in one place.</h2></div></div>
+  <div class="cat-tools">
+   <div class="tabs" id="tabs" role="group" aria-label="Filter by subject">
+    <button class="active" data-f="all" aria-pressed="true">All</button><button data-f="tech" aria-pressed="false">Technology</button><button data-f="lang" aria-pressed="false">Languages</button><button data-f="acad" aria-pressed="false">Academic</button><button data-f="biz" aria-pressed="false">Business</button>
+   </div>
+   <span class="found" id="found" aria-live="polite"></span>
+  </div>
+  <div class="courses" id="course-list">
+   <div class="chead" aria-hidden="true"><span>Course</span><span>Level</span><span>Length</span><span>Days</span><span>Fee</span><span></span></div>
+   <div class="course" data-cat="tech" data-k="web development html css javascript"><div><h3><i style="background:#7FB2F5"></i>Web Development Foundations</h3><p>HTML, CSS and JavaScript — finish with your own live website.</p></div><div><span class="lbl-m">Level</span><span class="v">Beginner</span></div><div><span class="lbl-m">Length</span><span class="v">12 weeks</span></div><div><span class="lbl-m">Days</span><span class="v">Sun · Tue · Thu</span></div><div><span class="lbl-m">Fee</span><span class="fee">$120</span></div><a href="#admissions" data-course="Web Development Foundations">Enrol</a></div>
+   <div class="course" data-cat="tech" data-k="graphic ui design figma"><div><h3><i style="background:#F4A99A"></i>Graphic &amp; UI Design</h3><p>Layout, colour, type and Figma, using real briefs.</p></div><div><span class="lbl-m">Level</span><span class="v">Beginner</span></div><div><span class="lbl-m">Length</span><span class="v">10 weeks</span></div><div><span class="lbl-m">Days</span><span class="v">Sun · Wed</span></div><div><span class="lbl-m">Fee</span><span class="fee">$110</span></div><a href="#admissions" data-course="Graphic &amp; UI Design">Enrol</a></div>
+   <div class="course" data-cat="tech" data-k="python programming data"><div><h3><i style="background:#7FB2F5"></i>Python for Beginners</h3><p>Programming basics, small automation scripts and data.</p></div><div><span class="lbl-m">Level</span><span class="v">Beginner</span></div><div><span class="lbl-m">Length</span><span class="v">8 weeks</span></div><div><span class="lbl-m">Days</span><span class="v">Sat</span></div><div><span class="lbl-m">Fee</span><span class="fee">$90</span></div><a href="#admissions" data-course="Python for Beginners">Enrol</a></div>
+   <div class="course" data-cat="lang" data-k="spoken english speaking ielts language"><div><h3><i style="background:#7CCFBE"></i>Spoken English</h3><p>Conversation practice, pronunciation and interview preparation.</p></div><div><span class="lbl-m">Level</span><span class="v">All levels</span></div><div><span class="lbl-m">Length</span><span class="v">8 weeks</span></div><div><span class="lbl-m">Days</span><span class="v">Mon · Wed</span></div><div><span class="lbl-m">Fee</span><span class="fee">$60</span></div><a href="#admissions" data-course="Spoken English">Enrol</a></div>
+   <div class="course" data-cat="acad" data-k="mathematics math algebra class 9 10"><div><h3><i style="background:#F2C94C"></i>Mathematics, Class 9–10</h3><p>Algebra, geometry and exam technique with weekly tests.</p></div><div><span class="lbl-m">Level</span><span class="v">Secondary</span></div><div><span class="lbl-m">Length</span><span class="v">16 weeks</span></div><div><span class="lbl-m">Days</span><span class="v">Sat · Mon</span></div><div><span class="lbl-m">Fee</span><span class="fee">$80</span></div><a href="#admissions" data-course="Mathematics, Class 9–10">Enrol</a></div>
+   <div class="course" data-cat="acad" data-k="physics science class 11 12"><div><h3><i style="background:#F2C94C"></i>Physics, Class 11–12</h3><p>Concepts, practicals and problem-solving for board exams.</p></div><div><span class="lbl-m">Level</span><span class="v">Higher sec.</span></div><div><span class="lbl-m">Length</span><span class="v">14 weeks</span></div><div><span class="lbl-m">Days</span><span class="v">Fri · Sat</span></div><div><span class="lbl-m">Fee</span><span class="fee">$85</span></div><a href="#admissions" data-course="Physics, Class 11–12">Enrol</a></div>
+   <div class="course" data-cat="biz" data-k="digital marketing social media business"><div><h3><i style="background:#B9A6F0"></i>Digital Marketing Basics</h3><p>Social media, search and simple analytics for small businesses.</p></div><div><span class="lbl-m">Level</span><span class="v">Intermediate</span></div><div><span class="lbl-m">Length</span><span class="v">6 weeks</span></div><div><span class="lbl-m">Days</span><span class="v">Fri</span></div><div><span class="lbl-m">Fee</span><span class="fee">$70</span></div><a href="#admissions" data-course="Digital Marketing Basics">Enrol</a></div>
+   <div class="nores" id="nores" hidden>No course matches that search. <button class="btn alt" type="button" id="clear" style="height:40px;margin-left:8px">Show all courses</button></div>
+  </div>
+  <p style="font-size:.85rem;margin-top:12px">Sample courses and fees for this template.</p>
+ </div>
+</section>
+
+<section class="sec" id="levels" style="padding-top:0">
+ <div class="c">
+  <div class="sec-head"><div><span class="label">Programme levels</span><h2>Start where you are. Move up when you're ready.</h2></div></div>
+  <div class="levels">
+   <div class="lvl reveal"><small>Level 1</small><h3>Foundation</h3><p>No experience needed. We start from the basics and build confidence first.</p><ul><li>Small groups of 12</li><li>Weekly practice tasks</li></ul></div>
+   <div class="lvl reveal"><small>Level 2</small><h3>Intermediate</h3><p>For students who know the basics and want real projects and faster progress.</p><ul><li>Project-based lessons</li><li>One-to-one feedback</li></ul></div>
+   <div class="lvl reveal"><small>Level 3</small><h3>Advanced</h3><p>Exam preparation, portfolios and specialist topics with senior teachers.</p><ul><li>Mock exams and reviews</li><li>Portfolio or certificate</li></ul></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec" id="teachers" style="background:#FFF7E0">
+ <div class="c">
+  <div class="sec-head"><div><span class="label">Teachers</span><h2>You'll know who is teaching before you join.</h2></div><p style="max-width:36ch;font-size:.9rem">Sample teacher profiles for this template.</p></div>
+  <div class="people">
+   <div class="tch"><div class="av" style="background:var(--sky)">NR</div><h3>Nadia Rahman</h3><span>Web development</span><p>Front-end developer who has taught beginners for several years.</p></div>
+   <div class="tch"><div class="av" style="background:var(--butter)">AK</div><h3>Arjun Kapoor</h3><span>Mathematics</span><p>Known for patient explanations and well-structured revision plans.</p></div>
+   <div class="tch"><div class="av" style="background:var(--mint)">SM</div><h3>Sara Malik</h3><span>Spoken English</span><p>Communication coach focused on everyday confidence and interviews.</p></div>
+   <div class="tch"><div class="av" style="background:var(--blush)">TH</div><h3>Tanvir Hasan</h3><span>Design &amp; marketing</span><p>Working designer who helps students build their first portfolio.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec" id="schedule">
+ <div class="c">
+  <div class="sec-head"><div><span class="label">Next start dates</span><h2>Upcoming batches</h2></div></div>
+  <div class="tw">
+   <table class="sched">
+    <caption class="sr-only">Upcoming course batches (sample)</caption>
+    <thead><tr><th scope="col">Course</th><th scope="col">Starts</th><th scope="col">Time</th><th scope="col">Mode</th><th scope="col">Seats</th></tr></thead>
+    <tbody>
+     <tr><td><b>Web Development Foundations</b></td><td>5 January</td><td>19:00–21:00</td><td>In centre &amp; online</td><td><span class="seat ok">Open</span></td></tr>
+     <tr><td><b>Spoken English</b></td><td>6 January</td><td>18:00–19:30</td><td>Online</td><td><span class="seat low">Few left</span></td></tr>
+     <tr><td><b>Mathematics, Class 9–10</b></td><td>10 January</td><td>16:00–18:00</td><td>In centre</td><td><span class="seat ok">Open</span></td></tr>
+     <tr><td><b>Digital Marketing Basics</b></td><td>16 January</td><td>10:00–13:00</td><td>Online</td><td><span class="seat ok">Open</span></td></tr>
+    </tbody>
+   </table>
+  </div>
+ </div>
+</section>
+
+<section class="sec" id="admissions" style="padding-top:0">
+ <div class="c adm">
+  <div>
+   <span class="label">Admissions</span>
+   <h2 style="font-size:clamp(1.9rem,1.4rem + 1.6vw,2.7rem);margin:10px 0 24px">Questions families usually ask</h2>
+   <div class="faq-i"><button data-acc aria-expanded="true" aria-controls="q1">Can I try a class before paying?</button><div id="q1"><p>Yes. Book a free counselling session and we'll arrange a trial class in the course you're interested in.</p></div></div>
+   <div class="faq-i"><button data-acc aria-expanded="false" aria-controls="q2">How big are the classes?</button><div id="q2" hidden><p>Foundation groups have up to 12 students; advanced groups are smaller.</p></div></div>
+   <div class="faq-i"><button data-acc aria-expanded="false" aria-controls="q3">Can fees be paid monthly?</button><div id="q3" hidden><p>Most courses can be paid in monthly instalments. We'll explain the options during counselling.</p></div></div>
+   <div class="faq-i"><button data-acc aria-expanded="false" aria-controls="q4">What if I miss a class?</button><div id="q4" hidden><p>Online classes are recorded, and teachers hold a short catch-up session each week.</p></div></div>
+  </div>
+  <form class="form" data-demo-form data-success="Thank you — our admissions team will call you to arrange a session.">
+   <h3>Book a free counselling session</h3>
+   <p style="font-size:.92rem">We'll call to understand your goals and suggest a course.</p>
+   <div class="r2">
+    <div class="field"><label for="e-name">Student name</label><input class="input" id="e-name" autocomplete="name" required><small class="field-error"></small></div>
+    <div class="field"><label for="e-phone">Phone</label><input class="input" id="e-phone" type="tel" autocomplete="tel" required><small class="field-error"></small></div>
+   </div>
+   <div class="field"><label for="e-email">Email</label><input class="input" id="e-email" type="email" autocomplete="email" required><small class="field-error"></small></div>
+   <div class="field"><label for="e-course">Course</label><select class="input" id="e-course" required><option value="">Choose a course</option><option>Web Development Foundations</option><option>Graphic &amp; UI Design</option><option>Python for Beginners</option><option>Spoken English</option><option>Mathematics, Class 9–10</option><option>Physics, Class 11–12</option><option>Digital Marketing Basics</option><option>Not sure yet</option></select><small class="field-error"></small></div>
+   <button class="btn" type="submit">Request a call</button>
+   <p class="form-status" role="status" hidden></p>
+   <p class="note">Template demo — this form checks your input but sends nothing.</p>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer class="site">
+ <div class="c">
+  <div class="fg">
+   <div><a class="logo" href="#top"><svg viewBox="0 0 34 34" aria-hidden="true" style="width:30px;height:30px"><circle cx="17" cy="17" r="16" fill="#fff"/><path d="M17 1a16 16 0 0116 16H17z" fill="#E85D3F"/><path d="M1 17h16v16A16 16 0 011 17z" fill="#FFE7A3"/></svg>EduSphere</a><p style="margin-top:12px;color:#C8D1E6;max-width:30ch">Evening and weekend classes with real teachers and fixed timetables. A sample academy.</p></div>
+   <div><h4>Learn</h4><ul><li><a href="#courses">Courses</a></li><li><a href="#levels">Levels</a></li><li><a href="#schedule">Start dates</a></li></ul></div>
+   <div><h4>Academy</h4><ul><li><a href="#teachers">Teachers</a></li><li><a href="#admissions">Admissions</a></li></ul></div>
+   <div><h4>Visit</h4><ul><li>House 12, Road 5, Your City</li><li>admissions@edusphere.example</li></ul></div>
+  </div>
+  <div class="fb"><span>© <span data-year>2026</span> EduSphere Academy — sample brand.</span><span>Website template by KHOKA TECH</span></div>
+ </div>
+</footer>
+<script src="../../assets/js/demo.js"></script>
+<script>
+/* Catalogue: subject tabs + text search work together; Enrol pre-selects the course. */
+(function(){
+ const rows=[...document.querySelectorAll(".course")],tabs=document.getElementById("tabs"),q=document.getElementById("cq");
+ let subj="all",term="";
+ function apply(scroll){
+  let n=0;rows.forEach(r=>{const ok=(subj==="all"||r.dataset.cat===subj)&&(!term||(r.dataset.k+" "+r.textContent).toLowerCase().includes(term));r.hidden=!ok;if(ok)n++});
+  document.getElementById("nores").hidden=n>0;
+  document.getElementById("found").textContent=n+(n===1?" course":" courses")+(term?` matching “${term}”`:"");
+  tabs.querySelectorAll("button").forEach(b=>{const on=b.dataset.f===subj;b.classList.toggle("active",on);b.setAttribute("aria-pressed",on)});
+  if(scroll)document.getElementById("courses").scrollIntoView({behavior:"smooth"});
+ }
+ tabs.addEventListener("click",e=>{const b=e.target.closest("[data-f]");if(b){subj=b.dataset.f;apply()}});
+ document.querySelectorAll("[data-go]").forEach(b=>b.addEventListener("click",()=>{subj=b.dataset.go;term="";q.value="";apply(true)}));
+ document.getElementById("hero-search").addEventListener("submit",e=>{e.preventDefault();term=q.value.toLowerCase().trim();subj="all";apply(true)});
+ document.querySelectorAll("[data-q]").forEach(b=>b.addEventListener("click",()=>{q.value=b.textContent;term=b.dataset.q;subj="all";apply(true)}));
+ document.getElementById("clear").addEventListener("click",()=>{term="";q.value="";subj="all";apply()});
+ document.addEventListener("click",e=>{const a=e.target.closest("[data-course]");if(a)document.getElementById("e-course").value=a.dataset.course});
+ apply();
+})();
+</script>
+</body>
+</html>

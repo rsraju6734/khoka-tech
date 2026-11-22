@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saffron Table — Restaurant Website Template Demo | KHOKA TEMPLATES</title>
+<meta name="description" content="Live demo of Saffron Table by KHOKA TEMPLATES: an atmospheric restaurant website with a printed-style menu, seasonal dishes, private dining and reservations.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#140D09">
+<link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/demo.css">
+<style>
+:root{--night:#140D09;--wood:#1E140E;--cream:#F3E9DA;--paper:#F6EEDF;--saffron:#D9A441;--chili:#7A2E1B;--muted:#B4A28C;--ink:#2A1C14;--line:rgba(243,233,218,.14);--serif:"Cormorant Garamond",Georgia,serif;--sans:"Jost",system-ui,sans-serif;--scroll-pad:80px}
+body{background:var(--night);color:var(--cream);font:400 1rem/1.7 var(--sans)}
+.c{width:min(1180px,100% - 48px);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05}
+p{color:var(--muted)}
+:focus-visible{outline:1px solid var(--saffron);outline-offset:4px}
+.sc{font:500 .72rem/1 var(--sans);letter-spacing:.32em;text-transform:uppercase;color:var(--saffron)}
+.cta{display:inline-flex;align-items:center;gap:12px;height:52px;padding:0 26px;border:1px solid var(--saffron);color:var(--night);background:var(--saffron);font:500 .78rem var(--sans);letter-spacing:.2em;text-transform:uppercase;transition:background .25s,color .25s;cursor:pointer}
+.cta:hover{background:transparent;color:var(--saffron)}
+.cta.ghost{background:transparent;color:var(--cream);border-color:rgba(243,233,218,.4)}
+.cta.ghost:hover{border-color:var(--cream)}
+
+/* header */
+header.site{position:sticky;top:0;z-index:50;background:rgba(20,13,9,.92);border-bottom:1px solid var(--line)}
+header.site .c{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:76px}
+.navL,.navR{display:flex;gap:30px;font-size:.75rem;letter-spacing:.24em;text-transform:uppercase}
+.navR{justify-content:flex-end;align-items:center}
+.navL a:hover,.navR a:hover{color:var(--saffron)}
+.logo{text-align:center;font:600 1.7rem/1 var(--serif);letter-spacing:.02em}
+.logo i{color:var(--saffron);font-style:italic}
+.navR .book{border:1px solid var(--saffron);color:var(--saffron);padding:10px 14px}
+.navR .book:hover{background:var(--saffron);color:var(--night)}
+.nav-toggle{background:none;border:1px solid var(--line);color:var(--cream);height:38px;padding:0 12px;font:500 .7rem var(--sans);letter-spacing:.2em}
+.nav-panel{display:none}
+
+/* hero */
+.hero{position:relative;min-height:calc(100svh - 76px);display:flex;align-items:flex-end;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero-art{position:absolute;inset:0}
+.hero-art svg{width:100%;height:100%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,13,9,.92) 0%,rgba(20,13,9,.55) 45%,rgba(20,13,9,0) 75%),linear-gradient(0deg,rgba(20,13,9,.85),transparent 40%)}
+.hero .c{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:flex-end;gap:40px;padding:0 0 64px}
+.hero h1{font-size:clamp(3rem,1.6rem + 5vw,6.2rem);max-width:11ch;margin:20px 0 26px;letter-spacing:-.01em}
+.hero h1 em{color:var(--saffron)}
+.hero p{max-width:40ch;font-size:1.05rem;color:#D8C9B4}
+.hero .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.tonight{text-align:right;font-size:.88rem;border-left:1px solid var(--line);padding-left:24px}
+.tonight b{display:block;font:500 1.6rem var(--serif);color:var(--cream)}
+
+/* intro */
+.intro{padding:120px 0;text-align:center}
+.intro blockquote{font:500 italic clamp(1.7rem,1.2rem + 1.8vw,2.8rem)/1.3 var(--serif);max-width:28ch;margin:24px auto 22px;color:var(--cream)}
+.intro .sig{font:.82rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+
+/* menu card */
+.menu-wrap{padding:0 0 120px}
+.card{background:var(--paper);color:var(--ink);padding:clamp(28px,5vw,64px);position:relative;box-shadow:0 40px 80px -30px rgba(0,0,0,.7)}
+.card::before{content:"";position:absolute;inset:14px;border:1px solid rgba(42,28,20,.25);pointer-events:none}
+.card::after{content:"";position:absolute;inset:19px;border:1px solid rgba(42,28,20,.12);pointer-events:none}
+.card-head{text-align:center;position:relative}
+.card-head h2{font-size:clamp(2.6rem,1.8rem + 3vw,4.4rem);color:var(--ink)}
+.card-head p{color:#7A6553;font-style:italic;font-family:var(--serif);font-size:1.15rem}
+.tabs{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin:28px 0 40px;position:relative}
+.tabs button{background:none;border:0;border-bottom:1px solid transparent;padding:8px 14px;font:500 .74rem var(--sans);letter-spacing:.24em;text-transform:uppercase;color:#8A735E;cursor:pointer}
+.tabs button.active{color:var(--chili);border-color:var(--chili)}
+.dishes{display:grid;grid-template-columns:1fr 1fr;gap:4px 72px;position:relative;max-width:940px;margin:auto}
+.dish{padding:14px 0}
+.dish-top{display:flex;align-items:baseline;gap:10px}
+.dish h3{font-size:1.45rem;font-weight:600;color:var(--ink)}
+.dish .dots{flex:1;border-bottom:1px dotted #B9A58D;transform:translateY(-5px)}
+.dish .pr{font:600 1.3rem var(--serif);color:var(--chili)}
+.dish p{color:#6E5B4B;font-size:.92rem;margin-top:2px}
+.dish .tag{font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:var(--chili);margin-left:6px}
+.card-foot{text-align:center;margin-top:36px;font-size:.82rem;color:#8A735E;position:relative}
+
+/* seasonal spread */
+.season{padding:0 0 120px}
+.season-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.season-head h2{font-size:clamp(2.4rem,1.6rem + 3vw,4rem);max-width:12ch;margin-top:14px}
+.spread{display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:auto auto;gap:24px}
+.plate{position:relative;overflow:hidden}
+.plate:first-child{grid-row:1 / span 2}
+.plate .art{aspect-ratio:1;display:grid;place-items:center}
+.plate:first-child .art{aspect-ratio:auto;height:100%;min-height:520px}
+.plate:not(:first-child) .art{aspect-ratio:16/9}
+.plate .art svg{width:62%;max-width:420px}
+.plate:not(:first-child) .art svg{width:34%}
+.plate .cap{position:absolute;left:0;right:0;bottom:0;padding:24px;display:flex;justify-content:space-between;align-items:end;gap:16px;background:linear-gradient(0deg,rgba(20,13,9,.9),transparent)}
+.plate h3{font-size:1.7rem}
+.plate p{font-size:.88rem;max-width:34ch}
+.plate .pr{font:500 1.5rem var(--serif);color:var(--saffron);white-space:nowrap}
+
+/* private dining */
+.private{background:var(--wood);border-block:1px solid var(--line);padding:110px 0}
+.private .c{display:grid;grid-template-columns:5fr 6fr;gap:72px;align-items:center}
+.private h2{font-size:clamp(2.4rem,1.6rem + 3vw,4rem);margin:16px 0 20px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);margin-top:32px;border-top:1px solid var(--line)}
+.facts div{padding:18px 0}
+.facts b{display:block;font:500 2rem var(--serif);color:var(--cream)}
+.facts span{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.room svg{width:100%;height:auto}
+
+/* visit + reserve */
+.visit{padding:120px 0}
+.visit .c{display:grid;grid-template-columns:5fr 6fr;gap:72px;align-items:start}
+.visit h2{font-size:clamp(2.4rem,1.6rem + 3vw,4rem);margin:16px 0 28px}
+.hours div{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line)}
+.hours dd{color:var(--saffron)}
+.addr{margin-top:28px}
+.addr b{display:block;font:500 1.4rem var(--serif);color:var(--cream)}
+.res{border:1px solid rgba(217,164,65,.45);padding:44px}
+.res h3{font-size:2.2rem;margin-bottom:6px}
+.r2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{margin-top:18px}
+.field label{display:block;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.input{width:100%;height:46px;background:transparent;border:0;border-bottom:1px solid rgba(243,233,218,.3);color:var(--cream);padding:0 2px;border-radius:0;color-scheme:dark}
+textarea.input{height:auto;padding:10px 2px}
+.input:focus{outline:none;border-color:var(--saffron)}
+select.input option{background:var(--night)}
+.res .cta{width:100%;justify-content:center;margin-top:28px}
+.res .note{font-size:.78rem;margin-top:12px;text-align:center}
+.form-status{color:var(--saffron)}
+.field-error{color:#E8907B}
+
+footer.site{border-top:1px solid var(--line);padding:56px 0 28px;font-size:.88rem}
+.fg{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px}
+.fg .logo{font-size:2rem}
+.fg nav{display:flex;gap:22px;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase}
+.fg nav:last-child{justify-content:flex-end}
+.fb{text-align:center;margin-top:40px;color:var(--muted);font-size:.8rem}
+
+@media(max-width:1000px){
+  .navL{display:none}.navR a:not(.book){display:none}
+  header.site .c{grid-template-columns:auto 1fr auto;gap:12px}
+  .logo{text-align:left}
+  .nav-toggle{display:block}
+  .nav-panel{position:absolute;top:100%;left:0;right:0;background:var(--night);border-bottom:1px solid var(--line);flex-direction:column;padding:8px 24px 24px}
+  .nav-panel.open{display:flex}
+  .nav-panel a{padding:14px 0;border-bottom:1px solid var(--line);font:500 1.5rem var(--serif)}
+  .private .c,.visit .c{grid-template-columns:1fr;gap:48px}
+  .tonight{display:none}
+}
+@media(max-width:700px){
+  .navR .book{display:none}
+  .hero .c{padding-bottom:44px}
+  .dishes{grid-template-columns:1fr}
+  .spread{grid-template-columns:1fr}
+  .plate:first-child{grid-row:auto}
+  .plate:first-child .art{min-height:0;aspect-ratio:1}
+  .plate .cap{flex-direction:column;align-items:flex-start;gap:4px}
+  .r2{grid-template-columns:1fr}
+  .res{padding:28px 22px}
+  .fg{grid-template-columns:1fr;text-align:center}
+  .fg nav,.fg nav:last-child{justify-content:center}
+  .intro,.visit,.private{padding:80px 0}
+}
+</style>
+</head>
+<body data-template="restaurant" data-name="Saffron Table">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site">
+ <div class="c">
+  <nav class="navL" aria-label="Primary"><a href="#menu">Menu</a><a href="#season">Seasonal</a><a href="#private">Private dining</a></nav>
+  <a class="logo" href="#top" id="top">Saffron <i>Table</i></a>
+  <div class="navR"><a href="#visit">Visit</a><a class="book" href="#visit">Reserve</a><button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-links">MENU</button></div>
+  <nav class="nav-panel" id="nav-links" aria-label="Mobile"><a href="#menu">Menu</a><a href="#season">Seasonal</a><a href="#private">Private dining</a><a href="#visit">Visit &amp; reserve</a></nav>
+ </div>
+</header>
+
+<main id="main">
+<section class="hero">
+ <div class="hero-art" aria-hidden="true">
+  <svg viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice">
+   <defs>
+    <radialGradient id="lamp" cx=".68" cy=".42" r=".6"><stop offset="0" stop-color="#4A2A18"/><stop offset=".7" stop-color="#1E140E"/><stop offset="1" stop-color="#140D09"/></radialGradient>
+    <radialGradient id="curry" cx=".45" cy=".4"><stop offset="0" stop-color="#D9772E"/><stop offset="1" stop-color="#8E3A13"/></radialGradient>
+    <radialGradient id="dal" cx=".45" cy=".4"><stop offset="0" stop-color="#E9B949"/><stop offset="1" stop-color="#B07A1E"/></radialGradient>
+   </defs>
+   <rect width="1400" height="900" fill="url(#lamp)"/>
+   <g stroke="#2B1D14" stroke-width="2" opacity=".6"><path d="M0 180h1400M0 380h1400M0 580h1400M0 780h1400"/></g>
+   <!-- big copper bowl -->
+   <circle cx="940" cy="380" r="210" fill="#2A1A10"/><circle cx="940" cy="380" r="196" fill="#B5652E"/><circle cx="940" cy="380" r="176" fill="url(#curry)"/>
+   <g fill="#F3E9DA" opacity=".9"><circle cx="890" cy="330" r="14"/><circle cx="990" cy="420" r="11"/><circle cx="930" cy="450" r="9"/></g>
+   <g fill="#4F6B1F"><path d="M1000 320q14-18 28-4q-14 14-28 4z"/><path d="M860 420q14-18 28-4q-14 14-28 4z"/><path d="M960 300q12-16 24-4q-12 12-24 4z"/></g>
+   <path d="M820 380q120 40 240-10" stroke="#F3E9DA" stroke-width="6" fill="none" opacity=".55" stroke-linecap="round"/>
+   <!-- dal bowl -->
+   <circle cx="1230" cy="640" r="120" fill="#2A1A10"/><circle cx="1230" cy="640" r="108" fill="#E8DCC8"/><circle cx="1230" cy="640" r="88" fill="url(#dal)"/>
+   <circle cx="1210" cy="620" r="8" fill="#7A2E1B"/><circle cx="1250" cy="660" r="6" fill="#7A2E1B"/>
+   <!-- flatbread -->
+   <ellipse cx="660" cy="690" rx="170" ry="120" fill="#D9B07A" transform="rotate(-12 660 690)"/>
+   <g fill="#8E5A2B" opacity=".7"><circle cx="610" cy="660" r="9"/><circle cx="690" cy="710" r="12"/><circle cx="650" cy="740" r="7"/><circle cx="720" cy="650" r="8"/></g>
+   <!-- spice tray -->
+   <rect x="1110" y="120" width="230" height="150" rx="10" fill="#2A1A10"/>
+   <circle cx="1165" cy="170" r="30" fill="#C2571A"/><circle cx="1240" cy="170" r="30" fill="#E8B04B"/><circle cx="1300" cy="230" r="0"/><circle cx="1165" cy="235" r="26" fill="#6B8E23"/><circle cx="1240" cy="235" r="26" fill="#7A2E1B"/><circle cx="1305" cy="200" r="22" fill="#F3E9DA"/>
+   <!-- small chutney + chillies -->
+   <circle cx="1150" cy="840" r="58" fill="#2A1A10"/><circle cx="1150" cy="840" r="48" fill="#3F6212"/>
+   <path d="M480 470q60-30 110 10" stroke="#B3261E" stroke-width="14" fill="none" stroke-linecap="round"/><path d="M590 480l14-14" stroke="#3F6212" stroke-width="5"/>
+   <path d="M470 530q60-24 100 18" stroke="#B3261E" stroke-width="12" fill="none" stroke-linecap="round"/>
+  </svg>
+ </div>
+ <div class="c">
+  <div>
+   <p class="sc">Dhanmondi · Est. 2014</p>
+   <h1>Slow food, cooked over <em>fire</em> and shared.</h1>
+   <p>A family kitchen serving the dishes we grew up with — spices ground each morning, breads from the clay oven, and plates meant for the middle of the table.</p>
+   <div class="acts"><a class="cta" href="#visit">Reserve a table</a><a class="cta ghost" href="#menu">See the menu</a></div>
+  </div>
+  <div class="tonight"><span class="sc">Tonight</span><b>18:00 – 23:00</b>Kitchen closes 22:15</div>
+ </div>
+</section>
+
+<section class="intro">
+ <div class="c">
+  <p class="sc">The kitchen</p>
+  <blockquote>“We cook the way our grandmother did, only with better ovens and more patience.”</blockquote>
+  <p class="sig">Rafi &amp; Nasreen, chefs and owners</p>
+ </div>
+</section>
+
+<section class="menu-wrap" id="menu">
+ <div class="c">
+  <div class="card">
+   <div class="card-head"><p class="sc" style="color:var(--chili)">Autumn</p><h2>The Menu</h2><p>Served from 18:00 · Dishes to share</p></div>
+   <div class="tabs" data-filters="#dishes" role="group" aria-label="Menu courses">
+    <button class="active" data-filter="small" aria-pressed="true">Small plates</button><button data-filter="large" aria-pressed="false">From the fire</button><button data-filter="sweet" aria-pressed="false">Sweet</button><button data-filter="drink" aria-pressed="false">To drink</button>
+   </div>
+   <div class="dishes" id="dishes">
+    <div class="dish" data-cat="small"><div class="dish-top"><h3>Fuchka</h3><span class="dots"></span><span class="pr">7</span></div><p>Crisp shells, spiced chickpeas, tamarind water <span class="tag">Veg</span></p></div>
+    <div class="dish" data-cat="small"><div class="dish-top"><h3>Beguni</h3><span class="dots"></span><span class="pr">6</span></div><p>Aubergine in gram-flour batter, kasundi mustard <span class="tag">Veg</span></p></div>
+    <div class="dish" data-cat="small"><div class="dish-top"><h3>Chicken Tikka</h3><span class="dots"></span><span class="pr">9</span></div><p>Yoghurt and fenugreek, charred in the tandoor</p></div>
+    <div class="dish" data-cat="small"><div class="dish-top"><h3>Prawn Pakora</h3><span class="dots"></span><span class="pr">10</span></div><p>Green chilli, curry leaf, lime</p></div>
+    <div class="dish" data-cat="large" hidden><div class="dish-top"><h3>Kacchi Biryani</h3><span class="dots"></span><span class="pr">18</span></div><p>Mutton and aromatic rice, sealed and slow-cooked <span class="tag">Signature</span></p></div>
+    <div class="dish" data-cat="large" hidden><div class="dish-top"><h3>Shorshe Ilish</h3><span class="dots"></span><span class="pr">22</span></div><p>Hilsa in a sharp mustard and green chilli sauce</p></div>
+    <div class="dish" data-cat="large" hidden><div class="dish-top"><h3>Lamb Rezala</h3><span class="dots"></span><span class="pr">19</span></div><p>Yoghurt, white pepper, cashew and kewra</p></div>
+    <div class="dish" data-cat="large" hidden><div class="dish-top"><h3>Paneer Makhani</h3><span class="dots"></span><span class="pr">14</span></div><p>Tomato, butter and cashew sauce, fenugreek <span class="tag">Veg</span></p></div>
+    <div class="dish" data-cat="sweet" hidden><div class="dish-top"><h3>Mishti Doi</h3><span class="dots"></span><span class="pr">5</span></div><p>Caramelised yoghurt set in a clay pot</p></div>
+    <div class="dish" data-cat="sweet" hidden><div class="dish-top"><h3>Saffron Kulfi</h3><span class="dots"></span><span class="pr">7</span></div><p>Slow-reduced milk, pistachio, rose</p></div>
+    <div class="dish" data-cat="sweet" hidden><div class="dish-top"><h3>Gulab Jamun</h3><span class="dots"></span><span class="pr">6</span></div><p>Warm, with cardamom syrup</p></div>
+    <div class="dish" data-cat="drink" hidden><div class="dish-top"><h3>Borhani</h3><span class="dots"></span><span class="pr">4</span></div><p>Spiced yoghurt drink with mint and black salt</p></div>
+    <div class="dish" data-cat="drink" hidden><div class="dish-top"><h3>Mango Lassi</h3><span class="dots"></span><span class="pr">5</span></div><p>Ripe mango, yoghurt, cardamom</p></div>
+    <div class="dish" data-cat="drink" hidden><div class="dish-top"><h3>Masala Chai</h3><span class="dots"></span><span class="pr">3</span></div><p>Assam tea with ginger and whole spices</p></div>
+   </div>
+   <p class="card-foot">Prices in USD · Please tell us about allergies when you order · Sample menu</p>
+  </div>
+ </div>
+</section>
+
+<section class="season" id="season">
+ <div class="c">
+  <div class="season-head"><div><p class="sc">This season</p><h2>Three dishes worth the trip</h2></div><p style="max-width:36ch">Available until the end of the season, while the market has them.</p></div>
+  <div class="spread">
+   <article class="plate reveal"><div class="art" style="background:#3A1E10"><svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="96" fill="#EADBC6"/><circle cx="100" cy="100" r="78" fill="#F3E9DA"/><circle cx="100" cy="100" r="58" fill="#E3B567"/><g fill="#7A2E1B"><circle cx="84" cy="86" r="9"/><circle cx="118" cy="110" r="10"/><circle cx="96" cy="124" r="7"/></g><g fill="#4F6B1F"><path d="M110 80q8-10 16-2q-8 8-16 2z"/><path d="M70 112q8-10 16-2q-8 8-16 2z"/></g></svg></div><div class="cap"><div><h3>Kacchi Biryani</h3><p>Our signature, cooked in a sealed pot for three hours. Serves two.</p></div><span class="pr">$36</span></div></article>
+   <article class="plate reveal"><div class="art" style="background:#2E1A12"><svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="96" fill="#EADBC6"/><circle cx="100" cy="100" r="66" fill="#C2571A"/><path d="M60 104h80" stroke="#F3E9DA" stroke-width="7" stroke-linecap="round"/></svg></div><div class="cap"><div><h3>Shorshe Ilish</h3><p>Hilsa, mustard, green chilli.</p></div><span class="pr">$22</span></div></article>
+   <article class="plate reveal"><div class="art" style="background:#4A2A18"><svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="96" fill="#EADBC6"/><circle cx="100" cy="100" r="54" fill="#F3E9DA"/><circle cx="100" cy="100" r="30" fill="#D9A441"/><circle cx="100" cy="100" r="9" fill="#4F6B1F"/></svg></div><div class="cap"><div><h3>Saffron Kulfi</h3><p>Pistachio, rose syrup.</p></div><span class="pr">$7</span></div></article>
+  </div>
+ </div>
+</section>
+
+<section class="private" id="private">
+ <div class="c">
+  <div>
+   <p class="sc">Private dining</p>
+   <h2>A long table for family occasions.</h2>
+   <p>Our upstairs room has one table, its own entrance and a set menu chosen with you. Birthdays, engagements, work dinners — we'll take care of the details.</p>
+   <div class="facts"><div><b>18</b><span>Guests</span></div><div><b>3</b><span>Set menus</span></div><div><b>1</b><span>Table</span></div></div>
+   <a class="cta ghost" href="#visit" style="margin-top:28px">Enquire about the room</a>
+  </div>
+  <div class="room" role="img" aria-label="Illustration of the private dining table">
+   <svg viewBox="0 0 600 420" aria-hidden="true"><rect width="600" height="420" fill="#140D09"/><rect x="60" y="150" width="480" height="120" fill="#3A2416" stroke="#D9A441" stroke-width="1"/><g fill="#EADBC6"><circle cx="110" cy="185" r="16"/><circle cx="190" cy="185" r="16"/><circle cx="270" cy="185" r="16"/><circle cx="350" cy="185" r="16"/><circle cx="430" cy="185" r="16"/><circle cx="510" cy="185" r="16"/><circle cx="110" cy="235" r="16"/><circle cx="190" cy="235" r="16"/><circle cx="270" cy="235" r="16"/><circle cx="350" cy="235" r="16"/><circle cx="430" cy="235" r="16"/><circle cx="510" cy="235" r="16"/></g><g fill="#D9A441"><circle cx="230" cy="210" r="5"/><circle cx="310" cy="210" r="5"/><circle cx="390" cy="210" r="5"/></g><g fill="none" stroke="#5A3A24" stroke-width="2"><rect x="94" y="110" width="32" height="28"/><rect x="174" y="110" width="32" height="28"/><rect x="254" y="110" width="32" height="28"/><rect x="334" y="110" width="32" height="28"/><rect x="414" y="110" width="32" height="28"/><rect x="494" y="110" width="32" height="28"/><rect x="94" y="282" width="32" height="28"/><rect x="174" y="282" width="32" height="28"/><rect x="254" y="282" width="32" height="28"/><rect x="334" y="282" width="32" height="28"/><rect x="414" y="282" width="32" height="28"/><rect x="494" y="282" width="32" height="28"/></g><path d="M300 0v60" stroke="#5A3A24"/><path d="M270 60h60l-10 22h-40z" fill="#D9A441"/><circle cx="300" cy="96" r="70" fill="#D9A441" opacity=".08"/></svg>
+  </div>
+ </div>
+</section>
+
+<section class="visit" id="visit">
+ <div class="c">
+  <div>
+   <p class="sc">Visit</p>
+   <h2>Opening hours</h2>
+   <dl class="hours">
+    <div><dt>Monday</dt><dd>Closed</dd></div>
+    <div><dt>Tuesday – Thursday</dt><dd>18:00 – 23:00</dd></div>
+    <div><dt>Friday – Saturday</dt><dd>13:00 – 23:30</dd></div>
+    <div><dt>Sunday</dt><dd>12:00 – 22:00</dd></div>
+   </dl>
+   <div class="addr"><b>House 27, Road 8, Dhanmondi</b><p>Sample address · Parking on Road 8 after 19:00</p><p style="margin-top:10px">+00 000 000 000 · table@saffron.example</p></div>
+  </div>
+  <form class="res" data-demo-form data-success="Thank you — we've noted your request and will call to confirm your table.">
+   <p class="sc">Reservations</p>
+   <h3>Book a table</h3>
+   <p style="font-size:.9rem">For parties larger than eight, please call us.</p>
+   <div class="r2">
+    <div class="field"><label for="r-name">Name</label><input class="input" id="r-name" autocomplete="name" required><small class="field-error"></small></div>
+    <div class="field"><label for="r-phone">Phone</label><input class="input" id="r-phone" type="tel" autocomplete="tel" required><small class="field-error"></small></div>
+   </div>
+   <div class="r2">
+    <div class="field"><label for="r-date">Date</label><input class="input" id="r-date" type="date" required><small class="field-error"></small></div>
+    <div class="field"><label for="r-time">Time</label><select class="input" id="r-time" required><option value="">Select</option><option>18:00</option><option>18:30</option><option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option><option>21:00</option><option>21:30</option></select><small class="field-error"></small></div>
+   </div>
+   <div class="r2">
+    <div class="field"><label for="r-guests">Guests</label><input class="input" id="r-guests" type="number" min="1" max="8" value="2" required><small class="field-error"></small></div>
+    <div class="field"><label for="r-occ">Occasion</label><select class="input" id="r-occ"><option>None</option><option>Birthday</option><option>Anniversary</option><option>Business</option></select></div>
+   </div>
+   <div class="field"><label for="r-note">Notes or allergies</label><textarea class="input" id="r-note" rows="2"></textarea></div>
+   <button class="cta" type="submit">Request a table</button>
+   <p class="form-status" role="status" hidden></p>
+   <p class="note">Template demo — this form checks your input but sends nothing.</p>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer class="site">
+ <div class="c">
+  <div class="fg">
+   <nav aria-label="Footer"><a href="#menu">Menu</a><a href="#season">Seasonal</a><a href="#private">Private</a></nav>
+   <a class="logo" href="#top">Saffron <i>Table</i></a>
+   <nav aria-label="Footer, visit"><a href="#visit">Hours</a><a href="#visit">Reserve</a></nav>
+  </div>
+  <p class="fb">© <span data-year>2026</span> Saffron Table — a sample restaurant. Website template by KHOKA TECH.</p>
+ </div>
+</footer>
+<script src="../../assets/js/demo.js"></script>
+<script>
+(function(){const d=document.getElementById("r-date"),n=new Date();n.setMinutes(n.getMinutes()-n.getTimezoneOffset());d.min=n.toISOString().slice(0,10)})();
+</script>
+</body>
+</html>

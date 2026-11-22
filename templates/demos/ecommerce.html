@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bazaar &amp; Co. — E-commerce Website Template Demo | KHOKA TEMPLATES</title>
+<meta name="description" content="Live demo of Bazaar Pro Store by KHOKA TEMPLATES: a product-first homeware shop with filters, sorting and a working cart drawer.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FAF8F4">
+<link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/demo.css">
+<style>
+:root{--bg:#FAF8F4;--stone:#EFEBE3;--ink:#1A1A1A;--muted:#6F6A62;--terra:#C4552D;--sage:#8A9A7B;--rule:#E2DDD3;--f:"Archivo",system-ui,sans-serif;--scroll-pad:80px}
+body{background:var(--bg);color:var(--ink);font:400 .98rem/1.6 var(--f)}
+.c{width:min(1320px,100% - 40px);margin-inline:auto}
+p{color:var(--muted)}
+:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:50px;padding:0 26px;background:var(--ink);color:#fff;border:1px solid var(--ink);font-weight:600;font-size:.92rem;cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:#333}
+.btn.line{background:transparent;color:var(--ink)}
+.btn.line:hover{background:var(--ink);color:#fff}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+
+.promo{background:var(--ink);color:#EDE9E1;font-size:.8rem;text-align:center;padding:9px 16px}
+header.site{position:sticky;top:0;z-index:60;background:var(--bg);border-bottom:1px solid var(--rule)}
+header.site .c{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:68px;gap:16px}
+.nav-panel{display:flex;gap:28px;font-size:.9rem;font-weight:500}
+.nav-panel a{padding:4px 0;border-bottom:1px solid transparent}
+.nav-panel a:hover{border-color:var(--ink)}
+.logo{font-weight:800;letter-spacing:.18em;font-size:1.05rem;text-align:center}
+.logo span{color:var(--terra)}
+.tools{display:flex;justify-content:flex-end;align-items:center;gap:14px}
+.find{position:relative}
+.find input{width:220px;height:38px;border:1px solid var(--rule);background:#fff;padding:0 12px 0 34px;font-size:.88rem}
+.find input:focus{outline:none;border-color:var(--ink)}
+.find svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);width:15px;height:15px;stroke:var(--muted);fill:none;stroke-width:2}
+.bag{background:none;border:0;font-weight:600;font-size:.9rem;cursor:pointer;display:flex;gap:6px;align-items:center;padding:6px 0}
+.bag b{display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 6px;background:var(--terra);color:#fff;font-size:.75rem}
+.bag b.bump{animation:bump .35s}
+@keyframes bump{50%{transform:scale(1.25)}}
+.nav-toggle{background:none;border:0;width:40px;height:40px;padding:0}
+.nav-toggle span{display:block;width:22px;height:1.5px;background:var(--ink);margin:6px 0}
+
+/* hero */
+.hero{padding:24px 0 0}
+.hero .c{display:grid;grid-template-columns:7fr 4fr;gap:0;border:1px solid var(--rule);background:#fff}
+.hero-img{background:var(--stone);aspect-ratio:16/10;display:grid;place-items:center;position:relative;overflow:hidden}
+.hero-img svg{width:auto;height:78%}
+.hero-img .tag{position:absolute;left:20px;top:20px;background:#fff;padding:6px 10px;font-size:.75rem;font-weight:600}
+.hero-copy{padding:48px 44px;display:flex;flex-direction:column;justify-content:space-between;gap:32px;border-left:1px solid var(--rule)}
+.hero-copy h1{font-size:clamp(2rem,1.3rem + 2.2vw,3.1rem);line-height:1.02;letter-spacing:-.035em;font-weight:700;margin:14px 0 16px}
+.hero-copy .eyebrow{color:var(--terra)}
+.pick{border-top:1px solid var(--rule);padding-top:22px}
+.pick-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.pick-row b{font-size:1.05rem}
+.pick-row span{font-weight:700;font-size:1.1rem}
+.pick p{font-size:.88rem;margin-bottom:18px}
+.pick .acts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+
+/* categories */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--rule);margin-top:56px}
+.cat{display:flex;align-items:center;gap:16px;padding:18px 20px 18px 0;border-top:1px solid var(--ink);background:none;border-left:0;border-right:0;border-bottom:0;text-align:left;cursor:pointer;width:100%}
+.cat+.cat{padding-left:20px;border-left:1px solid var(--rule)}
+.cat svg{width:40px;height:40px;stroke:var(--ink);fill:none;stroke-width:1.3;flex:0 0 40px}
+.cat b{display:block;font-size:1rem}
+.cat span{color:var(--muted);font-size:.82rem}
+.cat:hover b{color:var(--terra)}
+
+/* shop */
+.shop{padding:72px 0 96px}
+.shop-bar{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:28px}
+.shop-bar h2{font-size:clamp(1.7rem,1.3rem + 1.2vw,2.3rem);letter-spacing:-.03em;font-weight:700}
+.shop-tools{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.tabs{display:flex;gap:18px;font-size:.9rem}
+.tabs button{background:none;border:0;padding:4px 0;color:var(--muted);cursor:pointer;border-bottom:1.5px solid transparent;font-weight:500}
+.tabs button.active{color:var(--ink);border-color:var(--ink)}
+.sort{height:38px;border:1px solid var(--rule);background:#fff;padding:0 30px 0 10px;font-size:.86rem;appearance:none;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%231A1A1A' fill='none'/%3E%3C/svg%3E") no-repeat right 10px center}
+.count{font-size:.82rem;color:var(--muted);margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:36px 20px}
+.prod{position:relative}
+.pimg{position:relative;aspect-ratio:4/5;display:grid;place-items:center;overflow:hidden}
+.pimg svg{width:56%;height:auto;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.prod:hover .pimg svg{transform:scale(1.05)}
+.flag{position:absolute;left:10px;top:10px;font-size:.72rem;font-weight:600;padding:4px 8px;background:#fff}
+.flag.sale{background:var(--terra);color:#fff}
+.add{position:absolute;left:10px;right:10px;bottom:10px;height:42px;background:var(--ink);color:#fff;border:0;font-weight:600;font-size:.86rem;cursor:pointer;opacity:0;transform:translateY(8px);transition:opacity .2s,transform .2s}
+.prod:hover .add,.add:focus-visible{opacity:1;transform:none}
+.pinfo{display:flex;justify-content:space-between;gap:12px;margin-top:12px}
+.pinfo h3{font-size:.95rem;font-weight:600}
+.pinfo span{display:block;color:var(--muted);font-size:.82rem}
+.pr{font-weight:600;text-align:right;white-space:nowrap}
+.pr s{display:block;color:var(--muted);font-weight:400;font-size:.8rem}
+.none{padding:48px 0;text-align:center;color:var(--muted)}
+
+/* story */
+.story{background:var(--ink);color:#EDE9E1;padding:96px 0}
+.story .c{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:start}
+.story h2{font-size:clamp(2.4rem,1.6rem + 3vw,4.4rem);line-height:.98;letter-spacing:-.045em;font-weight:700;color:#fff}
+.story h2 span{color:var(--terra)}
+.story p{color:#B7B1A7}
+.mats{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:40px}
+.mats div{border-top:1px solid #3A3835;padding-top:16px}
+.mats b{display:block;color:#fff;margin-bottom:6px}
+.mats p{font-size:.88rem}
+
+/* service + newsletter */
+.service{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--rule)}
+.service div{padding:36px 28px 36px 0}
+.service div+div{padding-left:28px;border-left:1px solid var(--rule)}
+.service b{display:block;margin-bottom:6px}
+.service p{font-size:.9rem}
+.news{padding:80px 0;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.news h2{font-size:clamp(1.7rem,1.3rem + 1.2vw,2.3rem);letter-spacing:-.03em;font-weight:700}
+.news form{display:flex;gap:0;flex-wrap:wrap}
+.news .field{flex:1;min-width:200px}
+.news input{width:100%;height:50px;border:1px solid var(--ink);border-right:0;padding:0 16px;background:#fff}
+.news input:focus{outline:none;background:#fff}
+.news .form-status,.news .note{flex-basis:100%}
+.news .note{font-size:.78rem;margin-top:8px}
+
+footer.site{border-top:1px solid var(--rule);padding:56px 0 24px;font-size:.88rem}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h4{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}
+footer li{margin-bottom:6px;color:var(--muted)}
+footer li a:hover{color:var(--ink)}
+.fb{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:48px;padding-top:18px;border-top:1px solid var(--rule);color:var(--muted);font-size:.8rem}
+
+/* drawer */
+.scrim{position:fixed;inset:0;background:rgba(26,26,26,.35);opacity:0;visibility:hidden;transition:.25s;z-index:150}
+.scrim.open{opacity:1;visibility:visible}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--bg);z-index:160;transform:translateX(100%);visibility:hidden;transition:transform .3s cubic-bezier(.2,.8,.2,1),visibility .3s;display:flex;flex-direction:column;border-left:1px solid var(--rule)}
+.drawer.open{transform:none;visibility:visible}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid var(--rule)}
+.dh h2{font-size:1.1rem;font-weight:700}
+.x{background:none;border:1px solid var(--rule);width:36px;height:36px;cursor:pointer;font-size:1.1rem}
+.ship{padding:14px 24px;border-bottom:1px solid var(--rule);font-size:.84rem}
+.ship .track{height:3px;background:var(--rule);margin-top:8px}
+.ship .track i{display:block;height:100%;background:var(--sage);transition:width .3s}
+.items{flex:1;overflow:auto;padding:0 24px}
+.ci{display:grid;grid-template-columns:72px 1fr auto;gap:14px;padding:16px 0;border-bottom:1px solid var(--rule);align-items:start}
+.ci .th{aspect-ratio:4/5;display:grid;place-items:center}
+.ci .th svg{width:60%}
+.ci b{font-size:.92rem;font-weight:600}
+.ci small{display:block;color:var(--muted);font-size:.8rem}
+.qty{display:inline-flex;border:1px solid var(--rule);margin-top:10px}
+.qty button{width:30px;height:30px;background:none;border:0;cursor:pointer}
+.qty span{width:28px;display:grid;place-items:center;font-size:.85rem}
+.rm{display:block;background:none;border:0;padding:0;margin-top:8px;color:var(--muted);font-size:.78rem;text-decoration:underline;cursor:pointer;margin-left:auto}
+.empty{padding:56px 0;text-align:center}
+.df{padding:20px 24px;border-top:1px solid var(--rule)}
+.dr{display:flex;justify-content:space-between;font-size:.9rem;margin-bottom:6px;color:var(--muted)}
+.dr.t{color:var(--ink);font-weight:700;font-size:1.05rem;margin-top:6px}
+.df .btn{width:100%;margin-top:14px}
+.df small{display:block;text-align:center;color:var(--muted);margin-top:10px;font-size:.78rem}
+.toast{position:fixed;left:50%;bottom:20px;transform:translate(-50%,20px);background:var(--ink);color:#fff;padding:12px 18px;font-size:.88rem;opacity:0;transition:.25s;z-index:170;pointer-events:none;max-width:calc(100% - 32px)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+@media(max-width:1100px){.grid{grid-template-columns:repeat(3,1fr)}.find input{width:160px}}
+@media(max-width:900px){
+  header.site .c{grid-template-columns:auto 1fr auto}
+  .logo{text-align:left}
+  .nav-toggle{display:block}
+  .nav-panel{position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;gap:0;padding:4px 20px 18px;border-bottom:1px solid var(--rule);display:none}
+  .nav-panel.open{display:flex}
+  .nav-panel a{padding:14px 0;border-bottom:1px solid var(--rule)!important;font-size:1.05rem}
+  .find{display:none}
+  .hero .c{grid-template-columns:1fr}
+  .hero-copy{border-left:0;border-top:1px solid var(--rule);padding:32px 24px}
+  .cats{grid-template-columns:1fr 1fr}
+  .cat:nth-child(3){padding-left:0;border-left:0}
+  .story .c,.news{grid-template-columns:1fr;gap:32px}
+  .fg{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .grid{grid-template-columns:1fr 1fr;gap:28px 12px}
+  .add{opacity:1;transform:none;height:36px;font-size:.8rem}
+  .cats{grid-template-columns:1fr}
+  .cat,.cat+.cat{padding-left:0;border-left:0;border-top:1px solid var(--rule)}
+  .cat:first-child{border-top:1px solid var(--ink)}
+  .mats,.service{grid-template-columns:1fr}
+  .service div,.service div+div{padding:22px 0;border-left:0;border-top:1px solid var(--rule)}
+  .pinfo{flex-direction:column;gap:2px}
+  .pr{text-align:left}
+  .pr s{display:inline;margin-left:6px}
+  .fg{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body data-template="ecommerce" data-name="Bazaar Pro Store">
+<a class="skip-link" href="#main">Skip to content</a>
+<p class="promo">Free delivery on orders over $75 · 30-day returns</p>
+<header class="site">
+ <div class="c">
+  <div style="display:flex;align-items:center">
+   <button class="nav-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
+   <nav class="nav-panel" id="nav-links" aria-label="Main"><a href="#shop">Shop all</a><a href="#shop" data-jump="kitchen">Kitchen</a><a href="#shop" data-jump="living">Living</a><a href="#story">Materials</a></nav>
+  </div>
+  <a class="logo" href="#top" id="top">BAZAAR <span>&amp;</span> CO.</a>
+  <div class="tools">
+   <label class="find"><span class="sr-only">Search products</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="psearch" type="search" placeholder="Search" autocomplete="off"></label>
+   <button class="bag" id="open-cart" aria-haspopup="dialog" aria-controls="drawer">Bag <b id="cart-count">0</b><span class="sr-only">items</span></button>
+  </div>
+ </div>
+</header>
+
+<main id="main">
+<section class="hero">
+ <div class="c">
+  <div class="hero-img" role="img" aria-label="Ridge Vase in sand glaze">
+   <span class="tag">New in stoneware</span>
+   <svg viewBox="0 0 200 260" aria-hidden="true"><ellipse cx="100" cy="248" rx="70" ry="8" fill="#000" opacity=".08"/><path d="M70 30h60v14c0 10 26 32 26 92 0 70-22 108-56 108S44 206 44 136c0-60 26-82 26-92z" fill="#D9C9B0"/><path d="M70 30h60v14c0 10 26 32 26 92 0 70-22 108-56 108S44 206 44 136c0-60 26-82 26-92z" fill="none" stroke="#1A1A1A" stroke-width="1.4"/><g stroke="#B9A588" stroke-width="1.2"><path d="M52 110h96"/><path d="M47 140h106"/><path d="M48 170h104"/><path d="M54 200h92"/></g><path d="M70 30h60" stroke="#1A1A1A" stroke-width="3"/></svg>
+  </div>
+  <div class="hero-copy">
+   <div>
+    <span class="eyebrow">Autumn edit</span>
+    <h1>Handmade stoneware for everyday tables.</h1>
+    <p>Glazed by hand in small batches, so every piece is slightly different. Dishwasher safe and made to be used, not saved for best.</p>
+   </div>
+   <div class="pick">
+    <div class="pick-row"><b>Ridge Vase, sand</b><span>$48</span></div>
+    <p>Stoneware · 24 cm · Watertight</p>
+    <div class="acts"><button class="btn" data-add="2">Add to bag</button><a class="btn line" href="#shop">Shop all</a></div>
+   </div>
+  </div>
+ </div>
+ <div class="c">
+  <nav class="cats" aria-label="Shop by category">
+   <button class="cat" data-jump="kitchen"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 18h24v16a8 8 0 01-8 8h-8a8 8 0 01-8-8z"/><path d="M34 22h3a5 5 0 010 10h-3"/></svg><span><b>Kitchen</b><span>Mugs, bowls, boards</span></span></button>
+   <button class="cat" data-jump="table"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="16"/><circle cx="24" cy="24" r="9"/></svg><span><b>Table</b><span>Plates, carafes</span></span></button>
+   <button class="cat" data-jump="living"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M18 8h12v4c0 3 7 8 7 18 0 10-6 12-13 12s-13-2-13-12c0-10 7-15 7-18z"/></svg><span><b>Living</b><span>Vases, candles</span></span></button>
+   <button class="cat" data-jump="textile"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 12h32v24H8z"/><path d="M8 20h32M8 28h32M40 36l-4 6M32 36l-4 6M24 36l-4 6"/></svg><span><b>Textiles</b><span>Linen, throws</span></span></button>
+  </nav>
+ </div>
+</section>
+
+<section class="shop" id="shop">
+ <div class="c">
+  <div class="shop-bar">
+   <h2>Shop the collection</h2>
+   <div class="shop-tools">
+    <div class="tabs" role="group" aria-label="Filter by category">
+     <button class="active" data-filter="all" aria-pressed="true">All</button><button data-filter="kitchen" aria-pressed="false">Kitchen</button><button data-filter="table" aria-pressed="false">Table</button><button data-filter="living" aria-pressed="false">Living</button><button data-filter="textile" aria-pressed="false">Textiles</button>
+    </div>
+    <label><span class="sr-only">Sort products</span><select class="sort" id="sort"><option value="feat">Featured</option><option value="low">Price, low to high</option><option value="high">Price, high to low</option></select></label>
+   </div>
+  </div>
+  <p class="count" id="count" aria-live="polite"></p>
+  <div class="grid" id="grid"></div>
+  <p class="none" id="none" hidden>No products match “<span id="qv"></span>”.</p>
+ </div>
+</section>
+
+<section class="story" id="story">
+ <div class="c">
+  <h2>Clay,<br>linen,<br><span>oak.</span></h2>
+  <div>
+   <p style="font-size:1.1rem;max-width:52ch">We work with three materials and a handful of small workshops. Fewer things, made carefully, that look better the more they are used.</p>
+   <div class="mats">
+    <div><b>Stoneware</b><p>Fired at high temperature for strength. Food, oven and dishwasher safe.</p></div>
+    <div><b>Washed linen</b><p>Pre-washed for softness, so it won't shrink further at home.</p></div>
+    <div><b>Oiled oak</b><p>Finished with food-safe oil. Re-oil every few months to keep it fresh.</p></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<div class="c">
+ <div class="service">
+  <div><b>Delivery</b><p>2–4 working days. Free over $75, otherwise $6.</p></div>
+  <div><b>Returns</b><p>Unused items can be returned within 30 days of delivery.</p></div>
+  <div><b>Care</b><p>Every product page lists simple care instructions.</p></div>
+ </div>
+ <section class="news" id="newsletter">
+  <div><h2>New pieces, once a month.</h2><p>One short email when a new batch arrives. Unsubscribe at any time.</p></div>
+  <form data-demo-form data-success="Thanks — you're on the list.">
+   <div class="field"><label class="sr-only" for="n-email">Email address</label><input id="n-email" type="email" placeholder="Email address" autocomplete="email" required><small class="field-error"></small></div>
+   <button class="btn" type="submit">Subscribe</button>
+   <p class="form-status" role="status" hidden></p>
+   <p class="note">Template demo — nothing is sent.</p>
+  </form>
+ </section>
+</div>
+</main>
+
+<footer class="site">
+ <div class="c">
+  <div class="fg">
+   <div><a class="logo" href="#top" style="text-align:left;display:block">BAZAAR <span>&amp;</span> CO.</a><p style="margin-top:12px;max-width:30ch">Homeware made in small batches. A sample store for this template.</p></div>
+   <div><h4>Shop</h4><ul><li><a href="#shop">All products</a></li><li><a href="#shop" data-jump="kitchen">Kitchen</a></li><li><a href="#shop" data-jump="living">Living</a></li></ul></div>
+   <div><h4>Help</h4><ul><li><a href="#main">Delivery</a></li><li><a href="#main">Returns</a></li><li><a href="#newsletter">Newsletter</a></li></ul></div>
+   <div><h4>Contact</h4><ul><li>hello@bazaar.example</li><li>+00 000 000 000</li></ul></div>
+  </div>
+  <div class="fb"><span>© <span data-year>2026</span> Bazaar &amp; Co. — sample brand.</span><span>Website template by KHOKA TECH</span></div>
+ </div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="bag-title" aria-hidden="true">
+ <div class="dh"><h2 id="bag-title">Your bag</h2><button class="x" id="close-cart" aria-label="Close bag">×</button></div>
+ <div class="ship" id="ship"></div>
+ <div class="items" id="items"></div>
+ <div class="df">
+  <div class="dr"><span>Subtotal</span><span id="sub">$0.00</span></div>
+  <div class="dr"><span>Delivery</span><span id="del">—</span></div>
+  <div class="dr t"><span>Total</span><span id="tot">$0.00</span></div>
+  <button class="btn" id="checkout" type="button">Checkout</button>
+  <small>Template demo: checkout is disabled and no payment can be made.</small>
+ </div>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="../../assets/js/demo.js"></script>
+<script>
+/* Bazaar demo — products, search, sort and an in-memory bag. Nothing is stored or sent. */
+(function(){
+ const D={
+  mug:'<path d="M50 70h80v80a24 24 0 01-24 24H74a24 24 0 01-24-24z" fill="#E9DDCB" stroke="#1A1A1A" stroke-width="2"/><path d="M130 88h12a16 16 0 010 32h-12" fill="none" stroke="#1A1A1A" stroke-width="2"/><path d="M50 92h80" stroke="#B9A588"/>',
+  vase:'<path d="M70 30h60v14c0 10 26 32 26 92 0 70-22 108-56 108S44 206 44 136c0-60 26-82 26-92z" fill="#D9C9B0" stroke="#1A1A1A" stroke-width="2"/><path d="M52 120h96M48 160h104" stroke="#B9A588"/>',
+  bowl:'<path d="M30 100h140c0 46-32 74-70 74S30 146 30 100z" fill="#C9D1C0" stroke="#1A1A1A" stroke-width="2"/><ellipse cx="100" cy="100" rx="70" ry="10" fill="#E5EAE0" stroke="#1A1A1A" stroke-width="2"/>',
+  plates:'<ellipse cx="100" cy="150" rx="72" ry="18" fill="#F3EEE6" stroke="#1A1A1A" stroke-width="2"/><ellipse cx="100" cy="134" rx="72" ry="18" fill="#F3EEE6" stroke="#1A1A1A" stroke-width="2"/><ellipse cx="100" cy="118" rx="72" ry="18" fill="#F3EEE6" stroke="#1A1A1A" stroke-width="2"/><ellipse cx="100" cy="118" rx="40" ry="9" fill="none" stroke="#C4552D"/>',
+  carafe:'<path d="M86 30h28v40c24 14 34 40 34 70 0 36-20 54-48 54s-48-18-48-54c0-30 10-56 34-70z" fill="#DCE6EA" stroke="#1A1A1A" stroke-width="2"/><path d="M58 130h84" stroke="#9FB4BC"/>',
+  candle:'<rect x="62" y="80" width="76" height="100" fill="#EFE3CF" stroke="#1A1A1A" stroke-width="2"/><path d="M100 80v-16" stroke="#1A1A1A" stroke-width="2"/><path d="M100 40c8 10 8 18 0 24-8-6-8-14 0-24z" fill="#C4552D"/><path d="M62 104h76" stroke="#C8B79A"/>',
+  throw:'<path d="M40 60h120v100H40z" fill="#B9C2AE" stroke="#1A1A1A" stroke-width="2"/><path d="M40 80h120M40 100h120M40 120h120M40 140h120" stroke="#8A9A7B"/><path d="M52 160v14M70 160v14M88 160v14M106 160v14M124 160v14M142 160v14" stroke="#1A1A1A"/>',
+  board:'<path d="M36 70h104a20 20 0 0120 20v60a20 20 0 01-20 20H36z" fill="#D2B48C" stroke="#1A1A1A" stroke-width="2"/><circle cx="166" cy="120" r="8" fill="none" stroke="#1A1A1A" stroke-width="2"/><path d="M54 96h70M54 120h80M54 144h60" stroke="#B8966A"/>'
+ };
+ const P=[
+  {id:1,n:"Everyday Mug",m:"Stoneware · 300 ml",c:"kitchen",i:"mug",p:18,bg:"#EFE9DF",o:1},
+  {id:2,n:"Ridge Vase",m:"Stoneware · Sand",c:"living",i:"vase",p:48,bg:"#EFEBE3",f:"New",o:2},
+  {id:3,n:"Serving Bowl",m:"Stoneware · Sage",c:"table",i:"bowl",p:36,w:45,bg:"#E8ECE3",f:"−20%",s:1,o:3},
+  {id:4,n:"Dinner Plates, set of 4",m:"Stoneware · Chalk",c:"table",i:"plates",p:64,bg:"#F1EEE8",o:4},
+  {id:5,n:"Water Carafe",m:"Glass · 1 L",c:"table",i:"carafe",p:29,bg:"#E6EDEF",o:5},
+  {id:6,n:"Beeswax Candle",m:"Unscented · 40 h",c:"living",i:"candle",p:22,bg:"#F2EADC",f:"Low stock",o:6},
+  {id:7,n:"Linen Throw",m:"Washed linen · Moss",c:"textile",i:"throw",p:85,bg:"#E7EBE2",o:7},
+  {id:8,n:"Oak Serving Board",m:"Oiled oak · 45 cm",c:"kitchen",i:"board",p:42,bg:"#F0E8DC",f:"New",o:8}
+ ];
+ const $=s=>document.querySelector(s),fmt=n=>"$"+n.toFixed(2),FREE=75;
+ const pic=i=>'<svg viewBox="0 0 200 200" aria-hidden="true">'+D[i]+'</svg>';
+ const grid=$("#grid");
+ function draw(){
+  const s=$("#sort").value,list=P.slice().sort(s==="low"?(a,b)=>a.p-b.p:s==="high"?(a,b)=>b.p-a.p:(a,b)=>a.o-b.o);
+  grid.innerHTML=list.map(p=>`<article class="prod" data-cat="${p.c}" data-k="${(p.n+" "+p.m+" "+p.c).toLowerCase()}">
+   <div class="pimg" style="background:${p.bg}">${p.f?`<span class="flag${p.s?" sale":""}">${p.f}</span>`:""}${pic(p.i)}<button class="add" data-add="${p.id}" aria-label="Add ${p.n} to bag">Add to bag</button></div>
+   <div class="pinfo"><div><h3>${p.n}</h3><span>${p.m}</span></div><div class="pr">$${p.p}${p.w?`<s>$${p.w}</s>`:""}</div></div></article>`).join("");
+  applyFilter();
+ }
+ let cat="all";
+ function applyFilter(){
+  const q=$("#psearch").value.toLowerCase().trim();let n=0;
+  grid.querySelectorAll(".prod").forEach(el=>{const ok=(cat==="all"||el.dataset.cat===cat)&&(!q||el.dataset.k.includes(q));el.hidden=!ok;if(ok)n++});
+  $("#count").textContent=n+(n===1?" product":" products");
+  $("#none").hidden=n>0;$("#qv").textContent=q;
+ }
+ // category tabs (kept in sync with search and sort)
+ document.querySelector(".tabs").addEventListener("click",e=>{const b=e.target.closest("[data-filter]");if(b)setCat(b.dataset.filter)});
+ function setCat(c){cat=c;document.querySelectorAll(".tabs button").forEach(b=>{const on=b.dataset.filter===c;b.classList.toggle("active",on);b.setAttribute("aria-pressed",on)});applyFilter()}
+ document.addEventListener("click",e=>{const j=e.target.closest("[data-jump]");if(j){e.preventDefault();setCat(j.dataset.jump);document.getElementById("shop").scrollIntoView({behavior:"smooth"})}});
+ $("#sort").addEventListener("change",draw);
+ $("#psearch").addEventListener("input",()=>{applyFilter()});
+ $("#psearch").addEventListener("keydown",e=>{if(e.key==="Enter")document.getElementById("shop").scrollIntoView({behavior:"smooth"})});
+
+ // bag
+ const bag=new Map(),drawer=$("#drawer"),scrim=$("#scrim");let last=null;
+ const open=()=>{last=document.activeElement;drawer.classList.add("open");scrim.classList.add("open");drawer.setAttribute("aria-hidden","false");$("#close-cart").focus()};
+ const close=()=>{drawer.classList.remove("open");scrim.classList.remove("open");drawer.setAttribute("aria-hidden","true");if(last)last.focus()};
+ const toast=m=>{const t=$("#toast");t.textContent=m;t.classList.add("show");clearTimeout(toast.i);toast.i=setTimeout(()=>t.classList.remove("show"),2200)};
+ function render(bump){
+  let n=0,sub=0;
+  $("#items").innerHTML=bag.size?[...bag].map(([id,q])=>{const p=P.find(x=>x.id===id);n+=q;sub+=p.p*q;
+   return `<div class="ci"><div class="th" style="background:${p.bg}">${pic(p.i)}</div><div><b>${p.n}</b><small>${p.m}</small>
+   <div class="qty"><button data-dec="${id}" aria-label="One fewer ${p.n}">−</button><span>${q}</span><button data-inc="${id}" aria-label="One more ${p.n}">+</button></div></div>
+   <div style="text-align:right"><b>${fmt(p.p*q)}</b><button class="rm" data-rm="${id}">Remove</button></div></div>`}).join("")
+   :'<div class="empty"><p><b style="color:#1A1A1A">Your bag is empty.</b></p><p>Add something from the shop to try the bag.</p></div>';
+  const del=sub===0?0:(sub>=FREE?0:6);
+  $("#sub").textContent=fmt(sub);$("#del").textContent=sub===0?"—":(del?fmt(del):"Free");$("#tot").textContent=fmt(sub+del);
+  $("#ship").innerHTML=sub>=FREE?"You've unlocked <b>free delivery</b>.":`Spend <b>${fmt(FREE-sub)}</b> more for free delivery.`+'';
+  $("#ship").insertAdjacentHTML("beforeend",`<div class="track"><i style="width:${Math.min(100,sub/FREE*100)}%"></i></div>`);
+  const c=$("#cart-count");c.textContent=n;if(bump){c.classList.remove("bump");void c.offsetWidth;c.classList.add("bump")}
+  $("#checkout").disabled=!n;
+ }
+ document.addEventListener("click",e=>{
+  const a=e.target.closest("[data-add]");if(a){const id=+a.dataset.add;bag.set(id,(bag.get(id)||0)+1);render(true);toast(P.find(x=>x.id===id).n+" added to your bag");return}
+  const i=e.target.closest("[data-inc]");if(i){const id=+i.dataset.inc;bag.set(id,bag.get(id)+1);render(true);return}
+  const d=e.target.closest("[data-dec]");if(d){const id=+d.dataset.dec,q=bag.get(id)-1;q?bag.set(id,q):bag.delete(id);render(true);return}
+  const r=e.target.closest("[data-rm]");if(r){bag.delete(+r.dataset.rm);render(true)}
+ });
+ $("#open-cart").addEventListener("click",open);$("#close-cart").addEventListener("click",close);scrim.addEventListener("click",close);
+ document.addEventListener("keydown",e=>{if(e.key==="Escape"&&drawer.classList.contains("open"))close()});
+ $("#checkout").addEventListener("click",()=>toast("Template demo: checkout is disabled. No order or payment was made."));
+ draw();render(false);
+})();
+</script>
+</body>
+</html>

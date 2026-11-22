@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pixelforge Studio — Agency Website Template Demo | KHOKA TEMPLATES</title>
+<meta name="description" content="Live demo of Pixelforge Agency by KHOKA TEMPLATES: a Swiss-grid agency site with capabilities, selected work, process, principles and a project brief form.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#EDECE7">
+<link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/demo.css">
+<style>
+:root{--bg:#EDECE7;--ink:#0E0E0E;--muted:#5E5C56;--grey:#C9C7BF;--orange:#FF4F00;--disp:"Bricolage Grotesque",system-ui,sans-serif;--sans:"Inter",system-ui,sans-serif;--pad:clamp(16px,3vw,40px);--scroll-pad:72px}
+body{background:var(--bg);color:var(--ink);font:400 1rem/1.6 var(--sans)}
+.c{padding-inline:var(--pad)}
+.g{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:20px}
+h1,h2,h3{font-family:var(--disp);font-weight:700;letter-spacing:-.04em;line-height:.95}
+p{color:var(--muted)}
+:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+.num{font:500 .78rem var(--sans);font-variant-numeric:tabular-nums;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:12px;height:52px;padding:0 22px;background:var(--ink);color:var(--bg);font-weight:600;border:0;cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:var(--orange);color:var(--ink)}
+.btn.o{background:var(--orange);color:var(--ink)}
+.btn.o:hover{background:var(--ink);color:var(--bg)}
+.brief .btn.o:hover{background:#fff;color:var(--ink)}
+.u{border-bottom:2px solid var(--ink);font-weight:600;padding-bottom:2px}
+.u:hover{color:var(--orange);border-color:var(--orange)}
+
+header.site{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:2px solid var(--ink)}
+header.site .c{display:flex;justify-content:space-between;align-items:center;height:64px;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;font:800 1.25rem var(--disp);letter-spacing:-.04em}
+.logo i{width:14px;height:14px;background:var(--orange)}
+.nav-panel{display:flex;align-items:center;gap:28px;font-weight:500;font-size:.92rem}
+.nav-panel a sup{font-size:.62rem;color:var(--muted);margin-right:3px}
+.nav-panel a:not(.btn):hover{color:var(--orange)}
+.nav-panel .btn{height:40px;padding:0 16px;font-size:.88rem}
+.nav-toggle{background:var(--ink);color:var(--bg);border:0;height:38px;padding:0 14px;font-weight:600}
+
+/* hero with a visible column grid */
+.hero{position:relative;padding:0 0 48px;border-bottom:2px solid var(--ink);overflow:hidden}
+.cols{position:absolute;inset:0;padding-inline:var(--pad);pointer-events:none}
+.cols .g{height:100%}
+.cols span{border-left:1px solid rgba(14,14,14,.07);height:100%}
+.cols span:last-child{border-right:1px solid rgba(14,14,14,.07)}
+.hero-info{position:relative;border-bottom:1px solid var(--grey)}
+.hero-info>div{padding:16px 0;font-size:.85rem}
+.hero-info b{display:block;font-weight:600}
+.hero h1{position:relative;font-size:clamp(3rem,1.2rem + 7vw,8.6rem);margin-top:clamp(48px,8vw,120px);grid-column:1 / span 11}
+.hero h1 .sq{display:inline-block;width:.62em;height:.62em;background:var(--orange);margin-left:.08em}
+.hero-foot{position:relative;margin-top:56px;align-items:end}
+.hero-foot p{grid-column:1 / span 5;font-size:1.1rem;color:var(--ink)}
+.hero-foot .acts{grid-column:8 / span 5;display:flex;gap:20px;justify-content:flex-end;align-items:center;flex-wrap:wrap}
+
+/* sections */
+.sec{padding:clamp(72px,9vw,128px) 0}
+.sec-h{align-items:end;margin-bottom:48px}
+.sec-h .num{grid-column:1 / span 2}
+.sec-h h2{grid-column:3 / span 7;font-size:clamp(2.2rem,1.4rem + 3vw,4.4rem)}
+.sec-h p{grid-column:10 / span 3}
+.caps{border-top:2px solid var(--ink)}
+.cap{grid-column:span 3;padding:22px 20px 0 0;border-right:1px solid var(--grey);min-height:300px;display:flex;flex-direction:column}
+.cap+.cap{padding-left:20px}
+.cap:last-child{border-right:0}
+.cap h3{font-size:1.7rem;margin:18px 0 12px}
+.cap p{font-size:.92rem}
+.cap ul{margin-top:auto;padding-top:24px}
+.cap li{font-size:.86rem;padding:6px 0;border-top:1px solid var(--grey);font-weight:500}
+
+.work{row-gap:56px}
+.case{display:block}
+.case:nth-child(1){grid-column:1 / span 7}
+.case:nth-child(2){grid-column:9 / span 4;margin-top:140px}
+.case:nth-child(3){grid-column:1 / span 5}
+.case:nth-child(4){grid-column:7 / span 6;margin-top:-80px}
+.case .img{overflow:hidden;aspect-ratio:4/3}
+.case:nth-child(2) .img{aspect-ratio:3/4}
+.case .img svg{width:100%;height:100%;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.case:hover .img svg{transform:scale(1.04)}
+.case .meta{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding-top:14px;border-top:2px solid var(--ink);margin-top:14px}
+.case h3{font-size:1.6rem}
+.case .meta span{font-size:.88rem;color:var(--muted)}
+.case .meta .arrow{grid-row:1 / span 2;grid-column:2;font:700 1.6rem var(--disp);color:var(--ink);transition:transform .25s,color .25s}
+.case:hover .arrow{transform:translate(4px,-4px);color:var(--orange)}
+
+.proc{background:var(--ink);color:var(--bg)}
+.proc h2{color:var(--bg)}
+.proc p{color:#A9A79F}
+.proc .num{color:#8A8880}
+.phases{border-top:1px solid #3A3936}
+.ph{grid-column:span 3;padding:24px 20px 0 0;position:relative}
+.ph::before{content:"";position:absolute;left:0;top:-1px;height:3px;width:0;background:var(--orange);transition:width .8s cubic-bezier(.2,.7,.2,1)}
+.ph.in::before{width:calc(100% - 20px)}
+.ph .wk{font-size:.8rem;color:var(--orange);font-weight:600}
+.ph h3{font-size:2rem;margin:14px 0 10px;color:var(--bg)}
+.ph p{font-size:.92rem}
+.ph b{display:block;margin-top:16px;font-size:.82rem;color:var(--bg);font-weight:500}
+
+.prin li{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:20px;padding:28px 0;border-top:1px solid var(--grey);align-items:baseline}
+.prin li:last-child{border-bottom:1px solid var(--grey)}
+.prin .num{grid-column:1 / span 2}
+.prin h3{grid-column:3 / span 6;font-size:clamp(1.6rem,1.1rem + 1.6vw,2.6rem)}
+.prin p{grid-column:9 / span 4;font-size:.95rem}
+
+.studio-lead{grid-column:3 / span 6;font:600 clamp(1.4rem,1rem + 1.2vw,2.1rem)/1.25 var(--disp);letter-spacing:-.02em;color:var(--ink)!important}
+.team{grid-column:9 / span 4}
+.team li{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--grey);font-size:.94rem}
+.team li span{color:var(--muted)}
+
+.brief{background:var(--ink);color:var(--bg);padding:clamp(72px,9vw,128px) 0}
+.brief h2{grid-column:1 / span 5;font-size:clamp(3rem,1.6rem + 5vw,7rem);color:var(--bg)}
+.brief h2 span{color:var(--orange)}
+.brief .side{grid-column:1 / span 4;margin-top:28px;color:#A9A79F}
+.brief form{grid-column:7 / span 6;grid-row:1 / span 2}
+.brief fieldset{border:0;padding:0;margin:0 0 26px}
+.brief legend,.brief label.l{display:block;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#A9A79F;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{position:relative;cursor:pointer}
+.chips input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.chips span{display:inline-block;border:1px solid #4A4844;padding:9px 14px;font-size:.9rem;transition:background .15s,border-color .15s}
+.chips label:hover span{border-color:var(--bg)}
+.chips input:checked+span{background:var(--orange);border-color:var(--orange);color:var(--ink)}
+.chips input:focus-visible+span{outline:2px solid var(--bg);outline-offset:2px}
+.field{margin-bottom:22px}
+.input{width:100%;background:transparent;border:0;border-bottom:1px solid #4A4844;color:var(--bg);padding:10px 0;border-radius:0}
+.input:focus{outline:none;border-color:var(--orange)}
+select.input option{background:var(--ink)}
+.r2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.brief .note{font-size:.8rem;margin-top:12px;color:#8A8880}
+.brief .form-status{color:var(--orange)}
+.brief .field-error{color:#FF8A66}
+
+footer.site{padding:48px 0 24px}
+.big{font:800 clamp(4rem,1rem + 15vw,15rem)/.8 var(--disp);letter-spacing:-.06em;grid-column:1 / -1;color:var(--ink)!important}
+.big i{display:inline-block;width:.18em;height:.18em;background:var(--orange)}
+.fl{margin-top:32px;padding-top:16px;border-top:2px solid var(--ink);font-size:.85rem}
+.fl>*{grid-column:span 3}
+.fl a:hover{color:var(--orange)}
+
+@media(max-width:1000px){
+  .sec-h h2{grid-column:1 / -1;margin-top:10px}.sec-h p{grid-column:1 / span 8;margin-top:16px}.sec-h .num{grid-column:1 / -1}
+  .cap{grid-column:span 6;border-bottom:1px solid var(--grey);padding-bottom:22px;min-height:0}
+  .cap:nth-child(2){border-right:0}.cap:nth-child(3){padding-left:0}
+  .ph{grid-column:span 6;padding-bottom:28px}
+  .case:nth-child(n){grid-column:1 / -1;margin-top:0}
+  .case:nth-child(2){grid-column:1 / span 8}
+  .case:nth-child(2) .img{aspect-ratio:4/3}
+  .prin h3{grid-column:3 / -1}.prin p{grid-column:3 / -1;margin-top:10px}
+  .studio-lead{grid-column:1 / -1}.team{grid-column:1 / -1;margin-top:32px}
+  .brief h2,.brief .side{grid-column:1 / -1}.brief form{grid-column:1 / -1;grid-row:auto;margin-top:48px}
+  .hero-foot p{grid-column:1 / -1}.hero-foot .acts{grid-column:1 / -1;justify-content:flex-start;margin-top:24px}
+  .hero-info>div{grid-column:span 6!important}
+  .fl>*{grid-column:span 6;margin-bottom:8px}
+}
+@media(max-width:820px){
+  .nav-toggle{display:block}
+  .nav-panel{position:absolute;top:100%;left:0;right:0;background:var(--bg);border-bottom:2px solid var(--ink);flex-direction:column;align-items:stretch;gap:0;padding:0 var(--pad) 20px;display:none}
+  .nav-panel.open{display:flex}
+  .nav-panel a:not(.btn){font:700 1.8rem var(--disp);letter-spacing:-.03em;padding:12px 0;border-bottom:1px solid var(--grey)}
+  .nav-panel .btn{margin-top:16px;justify-content:center}
+}
+@media(max-width:600px){
+  .cap,.ph{grid-column:1 / -1;border-right:0;padding-left:0!important}
+  .case:nth-child(2){grid-column:1 / -1}
+  .prin .num,.prin h3,.prin p{grid-column:1 / -1}
+  .r2{grid-template-columns:1fr}
+  .hero-info>div{grid-column:1 / -1!important;padding:10px 0}
+  .hero-info>div+div{border-top:1px solid var(--grey)}
+  .fl>*{grid-column:1 / -1}
+}
+</style>
+</head>
+<body data-template="agency" data-name="Pixelforge Agency">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site">
+ <div class="c">
+  <a class="logo" href="#top" id="top"><i aria-hidden="true"></i>Pixelforge</a>
+  <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-links">Menu</button>
+  <nav class="nav-panel" id="nav-links" aria-label="Main">
+   <a href="#capabilities"><sup>01</sup>Capabilities</a><a href="#work"><sup>02</sup>Work</a><a href="#process"><sup>03</sup>Process</a><a href="#studio"><sup>04</sup>Studio</a>
+   <a class="btn" href="#brief">New project →</a>
+  </nav>
+ </div>
+</header>
+
+<main id="main">
+<section class="hero">
+ <div class="cols" aria-hidden="true"><div class="g"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+ <div class="c">
+  <div class="g hero-info">
+   <div style="grid-column:1 / span 3"><b>Pixelforge Studio</b>Brand, digital &amp; strategy</div>
+   <div style="grid-column:4 / span 3"><b>Independent</b>Since 2017 · 14 people</div>
+   <div style="grid-column:7 / span 3"><b>Now booking</b>Projects starting in spring</div>
+   <div style="grid-column:10 / span 3"><b>Based in</b>Your City, working worldwide</div>
+  </div>
+  <div class="g"><h1>Brands with a point of view, built for screens first<span class="sq" aria-hidden="true"></span></h1></div>
+  <div class="g hero-foot">
+   <p>We help ambitious companies decide what they stand for, then express it in identities, websites and campaigns that people remember for the right reasons.</p>
+   <div class="acts"><a class="btn o" href="#brief">Start a project →</a><a class="u" href="#work">See selected work</a></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec" id="capabilities">
+ <div class="c">
+  <div class="g sec-h"><span class="num">(01) Capabilities</span><h2>Four disciplines under one roof.</h2><p>Most projects combine strategy with at least one other discipline, so the thinking and the making stay connected.</p></div>
+  <div class="g caps">
+   <div class="cap reveal"><span class="num">01</span><h3>Strategy</h3><p>Research, positioning and the story your brand tells.</p><ul><li>Brand positioning</li><li>Audience research</li><li>Naming</li></ul></div>
+   <div class="cap reveal"><span class="num">02</span><h3>Identity</h3><p>Visual systems that hold up from favicon to billboard.</p><ul><li>Logo &amp; type systems</li><li>Brand guidelines</li><li>Packaging</li></ul></div>
+   <div class="cap reveal"><span class="num">03</span><h3>Digital</h3><p>Websites and products designed and built in-house.</p><ul><li>Websites</li><li>Product UI</li><li>Design systems</li></ul></div>
+   <div class="cap reveal"><span class="num">04</span><h3>Campaigns</h3><p>Launches and content that put the brand to work.</p><ul><li>Launch campaigns</li><li>Social content</li><li>Motion</li></ul></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec" id="work" style="padding-top:0">
+ <div class="c">
+  <div class="g sec-h"><span class="num">(02) Selected work</span><h2>Recent projects.</h2><p>Sample case studies for this template.</p></div>
+  <div class="g work">
+   <a class="case reveal" href="#brief"><div class="img"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="300" fill="#FF4F00"/><text x="36" y="190" font-family="Bricolage Grotesque,sans-serif" font-weight="800" font-size="120" letter-spacing="-8" fill="#0E0E0E">volt</text><rect x="300" y="60" width="50" height="50" fill="#0E0E0E"/></svg></div><div class="meta"><h3>Volt Energy</h3><span>Positioning · Identity · Website — 2025</span><span class="arrow" aria-hidden="true">↗</span></div></a>
+   <a class="case reveal" href="#brief"><div class="img"><svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="300" height="400" fill="#0E0E0E"/><rect x="70" y="60" width="160" height="290" rx="18" fill="#1F1F1F"/><rect x="86" y="90" width="128" height="80" fill="#C9C7BF"/><rect x="86" y="184" width="90" height="10" fill="#FF4F00"/><rect x="86" y="204" width="128" height="8" fill="#3A3936"/><rect x="86" y="220" width="100" height="8" fill="#3A3936"/></svg></div><div class="meta"><h3>Orbit</h3><span>Product UI · Design system — 2025</span><span class="arrow" aria-hidden="true">↗</span></div></a>
+   <a class="case reveal" href="#brief"><div class="img"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="300" fill="#C9C7BF"/><g fill="#0E0E0E"><rect x="60" y="70" width="70" height="170"/><rect x="150" y="110" width="70" height="130"/><rect x="240" y="40" width="70" height="200"/></g><circle cx="330" cy="70" r="22" fill="#FF4F00"/></svg></div><div class="meta"><h3>Bloom Skincare</h3><span>Packaging · Launch campaign — 2024</span><span class="arrow" aria-hidden="true">↗</span></div></a>
+   <a class="case reveal" href="#brief"><div class="img"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="300" fill="#F7F6F2"/><g stroke="#0E0E0E" stroke-width="2" fill="none"><path d="M0 220 Q100 140 200 190 T400 130"/><path d="M0 250 Q110 180 210 220 T400 170"/></g><rect x="40" y="40" width="150" height="20" fill="#0E0E0E"/><rect x="40" y="70" width="100" height="10" fill="#FF4F00"/></svg></div><div class="meta"><h3>Nomad Travel Co.</h3><span>Website · Editorial design — 2024</span><span class="arrow" aria-hidden="true">↗</span></div></a>
+  </div>
+ </div>
+</section>
+
+<section class="sec proc" id="process">
+ <div class="c">
+  <div class="g sec-h"><span class="num">(03) Process</span><h2>How a project moves.</h2><p>Fixed phases, fixed checkpoints. You always know what is being made this week.</p></div>
+  <div class="g phases" id="phases">
+   <div class="ph"><span class="wk">Weeks 1–2</span><h3>Discover</h3><p>Workshops, interviews and an audit of your brand and competitors.</p><b>Output: strategy brief</b></div>
+   <div class="ph"><span class="wk">Weeks 3–5</span><h3>Define</h3><p>Positioning, messaging and two or three creative directions to react to.</p><b>Output: chosen direction</b></div>
+   <div class="ph"><span class="wk">Weeks 6–10</span><h3>Design &amp; build</h3><p>Identity system, website and assets, reviewed together every week.</p><b>Output: finished system</b></div>
+   <div class="ph"><span class="wk">Week 11 +</span><h3>Launch</h3><p>Go-live, guidelines and handover — then support as you grow.</p><b>Output: launch kit</b></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec" id="principles">
+ <div class="c">
+  <div class="g sec-h"><span class="num">Principles</span><h2>What we hold ourselves to.</h2></div>
+  <ol class="prin">
+   <li class="reveal"><span class="num">P.01</span><h3>Strategy before style.</h3><p>We don't open a design tool until we agree what the work needs to achieve.</p></li>
+   <li class="reveal"><span class="num">P.02</span><h3>Senior people, start to finish.</h3><p>The people in the first meeting are the people doing the work.</p></li>
+   <li class="reveal"><span class="num">P.03</span><h3>Built to be used.</h3><p>Every system ships with guidelines and files your team can run with.</p></li>
+  </ol>
+ </div>
+</section>
+
+<section class="sec" id="studio" style="padding-top:0">
+ <div class="c">
+  <div class="g sec-h"><span class="num">(04) Studio</span></div>
+  <div class="g">
+   <p class="studio-lead">We're a small, independent team of strategists, designers and developers. Small enough to care about every detail, experienced enough to handle complex launches.</p>
+   <ul class="team">
+    <li>Riya Ahmed<span>Creative director</span></li>
+    <li>Jay Kumar<span>Technical lead</span></li>
+    <li>Lina Sultana<span>Brand designer</span></li>
+    <li>Omar Babu<span>Motion designer</span></li>
+    <li style="border:0;font-size:.8rem;color:var(--muted)">Sample team for this template.</li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section class="brief" id="brief">
+ <div class="c">
+  <div class="g">
+   <h2>Start a <span>project.</span></h2>
+   <p class="side">Tell us what you're planning. We reply to every brief within two working days with questions or a short proposal.<br><br>hello@pixelforge.example</p>
+   <form data-demo-form data-success="Thanks — your brief has been checked.">
+    <fieldset><legend>What do you need?</legend><div class="chips">
+     <label><input type="checkbox" name="s" value="strategy"><span>Strategy</span></label>
+     <label><input type="checkbox" name="s" value="identity"><span>Identity</span></label>
+     <label><input type="checkbox" name="s" value="website"><span>Website</span></label>
+     <label><input type="checkbox" name="s" value="campaign"><span>Campaign</span></label>
+    </div></fieldset>
+    <fieldset><legend>Budget</legend><div class="chips">
+     <label><input type="radio" name="b" value="1"><span>Under $10k</span></label>
+     <label><input type="radio" name="b" value="2" checked><span>$10–25k</span></label>
+     <label><input type="radio" name="b" value="3"><span>$25–60k</span></label>
+     <label><input type="radio" name="b" value="4"><span>$60k +</span></label>
+    </div></fieldset>
+    <div class="r2">
+     <div class="field"><label class="l" for="a-name">Name</label><input class="input" id="a-name" autocomplete="name" required><small class="field-error"></small></div>
+     <div class="field"><label class="l" for="a-email">Email</label><input class="input" id="a-email" type="email" autocomplete="email" required><small class="field-error"></small></div>
+    </div>
+    <div class="field"><label class="l" for="a-when">Ideal start</label><select class="input" id="a-when"><option>As soon as possible</option><option>In 1–3 months</option><option>Later this year</option></select></div>
+    <div class="field"><label class="l" for="a-msg">About the project</label><textarea class="input" id="a-msg" rows="3" required></textarea><small class="field-error"></small></div>
+    <button class="btn o" type="submit">Send brief →</button>
+    <p class="form-status" role="status" hidden></p>
+    <p class="note">Template demo — this form checks your input but sends nothing.</p>
+   </form>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer class="site">
+ <div class="c">
+  <div class="g"><p class="big" aria-hidden="true">Pixelforge<i></i></p></div>
+  <div class="g fl"><span>© <span data-year>2026</span> Pixelforge Studio — sample brand</span><a href="#work">Work</a><a href="#brief">New project</a><span>Website template by KHOKA TECH</span></div>
+ </div>
+</footer>
+<script src="../../assets/js/demo.js"></script>
+<script>
+// draw the orange progress line on each phase when the process section enters the viewport
+(function(){const ph=document.querySelectorAll(".ph");if(!("IntersectionObserver" in window)){ph.forEach(p=>p.classList.add("in"));return}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){ph.forEach((p,i)=>setTimeout(()=>p.classList.add("in"),i*220));io.disconnect()}}),{threshold:.3});io.observe(document.getElementById("phases"))})();
+</script>
+</body>
+</html>
