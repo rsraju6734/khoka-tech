@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LearnSphere Academy — Practical Courses in Tech, Design, Business &amp; Language | Demo by KHOKA TECH</title>
+<meta name="description" content="LearnSphere Academy is a sample education platform by KHOKA TECH: course catalogue with search and filters, course details, instructors, a student dashboard preview and enrolment.">
+<meta name="theme-color" content="#3B3FD8">
+<link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+<link rel="preload" as="image" href="img/hero.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/kit.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-demo="Education · LearnSphere Academy">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="hdr">
+ <div class="wrap hdr-in">
+  <a class="logo" href="index.html" aria-label="LearnSphere Academy home"><span class="mark" aria-hidden="true"><i></i></span>LearnSphere<small>ACADEMY</small></a>
+  <nav class="nav" id="nav" aria-label="Main"><a href="#courses">Courses</a><a href="#how">How it works</a><a href="#dashboard">Student dashboard</a><a href="#instructors">Instructors</a><a href="#faq">FAQ</a></nav>
+  <div class="hdr-r"><button class="btn btn-sm" type="button" data-enroll>Enroll now</button><button class="nav-btn" data-nav-toggle aria-controls="nav" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button></div>
+ </div>
+</header>
+
+<main id="main">
+<section class="hero">
+ <div class="wrap hero-grid">
+  <div class="hero-copy">
+   <span class="badge">Spring intake · classes start in January</span>
+   <h1>Learn practical skills from people who <em>use them every day.</em></h1>
+   <p class="lede">Live, small-group courses in development, data, design, business and language — taught in Bangla and English, online or at our Dhanmondi campus.</p>
+   <form class="hero-search" id="hero-search" role="search"><label class="sr-only" for="hs-q">Search courses</label><input id="hs-q" type="search" placeholder="What do you want to learn?" autocomplete="off"><button class="btn" type="submit">Find courses</button></form>
+   <p class="pop">Popular: <button type="button" data-hs="web">Web development</button><button type="button" data-hs="data">Data science</button><button type="button" data-hs="ielts">IELTS</button></p>
+  </div>
+  <div class="hero-pic">
+   <div class="ph hp"><img src="img/hero.webp" alt="Group of students collaborating around a laptop in a lecture hall" width="1920" height="1280" fetchpriority="high"></div>
+   <div class="float f1"><span class="dot" aria-hidden="true"></span><div><b>Live class tonight</b><small>Web Development · 8:00 PM</small></div></div>
+   <div class="float f2"><b>Certificate</b><small>on completion of every course</small></div>
+  </div>
+ </div>
+ <div class="wrap usp">
+  <div><b>Live + recorded</b><span>Join live or catch up any time</span></div>
+  <div><b>Small groups</b><span>Maximum 25 learners per batch</span></div>
+  <div><b>Real projects</b><span>Build a portfolio as you learn</span></div>
+  <div><b>Career support</b><span>CV reviews and mock interviews</span></div>
+ </div>
+</section>
+
+<section class="sec" id="courses" aria-labelledby="c-h">
+ <div class="wrap">
+  <div class="sec-head"><div><p class="kicker">Course catalogue</p><h2 id="c-h">Find the right course</h2></div><p class="muted" id="c-count" aria-live="polite"></p></div>
+  <div class="c-tools">
+   <div class="cat-chips" id="cat-chips" role="group" aria-label="Filter by subject"></div>
+   <div class="c-right">
+    <label class="c-search"><span class="sr-only">Search courses</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="c-q" type="search" placeholder="Search courses" autocomplete="off"></label>
+    <label><span class="sr-only">Level</span><select id="c-level"><option value="all">All levels</option><option>Beginner</option><option>Intermediate</option><option>All levels</option><option>HSC</option></select></label>
+   </div>
+  </div>
+  <div class="courses" id="course-grid"></div>
+  <div class="none" id="c-none" hidden><b>No courses match.</b><button class="btn btn-sm btn-soft" type="button" id="c-clear">Show all courses</button></div>
+ </div>
+</section>
+
+<section class="sec how" id="how" aria-labelledby="how-h">
+ <div class="wrap how-grid">
+  <div class="how-pics"><div class="ph hp1"><img src="img/classroom.webp" alt="Students in a classroom with a teacher presenting" width="1000" height="667" loading="lazy"></div><div class="ph hp2"><img src="img/teacher.webp" alt="Instructor explaining code on a large screen" width="1000" height="667" loading="lazy"></div></div>
+  <div>
+   <p class="kicker">How it works</p>
+   <h2 id="how-h">Learning that keeps you moving</h2>
+   <ol class="steps">
+    <li><b>Join live classes</b><span>Two or three evening sessions a week with your instructor and batch.</span></li>
+    <li><b>Practise with real projects</b><span>Weekly tasks based on work our instructors do in their jobs.</span></li>
+    <li><b>Get feedback</b><span>Personal review on every assignment, plus open doubt-clearing hours.</span></li>
+    <li><b>Earn your certificate</b><span>Complete the final project to receive a verified certificate.</span></li>
+   </ol>
+  </div>
+ </div>
+</section>
+
+<section class="sec dash-sec" id="dashboard" aria-labelledby="d-h">
+ <div class="wrap">
+  <div class="sec-head"><div><p class="kicker light">Student dashboard</p><h2 id="d-h">Everything you need in one place</h2></div><p class="note">Preview with sample data.</p></div>
+  <div class="dash">
+   <aside class="d-side"><span class="logo small"><span class="mark" aria-hidden="true"><i></i></span>LearnSphere</span>
+    <div class="d-tabs" role="tablist" aria-label="Dashboard sections"><button role="tab" type="button" data-dt="overview" aria-selected="true">Overview</button><button role="tab" type="button" data-dt="assign" aria-selected="false">Assignments</button><button role="tab" type="button" data-dt="sched" aria-selected="false">Schedule</button></div>
+    <div class="d-user"><span class="av">SR</span><div><b>Sadia R.</b><small>Sample student</small></div></div>
+   </aside>
+   <div class="d-main">
+    <div class="d-panel" data-panel="overview">
+     <h3>Welcome back, Sadia</h3>
+     <div class="d-cards">
+      <div class="d-card"><span>Full-Stack Web Development</span><div class="bar"><i style="width:62%"></i></div><small>62% complete · Module 4 of 6</small></div>
+      <div class="d-card"><span>IELTS &amp; Spoken English</span><div class="bar"><i style="width:35%"></i></div><small>35% complete · Mock test next week</small></div>
+      <div class="d-card stat"><b>12</b><small>Assignments submitted</small></div>
+      <div class="d-card stat"><b>94%</b><small>Attendance</small></div>
+     </div>
+     <div class="d-next"><b>Next live class</b><span>Back-end with Node.js · Tue, 8:00 PM</span><button class="btn btn-sm" type="button" data-toast="In the live platform, this would open your class link.">Join class</button></div>
+    </div>
+    <div class="d-panel" data-panel="assign" hidden>
+     <h3>Assignments</h3>
+     <ul class="d-list"><li><span>Build a REST API</span><em class="due">Due Thu</em></li><li><span>Writing Task 2 — opinion essay</span><em class="due">Due Sat</em></li><li><span>Responsive landing page</span><em class="done">Reviewed · 18/20</em></li><li><span>Listening practice set 3</span><em class="done">Submitted</em></li></ul>
+    </div>
+    <div class="d-panel" data-panel="sched" hidden>
+     <h3>This week</h3>
+     <ul class="d-list"><li><span>Sun · 8:00 PM</span><em>Node.js — routing and middleware</em></li><li><span>Mon · 6:00 PM</span><em>Speaking practice (campus)</em></li><li><span>Tue · 8:00 PM</span><em>Back-end with Node.js</em></li><li><span>Thu · 8:30 PM</span><em>Doubt-clearing hour</em></li></ul>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="sec" id="instructors" aria-labelledby="i-h">
+ <div class="wrap">
+  <div class="sec-head"><div><p class="kicker">Instructors</p><h2 id="i-h">Learn from working professionals</h2></div><p class="note">Sample instructor profiles (fictional).</p></div>
+  <div class="inst-grid" id="inst-grid"></div>
+ </div>
+</section>
+
+<section class="campus">
+ <div class="wrap campus-grid">
+  <div class="ph campus-pic"><img src="img/campus.webp" alt="Library with tall windows and bookshelves" width="1000" height="667" loading="lazy"></div>
+  <div class="campus-copy"><p class="kicker light">Dhanmondi campus</p><h2>Study online or join us on campus</h2><p>Quiet study spaces, a reference library and project rooms for group work — open to every enrolled student, seven days a week.</p><div class="ph campus-small"><img src="img/group.webp" alt="Group of students studying together" width="1000" height="667" loading="lazy"></div></div>
+ </div>
+</section>
+
+<section class="sec" id="faq" aria-labelledby="f-h">
+ <div class="wrap faq-grid">
+  <div><p class="kicker">FAQ</p><h2 id="f-h">Questions before you enrol</h2><p class="muted">Can't find an answer? Send an enquiry from the enrolment form and our admissions team will call you.</p><button class="btn" type="button" data-enroll>Start enrolment</button></div>
+  <div class="faq">
+   <details open><summary>Do I need any experience?</summary><p>No. Beginner courses start from zero. Intermediate courses list what you should know on the course page.</p></details>
+   <details><summary>What if I miss a live class?</summary><p>Every class is recorded and available in your dashboard within a few hours.</p></details>
+   <details><summary>Can I pay in instalments?</summary><p>Yes. Most courses can be paid in two or three monthly instalments.</p></details>
+   <details><summary>Do I get a certificate?</summary><p>Yes, after completing the assignments and the final project.</p></details>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer class="ftr">
+ <div class="wrap ftr-grid">
+  <div><a class="logo" href="index.html"><span class="mark" aria-hidden="true"><i></i></span>LearnSphere<small>ACADEMY</small></a><p>Practical, live courses for students and professionals. A sample education brand created by KHOKA TECH.</p></div>
+  <div><h4>Learn</h4><a href="#courses">All courses</a><a href="#how">How it works</a><a href="#dashboard">Dashboard</a></div>
+  <div><h4>Academy</h4><a href="#instructors">Instructors</a><a href="#faq">FAQ</a><button class="ftr-link" type="button" data-enroll>Enrolment</button></div>
+  <div><h4>Contact (sample)</h4><p>House 22, Road 7, Dhanmondi, Dhaka<br>admissions@learnsphere.example<br>+880 1700-000200</p></div>
+ </div>
+ <div class="wrap ftr-bottom"><span>© <span data-year>2026</span> LearnSphere Academy — sample brand.</span><span>Photos: Unsplash · Website by KHOKA TECH</span></div>
+</footer>
+
+<dialog class="enroll" id="enroll" aria-labelledby="en-h">
+ <form method="dialog" class="en-x-wrap"><button class="en-x" aria-label="Close">×</button></form>
+ <form class="en-form" id="en-form" data-demo-form data-success="Your enrolment request is ready. A real academy would now contact you to confirm your seat.">
+  <p class="kicker">Enrolment</p>
+  <h2 id="en-h">Reserve your seat</h2>
+  <div class="field"><label for="en-course">Course</label><select id="en-course" required><option value="">Choose a course</option></select><small class="f-err"></small></div>
+  <div class="row2">
+   <div class="field"><label for="en-name">Full name</label><input id="en-name" autocomplete="name" required minlength="2"><small class="f-err"></small></div>
+   <div class="field"><label for="en-phone">Phone</label><input id="en-phone" type="tel" autocomplete="tel" required><small class="f-err"></small></div>
+  </div>
+  <div class="field"><label for="en-email">Email</label><input id="en-email" type="email" autocomplete="email" required><small class="f-err"></small></div>
+  <fieldset class="mode"><legend>Preferred mode</legend><label><input type="radio" name="mode" value="online" checked><span>Online</span></label><label><input type="radio" name="mode" value="campus"><span>On campus</span></label></fieldset>
+  <button class="btn btn-full" type="submit">Request enrolment</button>
+  <p class="f-status" role="status" hidden></p>
+  <p class="demo-note">Demo mode: no payment is taken and nothing is sent.</p>
+ </form>
+</dialog>
+
+<script src="../shared/kit.js"></script>
+<script src="courses.js"></script>
+<script src="enroll.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

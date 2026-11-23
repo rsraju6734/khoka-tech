@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Horizon Estates — Luxury Homes for Sale &amp; Rent in Bangladesh | Demo by KHOKA TECH</title>
+<meta name="description" content="Horizon Estates is a sample luxury real estate website by KHOKA TECH: featured villas and apartments, property search and filters, galleries, agents and viewing requests.">
+<meta name="theme-color" content="#1B2330">
+<link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+<link rel="preload" as="image" href="img/hero.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/kit.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-demo="Real estate · Horizon Estates">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="hdr" id="hdr">
+ <div class="wrap hdr-in">
+  <a class="logo" href="index.html" aria-label="Horizon Estates home"><svg viewBox="0 0 40 24" aria-hidden="true"><path d="M2 20h36M8 20a12 12 0 0124 0" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M20 4v4M10 8l2 3M30 8l-2 3" stroke="currentColor" stroke-width="1.6"/></svg><span>Horizon<small>ESTATES</small></span></a>
+  <nav class="nav" id="nav" aria-label="Main"><a href="#listings">Properties</a><a href="#services">Services</a><a href="#agents">Agents</a><a href="#contact">Contact</a><a class="btn btn-sm" href="#contact">Book a viewing</a></nav>
+  <button class="nav-btn" data-nav-toggle aria-controls="nav" aria-expanded="false" aria-label="Open menu"><span></span><span></span></button>
+ </div>
+</header>
+
+<main id="main">
+<section class="hero">
+ <img class="hero-img" src="img/hero.webp" alt="Modern villa with an infinity pool overlooking the sea" width="1920" height="1280" fetchpriority="high">
+ <div class="hero-shade" aria-hidden="true"></div>
+ <div class="wrap hero-in">
+  <p class="eyebrow">Luxury homes · Dhaka · Cox's Bazar</p>
+  <h1>Find a home that feels like a retreat.</h1>
+  <p class="lede">Hand-picked villas, family houses and apartments — each one visited, measured and photographed by our own team.</p>
+  <form class="finder" id="finder" role="search" aria-label="Search properties">
+   <label><span>Looking to</span><select id="f-status"><option value="all">Buy or rent</option><option value="sale">Buy</option><option value="rent">Rent</option></select></label>
+   <label><span>Location</span><select id="f-city"><option value="all">Anywhere</option></select></label>
+   <label><span>Property type</span><select id="f-type"><option value="all">Any type</option></select></label>
+   <label><span>Bedrooms</span><select id="f-beds"><option value="0">Any</option><option value="3">3+</option><option value="4">4+</option><option value="5">5+</option></select></label>
+   <button class="btn" type="submit">Search</button>
+  </form>
+ </div>
+</section>
+
+<section class="sec featured" aria-labelledby="ft-h">
+ <div class="wrap">
+  <div class="sec-head"><div><p class="eyebrow dark">Featured</p><h2 id="ft-h">Homes we are proud to represent</h2></div><a class="lnk" href="#listings">See all properties →</a></div>
+  <div class="feat" id="feat"></div>
+ </div>
+</section>
+
+<section class="sec listings" id="listings" aria-labelledby="ls-h">
+ <div class="wrap">
+  <div class="sec-head"><div><p class="eyebrow dark">All properties</p><h2 id="ls-h">Search our listings</h2></div><p class="muted" id="ls-count" aria-live="polite"></p></div>
+  <div class="ls-tools">
+   <label class="ls-search"><span class="sr-only">Search by name or area</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="ls-q" type="search" placeholder="Search by name or area" autocomplete="off"></label>
+   <div class="seg" role="group" aria-label="Buy or rent"><button type="button" data-st="all" aria-pressed="true">All</button><button type="button" data-st="sale" aria-pressed="false">For sale</button><button type="button" data-st="rent" aria-pressed="false">For rent</button></div>
+   <label><span class="sr-only">Sort</span><select id="ls-sort"><option value="feat">Featured first</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="size">Largest first</option></select></label>
+  </div>
+  <div class="cards" id="cards"></div>
+  <div class="none" id="none" hidden><p><b>No properties match your search.</b></p><button class="btn btn-line btn-sm" type="button" id="clear">Clear filters</button></div>
+ </div>
+</section>
+
+<section class="sec services" id="services" aria-labelledby="sv-h">
+ <div class="wrap svc-grid">
+  <div class="ph svc-pic"><img src="img/extra1.webp" alt="Two-storey modern house with balconies" width="1400" height="933" loading="lazy"></div>
+  <div>
+   <p class="eyebrow dark">Our services</p>
+   <h2 id="sv-h">One team for buying, selling and letting</h2>
+   <ol class="svc-list">
+    <li><b>Buying</b><span>We shortlist homes that match your brief, arrange viewings and handle negotiation and paperwork.</span></li>
+    <li><b>Selling</b><span>Professional photography, honest valuation and marketing to a vetted list of buyers.</span></li>
+    <li><b>Letting &amp; management</b><span>Tenant checks, lease agreements and maintenance for landlords at home and abroad.</span></li>
+   </ol>
+   <a class="btn" href="#contact">Talk to an agent</a>
+  </div>
+ </div>
+</section>
+
+<section class="sec agents" id="agents" aria-labelledby="ag-h">
+ <div class="wrap">
+  <div class="sec-head"><div><p class="eyebrow dark">Our agents</p><h2 id="ag-h">People who know the neighbourhoods</h2></div><p class="note">Sample agent profiles (fictional) for this demo.</p></div>
+  <div class="agent-grid" id="agent-grid"></div>
+ </div>
+</section>
+
+<section class="sec contact" id="contact" aria-labelledby="ct-h">
+ <div class="wrap ct-grid">
+  <div>
+   <p class="eyebrow">Contact</p>
+   <h2 id="ct-h">Book a private viewing</h2>
+   <p>Tell us what you are looking for and when you are free. An agent will call you to arrange a visit.</p>
+   <dl class="ct-list"><div><dt>Office</dt><dd>Level 6, Road 11, Banani, Dhaka 1213</dd></div><div><dt>Phone</dt><dd>+880 1700-000100</dd></div><div><dt>Email</dt><dd>hello@horizonestates.example</dd></div><div><dt>Hours</dt><dd>Sat – Thu, 10:00 – 19:00</dd></div></dl>
+   <p class="note light">Sample contact details for this demo.</p>
+  </div>
+  <form class="inq" data-demo-form data-success="Thank you — your viewing request is ready. A live site would now notify the agent.">
+   <div class="row2">
+    <div class="field"><label for="c-name">Full name</label><input id="c-name" autocomplete="name" required minlength="2"><small class="f-err"></small></div>
+    <div class="field"><label for="c-phone">Phone</label><input id="c-phone" type="tel" autocomplete="tel" required><small class="f-err"></small></div>
+   </div>
+   <div class="field"><label for="c-email">Email</label><input id="c-email" type="email" autocomplete="email" required><small class="f-err"></small></div>
+   <div class="row2">
+    <div class="field"><label for="c-prop">Property</label><select id="c-prop"><option>Any property</option></select></div>
+    <div class="field"><label for="c-date">Preferred date</label><input id="c-date" type="date" data-min-today><small class="f-err"></small></div>
+   </div>
+   <div class="field"><label for="c-msg">Message</label><textarea id="c-msg" rows="3" maxlength="600" placeholder="Budget, timing, anything we should know"></textarea></div>
+   <button class="btn btn-full" type="submit">Request a viewing</button>
+   <p class="f-status" role="status" hidden></p>
+   <p class="demo-note">Demo mode: details are checked but not sent.</p>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer class="ftr">
+ <div class="wrap ftr-grid">
+  <div><a class="logo" href="index.html"><svg viewBox="0 0 40 24" aria-hidden="true"><path d="M2 20h36M8 20a12 12 0 0124 0" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M20 4v4M10 8l2 3M30 8l-2 3" stroke="currentColor" stroke-width="1.6"/></svg><span>Horizon<small>ESTATES</small></span></a><p>Luxury homes for sale and rent in Bangladesh. A sample brand created by KHOKA TECH; listings are fictional.</p></div>
+  <div><h4>Explore</h4><a href="#listings">All properties</a><a href="#services">Services</a><a href="#agents">Agents</a></div>
+  <div><h4>Contact</h4><p>+880 1700-000100<br>hello@horizonestates.example</p></div>
+ </div>
+ <div class="wrap ftr-bottom"><span>© <span data-year>2026</span> Horizon Estates — sample brand.</span><span>Photos: Unsplash · Website by KHOKA TECH</span></div>
+</footer>
+<script src="../shared/kit.js"></script>
+<script src="properties.js"></script>
+<script src="common.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

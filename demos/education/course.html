@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Course — LearnSphere Academy | Demo by KHOKA TECH</title>
+<meta name="description" content="Course details, curriculum, instructor and enrolment at LearnSphere Academy, a sample education website by KHOKA TECH.">
+<meta name="theme-color" content="#3B3FD8">
+<link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/kit.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-demo="Education · LearnSphere Academy">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="hdr">
+ <div class="wrap hdr-in">
+  <a class="logo" href="index.html" aria-label="LearnSphere Academy home"><span class="mark" aria-hidden="true"><i></i></span>LearnSphere<small>ACADEMY</small></a>
+  <nav class="nav" id="nav" aria-label="Main"><a href="index.html#courses">Courses</a><a href="index.html#how">How it works</a><a href="index.html#dashboard">Student dashboard</a><a href="index.html#instructors">Instructors</a><a href="index.html#faq">FAQ</a></nav>
+  <div class="hdr-r"><button class="btn btn-sm" type="button" data-enroll>Enroll now</button><button class="nav-btn" data-nav-toggle aria-controls="nav" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button></div>
+ </div>
+</header>
+
+<main id="main">
+ <section class="c-hero"><div class="wrap" id="c-hero"></div></section>
+ <div class="wrap c-body" id="c-body"></div>
+ <section class="sec more"><div class="wrap"><div class="sec-head"><div><p class="kicker">Keep exploring</p><h2>Other courses</h2></div><a class="lnk" href="index.html#courses">All courses →</a></div><div class="courses" id="more"></div></div></section>
+</main>
+
+<footer class="ftr">
+ <div class="wrap ftr-grid">
+  <div><a class="logo" href="index.html"><span class="mark" aria-hidden="true"><i></i></span>LearnSphere<small>ACADEMY</small></a><p>Practical, live courses for students and professionals. A sample education brand created by KHOKA TECH.</p></div>
+  <div><h4>Learn</h4><a href="index.html#courses">All courses</a><a href="index.html#how">How it works</a><a href="index.html#dashboard">Dashboard</a></div>
+  <div><h4>Academy</h4><a href="index.html#instructors">Instructors</a><a href="index.html#faq">FAQ</a><button class="ftr-link" type="button" data-enroll>Enrolment</button></div>
+  <div><h4>Contact (sample)</h4><p>House 22, Road 7, Dhanmondi, Dhaka<br>admissions@learnsphere.example<br>+880 1700-000200</p></div>
+ </div>
+ <div class="wrap ftr-bottom"><span>© <span data-year>2026</span> LearnSphere Academy — sample brand.</span><span>Photos: Unsplash · Website by KHOKA TECH</span></div>
+</footer>
+
+<dialog class="enroll" id="enroll" aria-labelledby="en-h">
+ <form method="dialog" class="en-x-wrap"><button class="en-x" aria-label="Close">×</button></form>
+ <form class="en-form" id="en-form" data-demo-form data-success="Your enrolment request is ready. A real academy would now contact you to confirm your seat.">
+  <p class="kicker">Enrolment</p>
+  <h2 id="en-h">Reserve your seat</h2>
+  <div class="field"><label for="en-course">Course</label><select id="en-course" required><option value="">Choose a course</option></select><small class="f-err"></small></div>
+  <div class="row2">
+   <div class="field"><label for="en-name">Full name</label><input id="en-name" autocomplete="name" required minlength="2"><small class="f-err"></small></div>
+   <div class="field"><label for="en-phone">Phone</label><input id="en-phone" type="tel" autocomplete="tel" required><small class="f-err"></small></div>
+  </div>
+  <div class="field"><label for="en-email">Email</label><input id="en-email" type="email" autocomplete="email" required><small class="f-err"></small></div>
+  <fieldset class="mode"><legend>Preferred mode</legend><label><input type="radio" name="mode" value="online" checked><span>Online</span></label><label><input type="radio" name="mode" value="campus"><span>On campus</span></label></fieldset>
+  <button class="btn btn-full" type="submit">Request enrolment</button>
+  <p class="f-status" role="status" hidden></p>
+  <p class="demo-note">Demo mode: no payment is taken and nothing is sent.</p>
+ </form>
+</dialog>
+
+<script src="../shared/kit.js"></script>
+<script src="courses.js"></script>
+<script src="enroll.js"></script>
+<script src="course.js"></script>
+</body>
+</html>
