@@ -29,11 +29,13 @@ khoka-tech/
 └── assets/
     ├── css/
     │   ├── home.css                ★ Homepage design (v6): intro, menu, flip card, service doors, timeline, dark mode
-    │   ├── style.css               Brand system for inner pages (templates, demos details, admin)
+    │   ├── style.css               Base layout for inner pages (templates, demos details, admin)
+    │   ├── theme.css               ★ v7 look for every inner page: paper colours, pill buttons, dark footer, dark mode
     │   ├── marketplace.css         Store, product page, order page
     │   ├── admin.css               Admin dashboard
     │   └── demo.css                Demo plumbing only
     ├── js/
+    │   ├── site.js                 Pull-cord light/dark switch on inner pages
     │   ├── contact.js              ★ CENTRAL CONFIG: email, business WhatsApp number, order prefix, API address
     │   ├── templates-data.js       ★ Template catalogue
     │   ├── main.js                 Homepage
@@ -103,6 +105,8 @@ filters, case dialog and contact form. Unknown ids (`product.html?id=x`) show a 
    (paste a message from step 2).
 
 ## Deploy / update on GitHub Pages
+CSS and JS links end in "?v=7". After changing a CSS/JS file, raise that number in the HTML files so visitors' browsers load the new file instead of a cached copy.
+
 Upload the changed files (keep the folder structure) to the `khoka-tech` repository, or `git add . && git commit -m "Update" && git push`.
 New in v5: `demos/` and `assets/images/projects/demo-*.webp`. Earlier: `admin/`, `docs/`, plus `templates/order.html`, `assets/css/admin.css`,
 `assets/js/admin-data.js`, `assets/js/admin.js`. Do not upload the local `.claude/` folder.

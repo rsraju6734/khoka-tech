@@ -204,12 +204,13 @@ function toast(m) { const e = $("#toast"); e.textContent = m; e.classList.add("s
   box.classList.add("done");
   setTimeout(() => root.classList.remove("intro-on"), 650);
  };
- const frame = now => {
-  const p = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+ // Timer-based (not requestAnimationFrame) so it also finishes in background tabs and throttled browsers.
+ const iv = setInterval(() => {
+  const p = Math.min(1, (performance.now() - t0) / dur), e = 1 - Math.pow(1 - p, 3);
   num.textContent = String(Math.round(e * 100)).padStart(3, "0"); bar.style.width = e * 100 + "%";
-  if (p < 1 && !ended) requestAnimationFrame(frame); else setTimeout(end, 250);
- };
- requestAnimationFrame(frame);
+  if (p >= 1) { clearInterval(iv); setTimeout(end, 250); }
+ }, 30);
+ setTimeout(() => { clearInterval(iv); end(); }, 2500); // hard stop: never block the page
  box.addEventListener("click", end);
  document.addEventListener("keydown", end, { once: true });
 })();
@@ -325,7 +326,7 @@ if ("IntersectionObserver" in window) {
 /* ---------- full-screen menu ---------- */
 const menuBtn = $("#menu-btn"), menu = $("#menu");
 function openMenu() {
- menu.hidden = false; requestAnimationFrame(() => menu.classList.add("open"));
+ menu.hidden = false; setTimeout(() => menu.classList.add("open"), 10);
  document.body.classList.add("menu-open"); document.body.style.overflow = "hidden";
  menuBtn.setAttribute("aria-expanded", "true"); $(".menu-links a").focus();
 }
