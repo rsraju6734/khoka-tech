@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Product — NOVA STORE | Demo by KHOKA TECH</title>
+<meta name="description" content="Product details, photos and specifications at NOVA STORE, a sample online store by KHOKA TECH.">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/kit.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-demo="E-commerce · NOVA STORE">
+<a class="skip-link" href="#main">Skip to content</a>
+<p class="announce">Free delivery in Dhaka on orders over ৳5,000 · 7-day easy returns</p>
+
+<header class="hdr">
+ <div class="wrap hdr-in">
+  <button class="icon-btn nav-btn" data-nav-toggle aria-controls="nav" aria-expanded="false" aria-label="Open menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  <a class="logo" href="index.html" aria-label="NOVA STORE home">NOVA<span>STORE</span></a>
+  <nav class="nav" id="nav" aria-label="Categories">
+   <a href="index.html#shop">Shop all</a><a href="index.html?cat=watches#shop">Watches</a><a href="index.html?cat=audio#shop">Audio</a><a href="index.html?cat=bags#shop">Bags</a><a href="index.html?cat=eyewear#shop">Eyewear</a><a href="index.html?cat=wear#shop">Shoes &amp; Apparel</a>
+  </nav>
+  <div class="hdr-tools">
+   <label class="search"><span class="sr-only">Search products</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="q" type="search" placeholder="Search products" autocomplete="off" data-search-redirect></label>
+   <button class="icon-btn" type="button" data-open-wish aria-label="Wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.6-7 10-7 10z"/></svg><span class="badge" data-wish-count hidden>0</span></button>
+   <button class="icon-btn cart" type="button" data-open-cart aria-label="Shopping bag"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 13H7z"/><path d="M9 7a3 3 0 016 0"/></svg><span class="badge" data-cart-count hidden>0</span></button>
+  </div>
+ </div>
+</header>
+
+<main id="main" class="wrap pdp-main">
+ <nav class="crumbs" aria-label="Breadcrumb" id="crumbs"></nav>
+ <div id="pdp"></div>
+ <section class="related" aria-labelledby="rel-h"><div class="sec-head"><h2 id="rel-h">You may also like</h2><a class="lnk" href="index.html#shop">View all →</a></div><div class="grid" id="related"></div></section>
+</main>
+
+<footer class="ftr">
+ <div class="wrap ftr-grid">
+  <div><a class="logo" href="index.html">NOVA<span>STORE</span></a><p>Everyday essentials, built to last. A sample online store created by KHOKA TECH.</p></div>
+  <div><h4>Shop</h4><a href="index.html?cat=watches#shop">Watches</a><a href="index.html?cat=audio#shop">Audio</a><a href="index.html?cat=bags#shop">Bags</a><a href="index.html?cat=eyewear#shop">Eyewear</a></div>
+  <div><h4>Help</h4><button class="ftr-link" type="button" data-open-cart>Your bag</button><button class="ftr-link" type="button" data-open-wish>Wishlist</button><a href="#delivery">Delivery &amp; returns</a></div>
+  <div><h4>Contact (sample)</h4><p>support@novastore.example<br>+880 1700-000001<br>Banani, Dhaka</p></div>
+ </div>
+ <div class="wrap ftr-bottom"><span>© <span data-year>2026</span> NOVA STORE — sample brand. Products and prices are for demonstration.</span><span>Photos: Unsplash · Website by KHOKA TECH</span></div>
+</footer>
+
+<!-- DRAWERS (same on every page) -->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="cart" role="dialog" aria-modal="true" aria-labelledby="cart-h" aria-hidden="true">
+ <div class="dr-h"><h2 id="cart-h">Your bag</h2><button class="dr-x" type="button" data-close aria-label="Close bag">×</button></div>
+ <div class="ship"><p id="ship-bar"></p><div class="track"><i id="ship-track"></i></div></div>
+ <ul class="lines" id="cart-lines"></ul>
+ <div class="dr-f">
+  <div class="sum"><span>Subtotal</span><span id="c-sub">৳0</span></div>
+  <div class="sum"><span>Delivery</span><span id="c-ship">—</span></div>
+  <div class="sum total"><span>Total</span><span id="c-total">৳0</span></div>
+  <button class="btn btn-full" type="button" id="to-checkout">Checkout</button>
+  <p class="demo-note">Demo store — checkout is a preview only.</p>
+ </div>
+</aside>
+<aside class="drawer" id="wishlist" role="dialog" aria-modal="true" aria-labelledby="wish-h" aria-hidden="true">
+ <div class="dr-h"><h2 id="wish-h">Wishlist</h2><button class="dr-x" type="button" data-close aria-label="Close wishlist">×</button></div>
+ <ul class="lines" id="wish-lines"></ul>
+</aside>
+<aside class="drawer wide" id="checkout" role="dialog" aria-modal="true" aria-labelledby="co-h" aria-hidden="true">
+ <div class="dr-h"><h2 id="co-h">Checkout preview</h2><button class="dr-x" type="button" data-close aria-label="Close checkout">×</button></div>
+ <div class="co-body">
+  <p class="demo-banner"><b>Demo mode.</b> This checkout shows how the real one would work. No order is placed and no payment is taken. Never enter real card details on a demo website.</p>
+  <form id="co-form" class="co-form" novalidate>
+   <h3>Delivery details</h3>
+   <div class="row2">
+    <div class="field"><label for="co-name">Full name</label><input id="co-name" required autocomplete="name"><small class="f-err"></small></div>
+    <div class="field"><label for="co-phone">Phone</label><input id="co-phone" type="tel" required autocomplete="tel" placeholder="+880 1XXX-XXXXXX"><small class="f-err"></small></div>
+   </div>
+   <div class="field"><label for="co-addr">Delivery address</label><input id="co-addr" required autocomplete="street-address" minlength="8"><small class="f-err"></small></div>
+   <div class="row2">
+    <div class="field"><label for="co-city">City</label><select id="co-city" required><option value="">Select</option><option>Dhaka</option><option>Chattogram</option><option>Sylhet</option><option>Khulna</option><option>Rajshahi</option><option>Other</option></select><small class="f-err"></small></div>
+    <div class="field"><label for="co-note">Delivery note <span class="muted">(optional)</span></label><input id="co-note" maxlength="120"></div>
+   </div>
+   <h3>Payment method</h3>
+   <div class="pay">
+    <label><input type="radio" name="pay" value="cod" checked> <span><b>Cash on delivery</b><small>Pay when your order arrives</small></span></label>
+    <label><input type="radio" name="pay" value="mobile"> <span><b>Mobile banking</b><small>Would redirect to the provider in a live store</small></span></label>
+   </div>
+   <h3>Order summary</h3>
+   <ul class="co-items" id="co-items"></ul>
+   <div class="sum"><span>Subtotal</span><span id="co-sub"></span></div>
+   <div class="sum"><span>Delivery</span><span id="co-ship"></span></div>
+   <div class="sum total"><span>Total</span><span id="co-total"></span></div>
+   <div class="co-actions"><button class="btn btn-line" type="button" id="co-back">Back to bag</button><button class="btn" type="submit">Review demo order</button></div>
+  </form>
+  <div class="co-done" id="co-done" hidden tabindex="-1">
+   <div class="tick" aria-hidden="true">✓</div>
+   <h3>Your details look good</h3>
+   <p>In a live NOVA STORE, this is where the order would be confirmed and sent to the warehouse. <b>Because this is a demo, no order was placed and nothing was charged.</b></p>
+   <button class="btn" type="button" id="co-finish">Finish demo and clear bag</button>
+  </div>
+ </div>
+</aside>
+
+<script src="../shared/kit.js"></script>
+<script src="products.js"></script>
+<script src="store.js"></script>
+<script src="product.js"></script>
+</body>
+</html>

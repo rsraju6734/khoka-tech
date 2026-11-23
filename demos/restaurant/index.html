@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Urban Plate — Modern Grill &amp; Kitchen, Gulshan | Demo by KHOKA TECH</title>
+<meta name="description" content="The Urban Plate is a sample restaurant website by KHOKA TECH: wood-fired grill, seasonal menu, chef's specials, gallery and online table reservations.">
+<meta name="theme-color" content="#141210">
+<link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+<link rel="preload" as="image" href="img/hero.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/kit.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-demo="Restaurant · The Urban Plate">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="hdr" id="hdr">
+ <div class="wrap hdr-in">
+  <a class="logo" href="#top" aria-label="The Urban Plate, back to top"><span class="logo-mark" aria-hidden="true">UP</span><span>The Urban Plate</span></a>
+  <nav class="nav" id="nav" aria-label="Main">
+   <a href="#menu">Menu</a><a href="#special">Chef's Special</a><a href="#gallery">Gallery</a><a href="#about">About</a><a href="#reviews">Reviews</a>
+   <a class="btn btn-sm" href="#reserve">Reserve a table</a>
+  </nav>
+  <button class="nav-btn" data-nav-toggle aria-controls="nav" aria-expanded="false" aria-label="Open menu"><span></span><span></span></button>
+ </div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" id="top">
+ <img class="hero-img" src="img/hero.webp" alt="The Urban Plate dining room with set tables and warm lighting" width="1920" height="1280" fetchpriority="high">
+ <div class="hero-shade" aria-hidden="true"></div>
+ <div class="wrap hero-in">
+  <p class="eyebrow">Modern grill &amp; kitchen · Gulshan 2, Dhaka</p>
+  <h1>Honest food, cooked over fire and served with care.</h1>
+  <p class="hero-lede">Wood-fired burgers and steaks, hand-stretched pizza and fresh pasta — made every day from market produce in our open kitchen.</p>
+  <div class="hero-cta"><a class="btn" href="#reserve">Reserve a table</a><a class="btn btn-ghost" href="#menu">View the menu</a></div>
+ </div>
+ <div class="hero-info">
+  <div class="wrap hero-info-in">
+   <div><span>Open today</span><b>12:00 – 23:00</b></div>
+   <div><span>Find us</span><b>Gulshan Avenue, Dhaka</b></div>
+   <div><span>Bookings</span><b>+880 1700-000000</b></div>
+  </div>
+ </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro sec">
+ <div class="wrap intro-grid">
+  <div class="intro-pics rv">
+   <div class="ph p1"><img src="img/room.webp" alt="Interior of the dining room with artwork on the walls" width="1000" height="667" loading="lazy"></div>
+   <div class="ph p2"><img src="img/plating.webp" alt="Cook slicing fresh vegetables in the kitchen" width="1000" height="667" loading="lazy"></div>
+  </div>
+  <div class="intro-text rv">
+   <p class="kicker">Welcome</p>
+   <h2>A neighbourhood restaurant with a serious kitchen.</h2>
+   <p>The Urban Plate opened as a small grill on Gulshan Avenue. Today we seat 80 guests across our dining room and bar — but the idea is the same: good ingredients, a hot fire, and food you will want to share.</p>
+   <ul class="pillars">
+    <li><b>Wood-fired grill</b><span>Burgers, steaks and vegetables cooked over seasoned hardwood.</span></li>
+    <li><b>Made in-house</b><span>Fresh pasta, dough, sauces and desserts prepared every morning.</span></li>
+    <li><b>Market produce</b><span>Vegetables and herbs bought daily from local growers.</span></li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="cats-sec" aria-labelledby="cats-h">
+ <div class="wrap">
+  <div class="sec-head"><div><p class="kicker">Explore</p><h2 id="cats-h">What are you in the mood for?</h2></div></div>
+  <div class="cats" id="cats"></div>
+ </div>
+</section>
+
+<!-- MENU -->
+<section class="sec menu-sec" id="menu" aria-labelledby="menu-h">
+ <div class="wrap">
+  <div class="sec-head">
+   <div><p class="kicker">Our menu</p><h2 id="menu-h">Made fresh, priced fairly</h2></div>
+   <p class="muted">Prices in Bangladeshi Taka, including VAT. Ask our team about allergens.</p>
+  </div>
+  <div class="tabs" id="tabs" role="tablist" aria-label="Menu categories"></div>
+  <div class="menu-grid" id="menu-grid" role="tabpanel" aria-labelledby="menu-h"></div>
+ </div>
+</section>
+
+<!-- CHEF'S SPECIAL -->
+<section class="special" id="special" aria-labelledby="sp-h">
+ <div class="wrap special-grid">
+  <div class="ph special-pic rv"><img src="img/steak2.webp" alt="Grilled steak with fries and salad" width="1000" height="667" loading="lazy"></div>
+  <div class="special-text rv">
+   <p class="kicker">Chef's special · this month</p>
+   <h2 id="sp-h">Smoked ribeye with chimichurri and hand-cut fries</h2>
+   <p>Grass-fed ribeye, dry-aged for 21 days, smoked over hardwood and finished on the grill. Served with fresh herb chimichurri, crisp fries and a market salad.</p>
+   <div class="special-meta"><span class="price">৳ 2,450</span><span class="muted">Serves one · available from 18:00</span></div>
+   <div class="chef">
+    <div class="ph chef-pic"><img src="img/chef.webp" alt="Chef preparing a dish in the kitchen" width="1000" height="667" loading="lazy"></div>
+    <div><b>From the kitchen</b><p>“We cook the ribeye slowly first, then hot and fast. It takes patience — that is the whole secret.”</p><span class="muted">Head chef (sample quote)</span></div>
+   </div>
+   <a class="btn" href="#reserve">Reserve to try it</a>
+  </div>
+ </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec" id="gallery" aria-labelledby="gal-h">
+ <div class="wrap">
+  <div class="sec-head"><div><p class="kicker">Gallery</p><h2 id="gal-h">Inside The Urban Plate</h2></div><p class="muted">Select a photo to view it larger.</p></div>
+  <div class="gallery" id="gallery-grid"></div>
+ </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec about" id="about" aria-labelledby="about-h">
+ <div class="wrap about-grid">
+  <div class="rv">
+   <p class="kicker">About us</p>
+   <h2 id="about-h">Built around the table</h2>
+   <p>We believe a good meal is about more than the plate. It is the warm welcome at the door, the sound of the grill, a long table of friends and a dessert you didn't plan to order.</p>
+   <p>Our team of 24 cooks, servers and bartenders works from one simple rule: treat every guest like a regular.</p>
+   <dl class="hours">
+    <div><dt>Saturday – Thursday</dt><dd>12:00 – 23:00</dd></div>
+    <div><dt>Friday</dt><dd>14:00 – 23:30</dd></div>
+    <div><dt>Kitchen last orders</dt><dd>22:15</dd></div>
+   </dl>
+  </div>
+  <div class="ph about-pic rv"><img src="img/waiter.webp" alt="Waiter carrying a tray of food" width="1000" height="667" loading="lazy"></div>
+ </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec reviews" id="reviews" aria-labelledby="rev-h">
+ <div class="wrap">
+  <div class="sec-head"><div><p class="kicker">Guest reviews</p><h2 id="rev-h">What guests say</h2></div><p class="note-sample">Sample reviews — fictional content written for this demo.</p></div>
+  <div class="rev-grid">
+   <figure class="rev rv"><div class="stars" aria-label="5 out of 5">★★★★★</div><blockquote>“The smoked ribeye was cooked perfectly and the staff remembered it was my mother's birthday. We will be back.”</blockquote><figcaption><span class="av">SR</span><span><b>Sadia R.</b>Dinner for four</span></figcaption></figure>
+   <figure class="rev rv"><div class="stars" aria-label="5 out of 5">★★★★★</div><blockquote>“Best wood-fired pizza in Gulshan. Thin, crisp crust and they don't overload it. Save room for the chocolate fondant.”</blockquote><figcaption><span class="av">TH</span><span><b>Tanvir H.</b>Weekend lunch</span></figcaption></figure>
+   <figure class="rev rv"><div class="stars" aria-label="4 out of 5">★★★★<span class="off">★</span></div><blockquote>“Lovely room and great burgers. It gets busy on Fridays, so book ahead — the online form makes that easy.”</blockquote><figcaption><span class="av">NA</span><span><b>Nusrat A.</b>Friday dinner</span></figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<!-- RESERVATION -->
+<section class="sec reserve" id="reserve" aria-labelledby="res-h">
+ <div class="wrap reserve-grid">
+  <div class="reserve-side">
+   <div class="ph reserve-pic"><img src="img/table.webp" alt="Friends sharing a variety of dishes at a round table" width="1000" height="667" loading="lazy"></div>
+   <div class="contact-card">
+    <h3>Visit us</h3>
+    <p>House 12, Gulshan Avenue, Gulshan 2, Dhaka 1212</p>
+    <p><a class="lnk" href="https://www.google.com/maps/search/?api=1&amp;query=Gulshan+Avenue+Dhaka" target="_blank" rel="noopener">Open area in Google Maps ↗</a></p>
+    <p>Phone: +880 1700-000000<br>Email: hello@theurbanplate.example</p>
+    <p class="note-sample">Sample contact details for this demo.</p>
+   </div>
+  </div>
+  <form class="res-form" id="res-form" data-demo-form data-success="Your table request is ready. A real restaurant would now confirm it by phone or SMS.">
+   <p class="kicker">Reservations</p>
+   <h2 id="res-h">Book a table</h2>
+   <p class="muted">For groups larger than 10 or private events, please call us.</p>
+   <div class="row2">
+    <div class="field"><label for="r-name">Full name</label><input id="r-name" name="name" autocomplete="name" required minlength="2"><small class="f-err"></small></div>
+    <div class="field"><label for="r-phone">Phone</label><input id="r-phone" name="phone" type="tel" autocomplete="tel" required placeholder="+880 1XXX-XXXXXX"><small class="f-err"></small></div>
+   </div>
+   <div class="field"><label for="r-email">Email <span class="opt">(optional)</span></label><input id="r-email" name="email" type="email" autocomplete="email"><small class="f-err"></small></div>
+   <div class="row3">
+    <div class="field"><label for="r-date">Date</label><input id="r-date" name="date" type="date" required data-min-today><small class="f-err"></small></div>
+    <div class="field"><label for="r-time">Time</label><select id="r-time" name="time" required><option value="">Select</option></select><small class="f-err"></small></div>
+    <div class="field"><label for="r-guests">Guests</label><input id="r-guests" name="guests" type="number" min="1" max="10" value="2" required><small class="f-err"></small></div>
+   </div>
+   <div class="field"><label for="r-occasion">Occasion</label><select id="r-occasion" name="occasion"><option>None</option><option>Birthday</option><option>Anniversary</option><option>Business meal</option><option>Date night</option></select></div>
+   <div class="field"><label for="r-notes">Notes or allergies <span class="opt">(optional)</span></label><textarea id="r-notes" name="notes" rows="3" maxlength="400"></textarea></div>
+   <button class="btn btn-full" type="submit">Request reservation</button>
+   <p class="f-status" role="status" hidden></p>
+   <p class="demo-note">Demo mode: the form checks your details but does not send them anywhere.</p>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer class="ftr">
+ <div class="wrap ftr-grid">
+  <div><a class="logo" href="#top"><span class="logo-mark" aria-hidden="true">UP</span><span>The Urban Plate</span></a><p>Modern grill &amp; kitchen in Gulshan, Dhaka. A sample restaurant brand created by KHOKA TECH.</p></div>
+  <div><h4>Explore</h4><a href="#menu">Menu</a><a href="#special">Chef's Special</a><a href="#gallery">Gallery</a><a href="#reserve">Reservations</a></div>
+  <div><h4>Hours</h4><p>Sat – Thu: 12:00 – 23:00<br>Friday: 14:00 – 23:30</p></div>
+  <div><h4>Contact</h4><p>+880 1700-000000<br>hello@theurbanplate.example</p></div>
+ </div>
+ <div class="wrap ftr-bottom"><span>© <span data-year>2026</span> The Urban Plate — sample brand.</span><span>Photos: Unsplash (see credits) · Website by KHOKA TECH</span></div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+ <button class="lb-btn lb-close" id="lb-close" aria-label="Close">×</button>
+ <button class="lb-btn lb-prev" id="lb-prev" aria-label="Previous photo">‹</button>
+ <figure><img id="lb-img" alt=""><figcaption id="lb-cap"></figcaption></figure>
+ <button class="lb-btn lb-next" id="lb-next" aria-label="Next photo">›</button>
+</div>
+
+<script src="../shared/kit.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
