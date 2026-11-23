@@ -1,4 +1,4 @@
-# KHOKA TECH — Studio website, template store & order system (v4)
+# KHOKA TECH — Studio website, template store & order system (v5)
 
 Static site: HTML5, CSS3 and vanilla JavaScript. No build step, no paid services. Runs on GitHub Pages:
 https://rsraju6734.github.io/khoka-tech/
@@ -10,6 +10,15 @@ khoka-tech/
 ├── README.md
 ├── admin/
 │   └── index.html                  Admin dashboard (Preview mode until a backend is connected)
+├── demos/                          ★ Five realistic demo websites with real photography
+│   ├── index.html                  Project details + photo credits (demos/#restaurant etc.)
+│   ├── photos.txt                  Photo source list (demo|file|unsplash id|photographer|slug|alt)
+│   ├── shared/                     kit.css + kit.js (demo bar, mobile menu, form validation), showcase.css
+│   ├── restaurant/                 The Urban Plate — menu, gallery, reservation
+│   ├── ecommerce/                  NOVA STORE — shop, product.html?id=, cart, wishlist, checkout preview
+│   ├── real-estate/                Horizon Estates — listings, property.html?id=, EMI calculator, viewing form
+│   ├── education/                  LearnSphere Academy — courses, course.html?id=, dashboard preview, enrolment
+│   └── technology/                 Nexora Technologies — services, case studies, team, project brief form
 ├── docs/
 │   └── BACKEND.md                  What needs a server, database schema, API contract, security checklist
 ├── templates/
@@ -33,8 +42,21 @@ khoka-tech/
     │   └── demo.js                 Demo bar, mobile nav, filters, demo forms
     └── images/
         ├── templates/*.svg         Template thumbnails
-        └── projects/shikbolab.svg  Featured project preview
+        └── projects/               shikbolab.svg + demo-*.webp thumbnails for the five demos
 ```
+
+## Demo websites — `demos/`
+Five fictional businesses built to show clients what KHOKA TECH can make. Homepage **Work → Demo websites** cards open
+each demo (**View live demo**) or its section on `demos/index.html` (**View details**).
+
+- **Demo mode everywhere:** forms validate input, then say clearly that nothing was sent. The NOVA STORE checkout
+  is a preview with no payment fields; the cart and wishlist live in `sessionStorage` (product ids only, cleared when
+  the tab closes). No personal data is stored.
+- **Fictional content:** business names, people, prices, addresses and reviews/testimonials are invented and labelled.
+  Agents, instructors and team members are shown with initials, not photos of real people as staff.
+- **Photos:** downloaded from Unsplash (free licence only, no Unsplash+), stored locally in each demo's `img/` folder
+  and credited on `demos/index.html#credits`. Branded products and logos were avoided. People in photos do not
+  endorse these businesses.
 
 ## Order flow (works today)
 1. Every **Order** button (store cards, product page, homepage, demo bar) opens `templates/order.html?id=<template>`.
@@ -67,6 +89,12 @@ but it is publicly reachable — real protection must come from a backend login.
 `python -m http.server 8000` in this folder → http://localhost:8000 (or double-click `index.html`).
 
 ## Test checklist
+**Demos:** open `demos/` → each **View live demo** → check the mobile menu (narrow window), every nav link, and:
+restaurant reservation form; NOVA STORE add to cart/wishlist → product page → size → cart → checkout preview;
+Horizon property page gallery, EMI calculator, viewing form; LearnSphere course page and **Enrol**; Nexora case
+filters, case dialog and contact form. Unknown ids (`product.html?id=x`) show a friendly not-found page.
+
+**Orders:**
 1. Store → **Order** on any card → order page shows that template and its demo price.
 2. Submit empty → errors; fill in → reference + message preview → **Open WhatsApp** opens wa.me with the text.
 3. Product page **Order this template**, homepage **Order**, demo bar **Order this template** → same order page.
@@ -75,5 +103,5 @@ but it is publicly reachable — real protection must come from a backend login.
 
 ## Deploy / update on GitHub Pages
 Upload the changed files (keep the folder structure) to the `khoka-tech` repository, or `git add . && git commit -m "Update" && git push`.
-New folders in this version: `admin/`, `docs/`, plus `templates/order.html`, `assets/css/admin.css`,
+New in v5: `demos/` and `assets/images/projects/demo-*.webp`. Earlier: `admin/`, `docs/`, plus `templates/order.html`, `assets/css/admin.css`,
 `assets/js/admin-data.js`, `assets/js/admin.js`. Do not upload the local `.claude/` folder.
