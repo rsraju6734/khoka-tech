@@ -28,7 +28,8 @@ khoka-tech/
 │   └── demos/                      Six live demos (business, ecommerce, education, portfolio, restaurant, agency)
 └── assets/
     ├── css/
-    │   ├── style.css               Brand system, header/footer, homepage
+    │   ├── home.css                ★ Homepage design (v6): intro, menu, flip card, service doors, timeline, dark mode
+    │   ├── style.css               Brand system for inner pages (templates, demos details, admin)
     │   ├── marketplace.css         Store, product page, order page
     │   ├── admin.css               Admin dashboard
     │   └── demo.css                Demo plumbing only
