@@ -4,176 +4,226 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>KHOKA TECH — Websites, AI tools and digital products</title>
-<meta name="description" content="KHOKA TECH is a digital studio that designs and builds websites, AI tools, digital products and custom software for growing businesses. Ready-made templates available.">
+<meta name="description" content="KHOKA TECH is a digital studio in Narayanganj, Bangladesh that designs and builds websites, online stores, AI tools and custom software. Live demos and ready-made templates available.">
 <meta property="og:title" content="KHOKA TECH — Websites, AI tools and digital products">
 <meta property="og:description" content="We design and build the websites and software your business runs on.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#0F1F16">
+<meta property="og:image" content="assets/images/projects/demo-restaurant.webp">
+<meta name="theme-color" content="#EFEBE4">
 <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&family=Noto+Sans+Bengali:wght@400;600&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Noto+Sans+Bengali:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/home.css">
+<script>try{var th=localStorage.getItem("kt-theme");if(th==="dark")document.documentElement.classList.add("dark");if(!sessionStorage.getItem("kt-intro")&&!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("intro-on")}catch(e){}</script>
 </head>
 <body id="top">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="logo" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#8B5CF6"/><path d="M14 10h8v18l14-18h10L31 30l16 24H36L22 33v21h-8z" fill="#fff"/><path d="M36 10h11L33 26z" fill="#E8DCC4"/></symbol></svg>
 <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
 
-<header class="nav">
- <div class="wrap nav-in">
-  <a class="brand" href="#top" aria-label="KHOKA TECH, back to top"><svg width="32" height="32" aria-hidden="true"><use href="#logo"/></svg><span>KHOKA <b>TECH</b></span></a>
-  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
-  <nav id="menu" class="menu" aria-label="Main">
-   <a href="#services" data-i18n="services">Services</a>
-   <a href="templates/" data-i18n="templates">Templates</a>
-   <a href="#work" data-i18n="portfolio">Work</a>
-   <a href="#about" data-i18n="about">About</a>
-   <select id="lang" class="lang" aria-label="Language"><option value="en">English</option><option value="bn">বাংলা</option><option value="hi">हिन्दी</option></select>
-   <a class="btn primary sm" href="#contact" data-i18n="cta">Start a project</a>
-  </nav>
+<!-- INTRO (once per visit, skipped with reduced motion) -->
+<div class="intro" id="intro" aria-hidden="true">
+ <div class="intro-top"><span><b>KHOKA TECH</b> · <span data-i18n="h_tag">Digital studio</span></span><span data-i18n="intro_r">Web · AI · Products · Software</span></div>
+ <div class="intro-bottom">
+  <div><p class="mono" data-i18n="intro_l">Opening the studio</p><p class="intro-num" id="intro-num">000</p></div>
+  <span class="intro-bar"><i id="intro-bar"></i></span>
+ </div>
+</div>
+
+<!-- TOP BAR -->
+<header class="bar" id="bar">
+ <button class="pill menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu"><span class="ham" aria-hidden="true"><i></i><i></i></span><span class="mono-up" data-i18n="menu">Menu</span></button>
+ <a class="brand" href="#top" aria-label="KHOKA TECH, back to top"><svg width="30" height="30" aria-hidden="true"><use href="#logo"/></svg><span>KHOKA <b>TECH</b></span></a>
+ <div class="bar-r">
+  <p class="pill clock" aria-label="Local time in Bangladesh"><span data-i18n="local">Local time</span> <b id="clock-t">--:--</b><i aria-hidden="true"></i><span id="clock-d"></span></p>
+  <label class="pill lang-pill"><span class="sr" data-i18n="lang_l">Language</span><select id="lang"><option value="en">EN</option><option value="bn">বাংলা</option><option value="hi">हिन्दी</option></select></label>
  </div>
 </header>
 
+<!-- FULL-SCREEN MENU -->
+<div class="menu" id="menu" hidden>
+ <nav class="menu-in" aria-label="Main">
+  <ol class="menu-links">
+   <li><a href="#top"><span class="mono">01</span><span data-i18n="home">Home</span></a></li>
+   <li><a href="#services"><span class="mono">02</span><span data-i18n="services">Services</span></a></li>
+   <li><a href="#work"><span class="mono">03</span><span data-i18n="portfolio">Work</span></a></li>
+   <li><a href="templates/"><span class="mono">04</span><span data-i18n="templates">Templates</span></a></li>
+   <li><a href="#process"><span class="mono">05</span><span data-i18n="process">Process</span></a></li>
+   <li><a href="#contact"><span class="mono">06</span><span data-i18n="contact">Contact</span></a></li>
+  </ol>
+  <div class="menu-side">
+   <p class="mono-up" data-i18n="fc">Contact</p>
+   <a data-c="email" href="mailto:rsraju673@gmail.com">rsraju673@gmail.com</a>
+   <a data-c="wa-phone" href="https://wa.me/8801719531952">+880 1719-531952</a>
+   <a data-c="github" href="https://github.com/rsraju6734">GitHub ↗</a>
+   <p class="muted" data-c="location">Narayanganj, Bangladesh</p>
+   <a class="btn dark" href="#contact"><span data-i18n="cta">Start a project</span><span class="arr" aria-hidden="true">→</span></a>
+  </div>
+ </nav>
+</div>
+
+<!-- PULL CORD: light / dark -->
+<button class="cord" id="cord" aria-pressed="false"><span class="sr" data-i18n="theme">Switch light and dark mode</span><span class="cord-line" aria-hidden="true"></span><span class="cord-knob" aria-hidden="true"></span></button>
+
 <main id="main">
+
 <!-- HERO -->
 <section class="hero">
- <div class="wrap">
-  <div class="g12 hero-grid">
-   <div class="hero-copy">
-    <p class="index"><b>KHOKA TECH</b><span data-i18n="h_tag">Digital studio</span></p>
-    <h1 data-i18n-html="h1">We design and build the websites and software <em>your business runs on.</em></h1>
-    <p class="lede" data-i18n="hd">Company websites, online shops, AI assistants and custom tools — planned with you, built by hand and looked after once they are live.</p>
-    <div class="hero-actions">
-     <a class="btn primary" href="#contact"><span data-i18n="b1">Start a project</span><span class="arr" aria-hidden="true">→</span></a>
-     <a class="btn" href="templates/" data-i18n="b2">Browse templates</a>
-    </div>
+ <div class="blob b1" aria-hidden="true"></div><div class="blob b2" aria-hidden="true"></div>
+ <div class="wrap hero-grid">
+  <div class="hero-copy">
+   <p class="tag"><i aria-hidden="true"></i><span data-i18n="h_tag2">Digital studio · Narayanganj, Bangladesh</span></p>
+   <h1><span class="l1" data-i18n="hi1">Hi, we're KHOKA TECH.</span><span class="l2" data-i18n="hi2">We build</span></h1>
+   <div class="flip" id="flip" aria-live="polite">
+    <span class="rings" aria-hidden="true"></span>
+    <div class="flip-card"><span class="flip-word" id="flip-word">Websites</span><span class="flip-n mono" id="flip-n">01 / 05</span></div>
+    <div class="flip-under" aria-hidden="true"></div>
    </div>
-   <figure class="showcase">
-    <div class="frame">
-     <div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>nexora-business · khoka templates</span></div>
-     <img src="assets/images/templates/business.svg" alt="Nexora Business, a corporate website template built by KHOKA TECH" width="640" height="400">
-    </div>
-    <div class="phone"><img src="assets/images/templates/ecommerce.svg" alt="Bazaar Pro Store template on a phone" width="640" height="400"></div>
-    <figcaption><span data-i18n="h_cap">From our template catalogue:</span> <a href="templates/details.html?id=business">Nexora Business</a>, <a href="templates/details.html?id=ecommerce">Bazaar Pro Store</a></figcaption>
-   </figure>
+   <p class="lede" data-i18n="hd">Company websites, online shops, AI assistants and custom tools — planned with you, built by hand and looked after once they are live.</p>
+   <div class="actions">
+    <a class="btn dark" href="#contact"><span data-i18n="b1">Start a project</span><span class="arr" aria-hidden="true">→</span></a>
+    <a class="btn ghost" href="#work" data-i18n="b3">See our work</a>
+   </div>
   </div>
-  <nav class="capabilities" aria-label="What we make">
-   <a href="#s-web"><span class="meta num">01</span><strong><span class="t" data-i18n="s1">Web development</span><span aria-hidden="true">↗</span></strong></a>
-   <a href="#s-ai"><span class="meta num">02</span><strong><span class="t" data-i18n="s2">AI solutions</span><span aria-hidden="true">↗</span></strong></a>
-   <a href="#s-prod"><span class="meta num">03</span><strong><span class="t" data-i18n="s3">Digital products</span><span aria-hidden="true">↗</span></strong></a>
-   <a href="#s-soft"><span class="meta num">04</span><strong><span class="t" data-i18n="s4">Custom software</span><span aria-hidden="true">↗</span></strong></a>
-  </nav>
+  <div class="hero-art" aria-label="Demo websites built by KHOKA TECH">
+   <a class="shot s3" href="demos/real-estate/" target="_blank" rel="noopener"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><img src="assets/images/projects/demo-real-estate.webp" alt="Horizon Estates demo website" width="800" height="500"></a>
+   <a class="shot s2" href="demos/ecommerce/" target="_blank" rel="noopener"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><img src="assets/images/projects/demo-ecommerce.webp" alt="NOVA STORE demo website" width="800" height="500"></a>
+   <a class="shot s1" href="demos/restaurant/" target="_blank" rel="noopener"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><img src="assets/images/projects/demo-restaurant.webp" alt="The Urban Plate demo website" width="800" height="500"></a>
+   <a class="chip" href="#work"><span data-i18n="chip">5 live demos</span> ↓</a>
+  </div>
+ </div>
+ <div class="wrap hero-foot">
+  <span class="mono-up"><i class="live" aria-hidden="true"></i><span data-i18n="avail">Available for new projects</span></span>
+  <span class="mono-up hide-sm" data-i18n="remote">Bangladesh & worldwide · Replies within a day</span>
+  <a class="mono-up" href="#services"><span data-i18n="scroll">Scroll to explore</span> ↓</a>
  </div>
 </section>
 
-<!-- SERVICES -->
-<section class="section" id="services">
- <div class="wrap g12">
-  <div class="svc-head rv">
-   <p class="index"><b>01</b><span data-i18n="services">Services</span></p>
-   <h2 data-i18n="st">What we can build for you</h2>
-   <p data-i18n="ss">Four kinds of work, one team. Most projects combine two or more — a website with a booking tool, or a shop with an AI assistant.</p>
-  </div>
-  <ol class="svc-list">
-   <li class="svc-row rv" id="s-web"><span class="num">01</span><div><h3 data-i18n="s1">Web development</h3><p data-i18n="s1d"></p><ul><li data-i18n="s1a"></li><li data-i18n="s1b"></li><li data-i18n="s1c"></li></ul></div></li>
-   <li class="svc-row rv" id="s-ai"><span class="num">02</span><div><h3 data-i18n="s2">AI solutions</h3><p data-i18n="s2d"></p><ul><li data-i18n="s2a"></li><li data-i18n="s2b"></li><li data-i18n="s2c"></li></ul></div></li>
-   <li class="svc-row rv" id="s-prod"><span class="num">03</span><div><h3 data-i18n="s3">Digital products</h3><p data-i18n="s3d"></p><ul><li data-i18n="s3a"></li><li data-i18n="s3b"></li><li data-i18n="s3c"></li></ul></div></li>
-   <li class="svc-row rv" id="s-soft"><span class="num">04</span><div><h3 data-i18n="s4">Custom software</h3><p data-i18n="s4d"></p><ul><li data-i18n="s4a"></li><li data-i18n="s4b"></li><li data-i18n="s4c"></li></ul></div></li>
-  </ol>
- </div>
-</section>
-
-<!-- TEMPLATES -->
-<section class="section band" id="templates">
+<!-- SERVICES: one door per service -->
+<section class="sec doors-sec" id="services">
  <div class="wrap">
-  <div class="tpl-head">
-   <div><p class="index"><b>02</b><span data-i18n="templates">Templates</span></p><h2 data-i18n="tt">Start from a finished design</h2><p data-i18n="ts"></p></div>
-   <a class="link" href="templates/"><span data-i18n="all">Browse all templates</span> →</a>
+  <div class="sec-head rv">
+   <p class="tag"><i aria-hidden="true"></i><span data-i18n="services">Services</span></p>
+   <h2 data-i18n="doors_h">Four doors. Pick the one you need.</h2>
+   <p class="muted" data-i18n="doors_p">Each door is one kind of work. Open one to see what is inside — most projects end up using two.</p>
   </div>
-  <div class="g12" id="tpl"></div>
+ </div>
+ <div class="hall">
+  <div class="wrap doors" role="tablist" aria-label="Services">
+   <button class="door d1" id="s-web" role="tab" aria-selected="true" aria-controls="room" data-door="1"><span class="leaf"><span class="plate" data-i18n="s1">Web development</span><span class="knob" aria-hidden="true"></span></span></button>
+   <button class="door d2" id="s-ai" role="tab" aria-selected="false" aria-controls="room" data-door="2"><span class="leaf"><span class="plate" data-i18n="s2">AI solutions</span><span class="knob" aria-hidden="true"></span></span></button>
+   <button class="door d3" id="s-prod" role="tab" aria-selected="false" aria-controls="room" data-door="3"><span class="leaf"><span class="plate" data-i18n="s3">Digital products</span><span class="knob" aria-hidden="true"></span></span></button>
+   <button class="door d4" id="s-soft" role="tab" aria-selected="false" aria-controls="room" data-door="4"><span class="leaf"><span class="plate" data-i18n="s4">Custom software</span><span class="knob" aria-hidden="true"></span></span></button>
+  </div>
+ </div>
+ <div class="wrap">
+  <div class="room" id="room" role="tabpanel" aria-live="polite">
+   <div><p class="mono-up" id="room-n">01 / 04</p><h3 id="room-h"></h3></div>
+   <div><p id="room-p"></p><ul class="ticks" id="room-ul"></ul><a class="link" href="#contact"><span data-i18n="discuss">Discuss this with us</span> →</a></div>
+  </div>
  </div>
 </section>
 
 <!-- WORK -->
-<section class="section" id="work">
+<section class="sec" id="work">
  <div class="wrap">
-  <div class="work-head">
-   <div><p class="index"><b>03</b><span data-i18n="portfolio">Work</span></p><h2 data-i18n="pt">Projects in progress</h2></div>
-   <p class="meta" data-i18n="ps" style="max-width:40ch"></p>
+  <div class="sec-head split rv">
+   <div><p class="tag"><i aria-hidden="true"></i><span data-i18n="portfolio">Work</span></p><h2 data-i18n="pt">Selected work</h2></div>
+   <p class="muted" data-i18n="ps">A live project first, followed by work in progress.</p>
   </div>
-  <article class="feat-prj" aria-labelledby="sl-title">
-   <a class="fp-pic" href="https://shikbolab.netlify.app/" target="_blank" rel="noopener" aria-label="ShikboLab — open the live site">
-    <span class="frame"><span class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>shikbolab.netlify.app</span></span><img src="assets/images/projects/shikbolab.svg" alt="ShikboLab homepage, a Bangla science learning website" width="640" height="400" loading="lazy"></span>
-   </a>
-   <div class="fp-copy">
-    <p class="meta"><span class="live-dot" aria-hidden="true"></span><span data-i18n="sl_kind">Live · Education platform</span></p>
+
+  <article class="feat rv" aria-labelledby="sl-title">
+   <a class="feat-pic" href="https://shikbolab.netlify.app/" target="_blank" rel="noopener" aria-label="ShikboLab — open the live site"><span class="dots" aria-hidden="true"><i></i><i></i><i></i><em>shikbolab.netlify.app</em></span><img src="assets/images/projects/shikbolab.svg" alt="ShikboLab homepage, a Bangla science learning website" width="640" height="400" loading="lazy"></a>
+   <div class="feat-copy">
+    <p class="mono-up"><i class="live" aria-hidden="true"></i><span data-i18n="sl_kind">Live · Education platform</span></p>
     <h3 id="sl-title">ShikboLab</h3>
-    <p class="fp-tag" lang="bn">“বই পড়ে নয়, নিজে করে বিজ্ঞান শেখো”</p>
-    <p data-i18n="sl_desc">A free science learning website in Bangla for school students. Simple notes, animated labs students can play with, games and quizzes — all in one place, with no sign-up.</p>
-    <dl class="fp-facts">
-     <div><dt class="num">4</dt><dd data-i18n="sl_f1">subjects</dd></div>
-     <div><dt class="num">54</dt><dd data-i18n="sl_f2">chapters</dd></div>
-     <div><dt class="num">9</dt><dd data-i18n="sl_f3">bonus labs</dd></div>
+    <p class="feat-tag" lang="bn">“বই পড়ে নয়, নিজে করে বিজ্ঞান শেখো”</p>
+    <p data-i18n="sl_desc">A free science learning website in Bangla for school students.</p>
+    <dl class="facts">
+     <div><dt>4</dt><dd data-i18n="sl_f1">subjects</dd></div>
+     <div><dt>54</dt><dd data-i18n="sl_f2">chapters</dd></div>
+     <div><dt>9</dt><dd data-i18n="sl_f3">bonus labs</dd></div>
      <div><dt>100%</dt><dd data-i18n="sl_f4">free</dd></div>
     </dl>
-    <p class="meta" data-i18n="sl_stack">Our role: design and development · Hosted on Netlify</p>
-    <div class="hero-actions" style="margin-top:22px"><a class="btn primary" href="https://shikbolab.netlify.app/" target="_blank" rel="noopener"><span data-i18n="sl_visit">Visit ShikboLab</span><span class="arr" aria-hidden="true">↗</span></a></div>
+    <p class="muted small" data-i18n="sl_stack">Our role: design and development · Hosted on Netlify</p>
+    <a class="btn dark" href="https://shikbolab.netlify.app/" target="_blank" rel="noopener"><span data-i18n="sl_visit">Visit ShikboLab</span><span class="arr" aria-hidden="true">↗</span></a>
    </div>
   </article>
-  <div class="demo-head">
-   <div><h3 data-i18n="dm_h">Demo websites</h3><p data-i18n="dm_p">Five complete business websites built by KHOKA TECH to show what we can make for you — with real photography and working features.</p></div>
+
+  <div class="sub-head">
+   <div><h3 data-i18n="dm_h">Demo websites</h3><p class="muted" data-i18n="dm_p"></p></div>
    <a class="link" href="demos/"><span data-i18n="dm_all">Project details</span> →</a>
   </div>
   <div class="demo-grid" id="demos"></div>
+
   <h3 class="rows-h" data-i18n="dm_more">Other projects</h3>
-  <ol class="work-list" id="prj"></ol>
+  <ol class="rows" id="prj"></ol>
+ </div>
+</section>
+
+<!-- TEMPLATES -->
+<section class="sec tpl-sec" id="templates">
+ <div class="wrap">
+  <div class="sec-head split rv">
+   <div><p class="tag"><i aria-hidden="true"></i><span data-i18n="templates">Templates</span></p><h2 data-i18n="tt">Start from a finished design</h2></div>
+   <p class="muted" data-i18n="ts"></p>
+  </div>
+  <div class="tpl-grid" id="tpl"></div>
+  <p class="tpl-all"><a class="btn ghost" href="templates/"><span data-i18n="all">Browse all templates</span><span class="arr" aria-hidden="true">→</span></a></p>
+ </div>
+</section>
+
+<!-- PROCESS: sticky timeline -->
+<section class="sec process" id="process">
+ <div class="wrap proc-grid">
+  <div class="proc-stick">
+   <p class="tag"><i aria-hidden="true"></i><span data-i18n="process">Process</span></p>
+   <h2 data-i18n="ht">How a project runs</h2>
+   <p class="proc-big" id="proc-big">01</p>
+   <p class="mono-up" id="proc-lab" data-i18n="h1w">Week 1</p>
+   <div class="proc-meter"><span class="mono"><b id="proc-i">01</b> / 04</span><span class="meter"><i id="proc-bar"></i></span></div>
+  </div>
+  <ol class="proc-list" id="proc-list">
+   <li data-step="01"><p class="mono-up" data-i18n="h1w">Week 1</p><h3 data-i18n="h1t">Conversation</h3><p data-i18n="h1x"></p></li>
+   <li data-step="02"><p class="mono-up" data-i18n="h2w">Week 1–2</p><h3 data-i18n="h2t">Design</h3><p data-i18n="h2x"></p></li>
+   <li data-step="03"><p class="mono-up" data-i18n="h3w">Week 2–4</p><h3 data-i18n="h3t">Build</h3><p data-i18n="h3x"></p></li>
+   <li data-step="04"><p class="mono-up" data-i18n="h4w">Launch day and after</p><h3 data-i18n="h4t">Launch & support</h3><p data-i18n="h4x"></p></li>
+  </ol>
  </div>
 </section>
 
 <!-- ABOUT -->
-<section class="section rule-top" id="about">
- <div class="wrap g12">
-  <div class="about-statement rv">
-   <p class="index"><b>04</b><span data-i18n="about">About</span></p>
-   <p class="big" data-i18n-html="ad"></p>
-   <p data-i18n="ad2"></p>
-  </div>
-  <div class="about-side rv">
-   <h3 data-i18n="ht">How a project runs</h3>
-   <ol class="steps" style="margin-top:16px">
-    <li><div><b data-i18n="h1t"></b><span data-i18n="h1d"></span></div></li>
-    <li><div><b data-i18n="h2t"></b><span data-i18n="h2d"></span></div></li>
-    <li><div><b data-i18n="h3t"></b><span data-i18n="h3d"></span></div></li>
-    <li><div><b data-i18n="h4t"></b><span data-i18n="h4d"></span></div></li>
-   </ol>
-   <div class="principles" id="why">
-    <h3 data-i18n="wt">What you can expect</h3>
-    <ul><li data-i18n="w1"></li><li data-i18n="w2"></li><li data-i18n="w3"></li><li data-i18n="w4"></li><li data-i18n="w5"></li></ul>
-   </div>
+<section class="sec about" id="about">
+ <div class="wrap">
+  <p class="tag rv"><i aria-hidden="true"></i><span data-i18n="about">About</span></p>
+  <p class="statement rv" data-i18n-html="ad"></p>
+  <div class="about-grid">
+   <p class="muted rv" data-i18n="ad2"></p>
+   <div class="rv"><h3 data-i18n="wt">What you can expect</h3><ul class="ticks"><li data-i18n="w1"></li><li data-i18n="w2"></li><li data-i18n="w3"></li><li data-i18n="w4"></li><li data-i18n="w5"></li></ul></div>
   </div>
  </div>
 </section>
 
-<!-- CONTACT -->
-<section class="section rule-top" id="contact">
- <div class="wrap g12">
-  <div class="contact-info">
-   <p class="index"><b>05</b><span data-i18n="contact">Contact</span></p>
-   <h2 data-i18n="ct">Tell us what you are planning</h2>
-   <p data-i18n="cs"></p>
-   <dl>
-    <div><dt data-i18n="c_email">Email</dt><dd><a class="link" data-c="email" href="mailto:rsraju673@gmail.com">rsraju673@gmail.com</a></dd></div>
-    <div><dt data-i18n="c_wa">WhatsApp</dt><dd><a class="link" data-c="wa-phone" href="https://wa.me/8801719531952">+880 1719-531952</a></dd></div>
-    <div><dt data-i18n="c_loc">Location</dt><dd data-c="location">Narayanganj, Bangladesh</dd></div>
-    <div><dt data-i18n="c_hours">Availability</dt><dd data-c="hours">Available 24/7</dd></div>
-    <div><dt data-i18n="c_lang">Languages</dt><dd>English · বাংলা · हिन्दी</dd></div>
-   </dl>
-   <div class="hero-actions" style="margin-top:28px">
-    <a class="btn primary" data-c="wa" href="https://wa.me/8801719531952"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.2 2.2 2.2 0 00.2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg><span data-i18n="wa_btn">Chat on WhatsApp</span></a>
-    <a class="btn" data-c="github" href="https://github.com/rsraju6734">GitHub ↗</a>
+<!-- CONTACT + FOOTER (dark) -->
+<section class="dark-zone" id="contact">
+ <div class="wrap">
+  <p class="mono-up"><i class="live" aria-hidden="true"></i><span data-i18n="avail2">Available for new work</span></p>
+  <h2 class="cta-h"><span data-i18n="cta1">Need something built?</span><span class="dim" data-i18n="cta2">Let's make it happen.</span></h2>
+  <div class="contact-grid">
+   <div class="contact-info">
+    <p data-i18n="cs"></p>
+    <dl>
+     <div><dt data-i18n="c_email">Email</dt><dd><a data-c="email" href="mailto:rsraju673@gmail.com">rsraju673@gmail.com</a></dd></div>
+     <div><dt data-i18n="c_wa">WhatsApp</dt><dd><a data-c="wa-phone" href="https://wa.me/8801719531952">+880 1719-531952</a></dd></div>
+     <div><dt data-i18n="c_loc">Location</dt><dd data-c="location">Narayanganj, Bangladesh</dd></div>
+     <div><dt data-i18n="c_hours">Availability</dt><dd data-c="hours">Available 24/7</dd></div>
+     <div><dt data-i18n="c_lang">Languages</dt><dd>English · বাংলা · हिन्दी</dd></div>
+    </dl>
+    <div class="actions">
+     <a class="btn light" data-c="wa" href="https://wa.me/8801719531952"><span data-i18n="wa_btn">Chat on WhatsApp</span><span class="arr" aria-hidden="true">→</span></a>
+     <a class="btn ghost-l" data-c="github" href="https://github.com/rsraju6734">GitHub ↗</a>
+    </div>
    </div>
-  </div>
-  <div class="contact-form">
-   <form id="form" novalidate>
+   <form class="contact-form" id="form" novalidate>
     <p class="notice" data-i18n="demonote"></p>
     <div class="two">
      <label><span data-i18n="fn">Name</span><input name="name" autocomplete="name" required><small class="err"></small></label>
@@ -181,30 +231,23 @@
     </div>
     <label><span data-i18n="fp">Project type</span><select name="type"><option data-i18n="s1">Web development</option><option data-i18n="s2">AI solutions</option><option data-i18n="s3">Digital products</option><option data-i18n="s4">Custom software</option><option data-i18n="tpl_opt">Template customisation</option></select></label>
     <label><span data-i18n="fm">Message</span><textarea name="msg" rows="5" required></textarea><small class="err"></small></label>
-    <div><button class="btn primary" type="submit"><span data-i18n="sub_btn">Send message</span><span class="arr" aria-hidden="true">→</span></button></div>
+    <div><button class="btn light" type="submit"><span data-i18n="sub_btn">Send message</span><span class="arr" aria-hidden="true">→</span></button></div>
     <div id="status" role="status" aria-live="polite"></div>
    </form>
   </div>
+
+  <footer class="foot">
+   <div class="fcol"><p class="mono-up" data-i18n="portfolio">Work</p><a href="#s-web" data-door-link="1" data-i18n="s1"></a><a href="#s-ai" data-door-link="2" data-i18n="s2"></a><a href="#s-prod" data-door-link="3" data-i18n="s3"></a><a href="#s-soft" data-door-link="4" data-i18n="s4"></a></div>
+   <div class="fcol"><p class="mono-up" data-i18n="templates">Templates</p><div id="foot-tpl"></div></div>
+   <div class="fcol"><p class="mono-up" data-i18n="nav">Navigate</p><a href="#top" data-i18n="home">Home</a><a href="#work" data-i18n="portfolio">Work</a><a href="demos/" data-i18n="dm_h">Demo websites</a><a href="#process" data-i18n="process">Process</a><a href="#about" data-i18n="about">About</a></div>
+   <div class="fcol"><p class="mono-up" data-i18n="status_h">Status</p><span data-i18n="avail">Available for new projects</span><span data-i18n="remote_s">Remote · Bangladesh & worldwide</span><span><span data-i18n="local">Local time</span> <b id="clock-f">--:--</b></span></div>
+  </footer>
+  <div class="copy"><span>© <span id="year">2026</span> KHOKA TECH. <span data-i18n="credit">Designed and developed by KHOKA TECH.</span></span><a href="#top"><span data-i18n="top">Back to top</span> ↑</a></div>
  </div>
 </section>
 </main>
 
-<footer class="site">
- <div class="wrap">
-  <div class="foot-cta">
-   <h2 data-i18n="f_cta">Have something in mind? Let's talk it through.</h2>
-   <a class="btn primary" href="#contact"><span data-i18n="cta">Start a project</span><span class="arr" aria-hidden="true">→</span></a>
-  </div>
-  <div class="fgrid">
-   <div><a class="brand" href="#top"><svg width="28" height="28" aria-hidden="true"><use href="#logo"/></svg><span>KHOKA <b>TECH</b></span></a><p data-i18n="fd"></p></div>
-   <div><h4 data-i18n="fq">Studio</h4><a href="#services" data-i18n="services">Services</a><a href="#work" data-i18n="portfolio">Work</a><a href="#about" data-i18n="about">About</a><a href="#contact" data-i18n="contact">Contact</a></div>
-   <div><h4 data-i18n="fsv">Services</h4><a href="#s-web" data-i18n="s1"></a><a href="#s-ai" data-i18n="s2"></a><a href="#s-prod" data-i18n="s3"></a><a href="#s-soft" data-i18n="s4"></a></div>
-   <div><h4 data-i18n="templates">Templates</h4><div id="foot-tpl"></div></div>
-   <div><h4 data-i18n="fc">Contact</h4><a data-c="email" href="mailto:rsraju673@gmail.com">rsraju673@gmail.com</a><a data-c="wa-phone" href="https://wa.me/8801719531952">+880 1719-531952</a><a data-c="github" href="https://github.com/rsraju6734">GitHub</a><p class="meta" data-c="location" style="margin-top:4px">Narayanganj, Bangladesh</p></div>
-  </div>
-  <div class="copy"><span>© <span class="num" id="year">2026</span> KHOKA TECH</span><span data-i18n="credit">Designed and developed by KHOKA TECH.</span></div>
- </div>
-</footer>
+<a class="to-top" id="to-top" href="#top" aria-label="Back to top"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" class="ring-bg"/><circle cx="24" cy="24" r="22" class="ring" id="ring"/></svg><span aria-hidden="true">↑</span></a>
 <div id="toast" role="status" aria-live="polite"></div>
 <script src="assets/js/contact.js"></script>
 <script src="assets/js/templates-data.js"></script>

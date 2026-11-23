@@ -1,9 +1,20 @@
-/* KHOKA TECH — main.js (homepage)
-   - TEXT: all homepage copy in English, Bangla and Hindi. Keys ending in "html" are set with innerHTML (trusted, static).
-   - PROJECTS: the smaller rows in the Work section. The featured live project (ShikboLab) is in index.html, #work.
-   - Template rows come from assets/js/templates-data.js (shared with the marketplace). */
+/* KHOKA TECH - main.js (homepage, v6 design)
+   TEXT: homepage copy in English, Bangla and Hindi (keys used with innerHTML are trusted, static text).
+   Features: intro counter, full-screen menu, Bangladesh clock, flip-card words, service doors, sticky process
+   timeline, pull-cord dark mode, demo/template/project lists, contact form handing off to WhatsApp or email. */
 const TEXT = {
  en:{
+  home:"Home",process:"Process",menu:"Menu",local:"Local time",lang_l:"Language",theme:"Switch light and dark mode",
+  intro_l:"Opening the studio",intro_r:"Web · AI · Products · Software",h_tag2:"Digital studio · Narayanganj, Bangladesh",
+  hi1:"Hi, we're KHOKA TECH.",hi2:"We build",words:["Websites","Online stores","AI assistants","Web apps","Templates"],
+  b3:"See our work",chip:"5 live demos",avail:"Available for new projects",remote:"Bangladesh & worldwide · Replies within a day",scroll:"Scroll to explore",
+  doors_h:"Four doors. Pick the one you need.",doors_p:"Each door is one kind of work. Open one to see what is inside — most projects end up using two.",discuss:"Discuss this with us",
+  h1w:"Week 1",h2w:"Week 1–2",h3w:"Week 2–4",h4w:"Launch day and after",
+  h1x:"We learn what you need, look at what you already have, and agree a written scope and price before any work starts.",
+  h2x:"You see real layouts early — on your own phone — and give feedback before anything is built.",
+  h3x:"We develop, test on phones and computers, and walk you through every page so nothing is a surprise.",
+  h4x:"We publish the site, connect your domain, and stay available for changes, fixes and new ideas.",
+  avail2:"Available for new work",cta1:"Need something built?",cta2:"Let's make it happen.",nav:"Navigate",status_h:"Status",remote_s:"Remote · Bangladesh & worldwide",top:"Back to top",
   skip:"Skip to content",services:"Services",templates:"Templates",portfolio:"Work",about:"About",contact:"Contact",cta:"Start a project",
   h_tag:"Digital studio",
   h1:"We design and build the websites and software <em>your business runs on.</em>",
@@ -45,6 +56,17 @@ const TEXT = {
   credit:"Designed and developed by KHOKA TECH.",soon:"Social links are placeholders — add yours in index.html.",
   title:"KHOKA TECH — Websites, AI tools and digital products"},
  bn:{
+  home:"হোম",process:"প্রক্রিয়া",menu:"মেনু",local:"স্থানীয় সময়",lang_l:"ভাষা",theme:"লাইট ও ডার্ক মোড বদলান",
+  intro_l:"স্টুডিও খুলছে",intro_r:"ওয়েব · এআই · পণ্য · সফটওয়্যার",h_tag2:"ডিজিটাল স্টুডিও · নারায়ণগঞ্জ, বাংলাদেশ",
+  hi1:"হ্যালো, আমরা খোকা টেক।",hi2:"আমরা বানাই",words:["ওয়েবসাইট","অনলাইন শপ","এআই অ্যাসিস্ট্যান্ট","ওয়েব অ্যাপ","টেমপ্লেট"],
+  b3:"আমাদের কাজ দেখুন",chip:"৫টি লাইভ ডেমো",avail:"নতুন প্রজেক্টের জন্য প্রস্তুত",remote:"বাংলাদেশ ও সারা বিশ্ব · এক দিনের মধ্যে উত্তর",scroll:"নিচে স্ক্রল করুন",
+  doors_h:"চারটি দরজা। আপনার দরকারেরটা বেছে নিন।",doors_p:"প্রতিটি দরজা এক ধরনের কাজ। খুলে দেখুন ভেতরে কী আছে — বেশিরভাগ প্রজেক্টে দুটো লাগে।",discuss:"এ নিয়ে আমাদের সাথে কথা বলুন",
+  h1w:"সপ্তাহ ১",h2w:"সপ্তাহ ১–২",h3w:"সপ্তাহ ২–৪",h4w:"চালুর দিন ও পরে",
+  h1x:"আপনার প্রয়োজন বুঝি, আপনার যা আছে দেখি, আর কাজ শুরুর আগে লিখিত পরিধি ও মূল্য ঠিক করি।",
+  h2x:"আগেভাগেই আসল লেআউট দেখেন — নিজের ফোনেই — আর কিছু তৈরির আগে মতামত দেন।",
+  h3x:"ডেভেলপ করি, ফোন ও কম্পিউটারে পরীক্ষা করি, আর প্রতিটি পেজ বুঝিয়ে দিই যাতে কিছুই অবাক না করে।",
+  h4x:"সাইট প্রকাশ করি, আপনার ডোমেইন যুক্ত করি, আর পরিবর্তন, সমাধান ও নতুন আইডিয়ার জন্য পাশে থাকি।",
+  avail2:"নতুন কাজের জন্য প্রস্তুত",cta1:"কিছু বানাতে চান?",cta2:"চলুন শুরু করি।",nav:"নেভিগেশন",status_h:"অবস্থা",remote_s:"রিমোট · বাংলাদেশ ও সারা বিশ্ব",top:"উপরে যান",
   skip:"মূল কনটেন্টে যান",services:"সেবা",templates:"টেমপ্লেট",portfolio:"কাজ",about:"পরিচিতি",contact:"যোগাযোগ",cta:"প্রজেক্ট শুরু করুন",
   h_tag:"ডিজিটাল স্টুডিও",
   h1:"আপনার ব্যবসা যে ওয়েবসাইট ও সফটওয়্যারে চলে, <em>আমরা তা ডিজাইন করি ও তৈরি করি।</em>",
@@ -86,6 +108,17 @@ const TEXT = {
   credit:"ডিজাইন ও ডেভেলপমেন্ট: খোকা টেক।",soon:"সোশ্যাল লিংকগুলো প্লেসহোল্ডার — index.html-এ আপনার লিংক দিন।",
   title:"খোকা টেক — ওয়েবসাইট, এআই টুল ও ডিজিটাল পণ্য"},
  hi:{
+  home:"होम",process:"प्रक्रिया",menu:"मेनू",local:"स्थानीय समय",lang_l:"भाषा",theme:"लाइट और डार्क मोड बदलें",
+  intro_l:"स्टूडियो खुल रहा है",intro_r:"वेब · एआई · उत्पाद · सॉफ़्टवेयर",h_tag2:"डिजिटल स्टूडियो · नारायणगंज, बांग्लादेश",
+  hi1:"नमस्ते, हम खोका टेक हैं।",hi2:"हम बनाते हैं",words:["वेबसाइट","ऑनलाइन शॉप","एआई असिस्टेंट","वेब ऐप","टेम्पलेट"],
+  b3:"हमारा काम देखें",chip:"5 लाइव डेमो",avail:"नए प्रोजेक्ट के लिए उपलब्ध",remote:"बांग्लादेश और दुनिया भर · एक दिन में जवाब",scroll:"नीचे स्क्रॉल करें",
+  doors_h:"चार दरवाज़े। जो चाहिए वह चुनें।",doors_p:"हर दरवाज़ा एक तरह का काम है। खोलकर देखें अंदर क्या है — ज़्यादातर प्रोजेक्ट में दो लगते हैं।",discuss:"इस पर हमसे बात करें",
+  h1w:"सप्ताह 1",h2w:"सप्ताह 1–2",h3w:"सप्ताह 2–4",h4w:"लॉन्च का दिन और बाद में",
+  h1x:"हम आपकी ज़रूरत समझते हैं, जो पहले से है उसे देखते हैं, और काम शुरू होने से पहले लिखित दायरा और मूल्य तय करते हैं।",
+  h2x:"आप जल्दी ही असली लेआउट देखते हैं — अपने फ़ोन पर — और कुछ बनने से पहले राय देते हैं।",
+  h3x:"हम विकसित करते हैं, फ़ोन और कंप्यूटर पर जाँचते हैं, और हर पेज समझाते हैं ताकि कुछ भी अचानक न लगे।",
+  h4x:"हम साइट प्रकाशित करते हैं, आपका डोमेन जोड़ते हैं, और बदलाव, सुधार और नए विचारों के लिए उपलब्ध रहते हैं।",
+  avail2:"नए काम के लिए उपलब्ध",cta1:"कुछ बनवाना है?",cta2:"चलिए शुरू करते हैं।",nav:"नेविगेट",status_h:"स्थिति",remote_s:"रिमोट · बांग्लादेश और दुनिया भर",top:"ऊपर जाएँ",
   skip:"मुख्य सामग्री पर जाएँ",services:"सेवाएँ",templates:"टेम्पलेट",portfolio:"काम",about:"परिचय",contact:"संपर्क",cta:"प्रोजेक्ट शुरू करें",
   h_tag:"डिजिटल स्टूडियो",
   h1:"आपका व्यवसाय जिन वेबसाइटों और सॉफ़्टवेयर पर चलता है, <em>हम उन्हें डिज़ाइन करते और बनाते हैं।</em>",
@@ -149,30 +182,108 @@ const DEMOS = [
 ];
 
 const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
 let lang = (() => { try { return localStorage.getItem("lang"); } catch (e) { return null; } })();
 if (!TEXT[lang]) lang = "en";
 const t = k => TEXT[lang][k] ?? TEXT.en[k] ?? k;
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const LOCALE = { en: "en-GB", bn: "bn-BD", hi: "hi-IN" };
+const pad2 = n => String(n).padStart(2, "0");
 
 function toast(m) { const e = $("#toast"); e.textContent = m; e.classList.add("show"); clearTimeout(toast.i); toast.i = setTimeout(() => e.classList.remove("show"), 2800); }
 
+/* ---------- intro counter (once per tab session) ---------- */
+(function intro() {
+ const root = document.documentElement, box = $("#intro");
+ if (!root.classList.contains("intro-on")) return;
+ const num = $("#intro-num"), bar = $("#intro-bar"), dur = 1500, t0 = performance.now();
+ let ended = false;
+ const end = () => {
+  if (ended) return; ended = true;
+  try { sessionStorage.setItem("kt-intro", "1"); } catch (e) {}
+  box.classList.add("done");
+  setTimeout(() => root.classList.remove("intro-on"), 650);
+ };
+ const frame = now => {
+  const p = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+  num.textContent = String(Math.round(e * 100)).padStart(3, "0"); bar.style.width = e * 100 + "%";
+  if (p < 1 && !ended) requestAnimationFrame(frame); else setTimeout(end, 250);
+ };
+ requestAnimationFrame(frame);
+ box.addEventListener("click", end);
+ document.addEventListener("keydown", end, { once: true });
+})();
+
+/* ---------- live clock: Bangladesh time ---------- */
+function tick() {
+ const now = new Date(), L = LOCALE[lang];
+ const time = new Intl.DateTimeFormat(L, { timeZone: "Asia/Dhaka", hour: "numeric", minute: "2-digit", hour12: true }).format(now).replace(/\s/g, "").toLowerCase();
+ const date = new Intl.DateTimeFormat(L, { timeZone: "Asia/Dhaka", day: "numeric", month: "long", year: "numeric" }).format(now);
+ $("#clock-t").textContent = time; $("#clock-f").textContent = time; $("#clock-d").textContent = date;
+}
+
+/* ---------- flip card: rotating words ---------- */
+const flip = { i: 0, timer: null };
+function flipShow(animate) {
+ const words = t("words"), card = $(".flip-card"), word = $("#flip-word"), n = $("#flip-n");
+ if (flip.i >= words.length) flip.i = 0;
+ const apply = () => { word.textContent = words[flip.i]; n.textContent = pad2(flip.i + 1) + " / " + pad2(words.length); };
+ if (!animate || REDUCED) { apply(); return; }
+ card.classList.add("out");
+ setTimeout(() => { apply(); card.classList.remove("out"); }, 330);
+}
+function flipStart() {
+ clearInterval(flip.timer);
+ const box = $("#flip");
+ box.removeAttribute("aria-live");
+ box.setAttribute("role", "img");
+ box.setAttribute("aria-label", t("hi2") + ": " + t("words").join(", "));
+ flipShow(false);
+ flip.timer = setInterval(() => { if (document.hidden) return; flip.i = (flip.i + 1) % t("words").length; flipShow(true); }, 2600);
+}
+
+/* ---------- service doors ---------- */
+let door = 1;
+function openDoor(n, focus) {
+ door = n;
+ $$(".door").forEach(d => { const on = +d.dataset.door === n; d.setAttribute("aria-selected", on); d.tabIndex = on ? 0 : -1; if (on && focus) d.focus(); });
+ const room = $("#room");
+ $("#room-n").textContent = pad2(n) + " / 04";
+ $("#room-h").textContent = t("s" + n);
+ $("#room-p").textContent = t("s" + n + "d");
+ $("#room-ul").innerHTML = ["a", "b", "c"].map(x => `<li>${esc(t("s" + n + x))}</li>`).join("");
+ room.setAttribute("aria-labelledby", $$(".door")[n - 1].id);
+ room.classList.remove("swap"); void room.offsetWidth; room.classList.add("swap");
+}
+$$(".door").forEach(d => d.addEventListener("click", () => openDoor(+d.dataset.door)));
+$(".doors").addEventListener("keydown", e => {
+ const k = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
+ if (k) { e.preventDefault(); openDoor((door - 1 + k + 4) % 4 + 1, true); }
+ if (e.key === "Home") { e.preventDefault(); openDoor(1, true); }
+ if (e.key === "End") { e.preventDefault(); openDoor(4, true); }
+});
+const doorFromHash = h => { const d = h && h.length > 1 && document.getElementById(h.slice(1)); return d && d.classList.contains("door") ? +d.dataset.door : 0; };
+document.addEventListener("click", e => {
+ const a = e.target.closest("a[href^='#s-']"); if (!a) return;
+ const n = doorFromHash(a.getAttribute("href")); if (!n) return;
+ e.preventDefault(); openDoor(n); closeMenu();
+ $("#services").scrollIntoView({ behavior: REDUCED ? "auto" : "smooth" });
+ history.replaceState(null, "", a.getAttribute("href"));
+});
+
+/* ---------- content blocks ---------- */
 function renderTemplates() {
  const CATS = window.KT_CATEGORIES || {}, all = (window.KT_TEMPLATES || []).slice().sort((a, b) => a.order - b.order);
  if (!all.length) return;
  const cat = x => (CATS[x.category] || {})[lang] || x.category;
  const d = x => "templates/details.html?id=" + x.id;
- const f = all.find(x => x.id === FEATURED) || all[0], rest = all.filter(x => x !== f);
- $("#tpl").innerHTML = `
- <article class="tpl-feature">
-  <a class="pic" href="${d(f)}" style="background:${f.paper}" aria-label="${esc(t("det"))}: ${esc(f.name)}"><img src="${f.thumb}" alt="${esc(f.name)} — ${esc(cat(f))}" width="640" height="400" loading="lazy"></a>
-  <div class="cap"><div><span class="meta">${esc(cat(f))} · ${esc(f.fonts)}</span><h3><a href="${d(f)}">${esc(f.name)}</a></h3><p>${esc(f.short[lang] || f.short.en)}</p></div>
-  <div class="price num">$${f.price}<small>${esc(t("price"))}</small></div></div>
-  <div class="tpl-actions"><a class="btn sm" href="${f.demo}" target="_blank" rel="noopener">${esc(t("prev"))} ↗</a><a class="btn sm" href="${d(f)}">${esc(t("det"))}</a><a class="btn primary sm" href="templates/order.html?id=${f.id}">${esc(t("ord"))}</a></div>
- </article>
- <div class="tpl-list">
-  ${rest.map(x => `<a class="tpl-row" href="${d(x)}"><span class="mini" style="background:${x.paper}"><img src="${x.thumb}" alt="" width="640" height="400" loading="lazy"></span><span><b>${esc(x.name)}</b><span class="meta">${esc(cat(x))}</span></span><span class="p num">$${x.price}</span></a>`).join("")}
-  <p class="meta tpl-all">${esc(t("price"))} · <a class="link" href="templates/">${esc(t("all"))} →</a></p>
- </div>`;
+ $("#tpl").innerHTML = all.map(x => `<article class="tpl">
+  <a class="pic" href="${d(x)}" style="background:${x.paper}" aria-label="${esc(t("det"))}: ${esc(x.name)}"><img src="${x.thumb}" alt="${esc(x.name)} — ${esc(cat(x))}" width="640" height="400" loading="lazy"></a>
+  <div class="tpl-b">
+   <div class="top"><div><span class="mono-up">${esc(cat(x))}</span><h4><a href="${d(x)}">${esc(x.name)}</a></h4></div><div class="price">$${x.price}<small>${esc(t("price"))}</small></div></div>
+   <p>${esc(x.short[lang] || x.short.en)}</p>
+   <div class="demo-act"><a class="btn ghost sm" href="${x.demo}" target="_blank" rel="noopener">${esc(t("prev"))} ↗</a><a class="btn dark sm" href="templates/order.html?id=${x.id}">${esc(t("ord"))}</a></div>
+  </div></article>`).join("");
  $("#foot-tpl").innerHTML = Object.keys(CATS).map(k => `<a href="templates/?cat=${k}">${esc(CATS[k][lang] || CATS[k].en)}</a>`).join("");
 }
 
@@ -180,41 +291,92 @@ function renderDemos() {
  $("#demos").innerHTML = DEMOS.map(d => `<article class="demo-card">
   <a class="demo-pic" href="demos/${d.id}/" target="_blank" rel="noopener" aria-label="${esc(t("dm_live"))}: ${esc(d.name)}"><img src="assets/images/projects/demo-${d.id}.webp" alt="${esc(d.name)} — ${esc(d.cat[lang] || d.cat.en)}" width="800" height="500" loading="lazy"></a>
   <div class="demo-b">
-   <span class="meta">${esc(d.cat[lang] || d.cat.en)}</span>
+   <span class="mono-up">${esc(d.cat[lang] || d.cat.en)}</span>
    <h4>${esc(d.name)}</h4>
    <p>${esc(d.desc[lang] || d.desc.en)}</p>
    <ul class="demo-stack">${d.stack.map(s => `<li>${esc(s)}</li>`).join("")}</ul>
-   <div class="demo-act"><a class="btn primary sm" href="demos/${d.id}/" target="_blank" rel="noopener">${esc(t("dm_live"))} ↗</a><a class="btn sm" href="demos/#${d.id}">${esc(t("dm_det"))}</a></div>
+   <div class="demo-act"><a class="btn dark sm" href="demos/${d.id}/" target="_blank" rel="noopener">${esc(t("dm_live"))} ↗</a><a class="btn ghost sm" href="demos/#${d.id}">${esc(t("dm_det"))}</a></div>
   </div></article>`).join("");
 }
 
 function renderProjects() {
- $("#prj").innerHTML = PROJECTS.map(p => `<li class="work-row">
-  <span class="meta num">${esc(p.year)} · ${esc(t(p.type))}</span>
-  <h3>${esc(p.name)}</h3>
+ $("#prj").innerHTML = PROJECTS.map(p => `<li class="row">
+  <span class="mono-up meta-y">${esc(p.year)} · ${esc(t(p.type))}</span>
+  <h4>${esc(p.name)}</h4>
   <p>${esc(t(p.desc))}${p.link ? ` <a href="${p.link}" target="_blank" rel="noopener">${esc(t("view_demo"))} ↗</a>` : ""}</p>
   <span class="st">${esc(t(p.status))}</span></li>`).join("");
 }
 
+/* ---------- process timeline ---------- */
+const steps = $$("#proc-list li");
+let stepNow = 0;
+function setStep(i) {
+ stepNow = i;
+ steps.forEach((li, j) => li.classList.toggle("on", j === i));
+ $("#proc-big").textContent = pad2(i + 1); $("#proc-i").textContent = pad2(i + 1);
+ $("#proc-lab").textContent = $(".mono-up", steps[i]).textContent;
+ $("#proc-bar").style.width = ((i + 1) / steps.length) * 100 + "%";
+}
+if ("IntersectionObserver" in window) {
+ const po = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) setStep(steps.indexOf(x.target)); }), { rootMargin: "-45% 0px -45% 0px" });
+ steps.forEach(li => po.observe(li));
+}
+
+/* ---------- full-screen menu ---------- */
+const menuBtn = $("#menu-btn"), menu = $("#menu");
+function openMenu() {
+ menu.hidden = false; requestAnimationFrame(() => menu.classList.add("open"));
+ document.body.classList.add("menu-open"); document.body.style.overflow = "hidden";
+ menuBtn.setAttribute("aria-expanded", "true"); $(".menu-links a").focus();
+}
+function closeMenu() {
+ if (menu.hidden) return;
+ menu.classList.remove("open"); document.body.classList.remove("menu-open"); document.body.style.overflow = "";
+ menuBtn.setAttribute("aria-expanded", "false");
+ setTimeout(() => { if (!menu.classList.contains("open")) menu.hidden = true; }, 350);
+}
+menuBtn.addEventListener("click", () => menu.hidden ? openMenu() : closeMenu());
+menu.addEventListener("click", e => { if (e.target.closest("a")) closeMenu(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !menu.hidden) { closeMenu(); menuBtn.focus(); } });
+
+/* ---------- language ---------- */
 function render() {
- $$("[data-i18n]").forEach(e => { e.textContent = t(e.dataset.i18n); });
+ $$("[data-i18n]").forEach(e => { const v = t(e.dataset.i18n); if (typeof v === "string") e.textContent = v; });
  $$("[data-i18n-html]").forEach(e => { e.innerHTML = t(e.dataset.i18nHtml); });
  renderTemplates(); renderDemos(); renderProjects();
+ openDoor(door); flipStart(); tick(); setStep(stepNow);
  if (window.KT_fillContact) KT_fillContact(lang);
  document.title = t("title");
 }
 function setLang(l) { lang = TEXT[l] ? l : "en"; try { localStorage.setItem("lang", lang); } catch (e) {} document.documentElement.lang = lang; $("#lang").value = lang; render(); }
-
-/* navigation */
-const burger = $("#burger"), menu = $("#menu");
-const closeMenu = () => { menu.classList.remove("open"); burger.setAttribute("aria-expanded", "false"); };
-burger.addEventListener("click", () => { const o = menu.classList.toggle("open"); burger.setAttribute("aria-expanded", o); });
-menu.addEventListener("click", e => { if (e.target.closest("a")) closeMenu(); });
-document.addEventListener("keydown", e => { if (e.key === "Escape" && menu.classList.contains("open")) { closeMenu(); burger.focus(); } });
 $("#lang").addEventListener("change", e => setLang(e.target.value));
-document.addEventListener("click", e => { const s = e.target.closest("[data-soon]"); if (s) { e.preventDefault(); toast(t("soon")); } });
 
-/* contact form (demo) */
+/* ---------- pull cord: light / dark ---------- */
+const cord = $("#cord");
+function applyTheme(dark) {
+ document.documentElement.classList.toggle("dark", dark);
+ cord.setAttribute("aria-pressed", dark);
+ $('meta[name="theme-color"]').content = dark ? "#141312" : "#EFEBE4";
+}
+cord.addEventListener("click", () => {
+ const dark = !document.documentElement.classList.contains("dark");
+ applyTheme(dark); try { localStorage.setItem("kt-theme", dark ? "dark" : "light"); } catch (e) {}
+ cord.classList.remove("pull"); void cord.offsetWidth; cord.classList.add("pull");
+});
+applyTheme(document.documentElement.classList.contains("dark"));
+
+/* ---------- scroll: bar background, back-to-top ring ---------- */
+const bar = $("#bar"), toTop = $("#to-top"), ring = $("#ring");
+function onScroll() {
+ const y = scrollY, h = document.documentElement.scrollHeight - innerHeight;
+ bar.classList.toggle("scrolled", y > 30);
+ toTop.classList.toggle("show", y > innerHeight * .8);
+ ring.style.strokeDashoffset = 138.2 * (1 - (h > 0 ? y / h : 0));
+}
+addEventListener("scroll", onScroll, { passive: true }); onScroll();
+
+/* ---------- contact form: builds a message, the visitor sends it ---------- */
+document.addEventListener("click", e => { const s = e.target.closest("[data-soon]"); if (s) { e.preventDefault(); toast(t("soon")); } });
 $("#form").addEventListener("submit", e => {
  e.preventDefault(); const f = e.target; let first = null;
  $$("input,textarea", f).forEach(i => {
@@ -223,18 +385,19 @@ $("#form").addEventListener("submit", e => {
   i.parentElement.querySelector(".err").textContent = m; i.setAttribute("aria-invalid", !!m); if (m && !first) first = i;
  });
  if (first) { first.focus(); $("#status").textContent = ""; return; }
- // Build the message and let the visitor send it from their own WhatsApp or email app.
  const msg = [t("m_hello"), "", t("m_name") + ": " + f.name.value.trim(), t("m_email") + ": " + f.email.value.trim(), t("m_type") + ": " + f.type.value, "", f.msg.value.trim()].join("\n");
- $("#status").innerHTML = `<p style="margin-bottom:12px">${esc(t("ready"))}</p><div class="hero-actions" style="margin-top:0">
-  <a class="btn primary" href="${KT_WA(msg)}" target="_blank" rel="noopener">${esc(t("send_wa"))} →</a>
-  <a class="btn" href="${KT_MAIL(t("mail_subj"), msg)}">${esc(t("send_mail"))}</a></div>`;
+ $("#status").innerHTML = `<p>${esc(t("ready"))}</p><div class="actions">
+  <a class="btn light" href="${KT_WA(msg)}" target="_blank" rel="noopener"><span>${esc(t("send_wa"))}</span><span class="arr" aria-hidden="true">→</span></a>
+  <a class="btn ghost-l" href="${KT_MAIL(t("mail_subj"), msg)}">${esc(t("send_mail"))}</a></div>`;
 });
 
-/* subtle reveal */
-if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+/* ---------- reveal on scroll ---------- */
+if ("IntersectionObserver" in window && !REDUCED) {
  const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } }), { rootMargin: "0px 0px -60px 0px" });
  $$(".rv").forEach(el => io.observe(el));
 } else $$(".rv").forEach(el => el.classList.add("in"));
 
 $("#year").textContent = new Date().getFullYear();
 setLang(lang);
+setInterval(tick, 15000);
+{ const n = doorFromHash(location.hash); if (n) openDoor(n); }
