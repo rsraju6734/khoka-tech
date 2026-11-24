@@ -225,6 +225,9 @@ html.dark .door[aria-selected="true"]{box-shadow:0 0 0 10px #2C2927,0 0 60px 6px
 .demo-card:hover{transform:translateY(-6px);box-shadow:0 26px 50px -30px rgba(0,0,0,.45)}
 .demo-card:first-child{grid-column:span 2;flex-direction:row}
 .demo-card:first-child .demo-pic{width:56%;aspect-ratio:auto}
+/* 6th demo (Monolith Architecture) closes the grid as a full-width feature card */
+.demo-card:nth-child(6):last-child{grid-column:1/-1;flex-direction:row}
+.demo-card:nth-child(6):last-child .demo-pic{width:56%;aspect-ratio:auto}
 .demo-pic{display:block;overflow:hidden;aspect-ratio:16/10;background:var(--paper-2)}
 .demo-pic img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
 .demo-card:hover .demo-pic img{transform:scale(1.05)}
@@ -358,6 +361,8 @@ html.dark .door[aria-selected="true"]{box-shadow:0 0 0 10px #2C2927,0 0 60px 6px
  .demo-grid,.tpl-grid{grid-template-columns:1fr}
  .demo-card:first-child{grid-column:auto;flex-direction:column}
  .demo-card:first-child .demo-pic{width:100%;aspect-ratio:16/10}
+ .demo-card:nth-child(6):last-child{flex-direction:column}
+ .demo-card:nth-child(6):last-child .demo-pic{width:100%;aspect-ratio:16/10}
  .two{grid-template-columns:1fr}
  .facts{grid-template-columns:repeat(2,1fr)}
  .row{grid-template-columns:1fr auto}.row .meta-y{grid-column:1/3}.row p{grid-column:1/3}

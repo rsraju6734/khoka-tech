@@ -10,7 +10,7 @@ khoka-tech/
 ├── README.md
 ├── admin/
 │   └── index.html                  Admin dashboard (Preview mode until a backend is connected)
-├── demos/                          ★ Five realistic demo websites with real photography
+├── demos/                          ★ Six realistic demo websites with real photography
 │   ├── index.html                  Project details + photo credits (demos/#restaurant etc.)
 │   ├── photos.txt                  Photo source list (demo|file|unsplash id|photographer|slug|alt)
 │   ├── shared/                     kit.css + kit.js (demo bar, mobile menu, form validation), showcase.css
@@ -18,7 +18,9 @@ khoka-tech/
 │   ├── ecommerce/                  NOVA STORE — shop, product.html?id=, cart, wishlist, checkout preview
 │   ├── real-estate/                Horizon Estates — listings, property.html?id=, EMI calculator, viewing form
 │   ├── education/                  LearnSphere Academy — courses, course.html?id=, dashboard preview, enrolment
-│   └── technology/                 Nexora Technologies — services, case studies, team, project brief form
+│   ├── technology/                 Nexora Technologies — services, case studies, team, project brief form
+│   └── monolith/                   Monolith Architecture — blueprint intro, GSAP scroll storytelling, projects, quote form
+│       └── vendor/                 GSAP 3.13 + ScrollTrigger (bundled locally, no CDN needed)
 ├── docs/
 │   └── BACKEND.md                  What needs a server, database schema, API contract, security checklist
 ├── templates/
@@ -45,11 +47,11 @@ khoka-tech/
     │   └── demo.js                 Demo bar, mobile nav, filters, demo forms
     └── images/
         ├── templates/*.svg         Template thumbnails
-        └── projects/               shikbolab.svg + demo-*.webp thumbnails for the five demos
+        └── projects/               shikbolab.svg + demo-*.webp thumbnails for the six demos
 ```
 
 ## Demo websites — `demos/`
-Five fictional businesses built to show clients what KHOKA TECH can make. Homepage **Work → Demo websites** cards open
+Six fictional businesses built to show clients what KHOKA TECH can make. Homepage **Work → Demo websites** cards open
 each demo (**View live demo**) or its section on `demos/index.html` (**View details**).
 
 - **Demo mode everywhere:** forms validate input, then say clearly that nothing was sent. The NOVA STORE checkout
@@ -60,6 +62,16 @@ each demo (**View live demo**) or its section on `demos/index.html` (**View deta
 - **Photos:** downloaded from Unsplash (free licence only, no Unsplash+), stored locally in each demo's `img/` folder
   and credited on `demos/index.html#credits`. Branded products and logos were avoided. People in photos do not
   endorse these businesses.
+
+### Monolith Architecture — `demos/monolith/`
+Premium animated demo (Real Estate & Construction). Plain HTML/CSS/JS plus GSAP + ScrollTrigger in `vendor/`.
+- **Intro:** an SVG front elevation draws itself on a blueprint grid, then a scan line reveals the real photograph
+  underneath (the drawing is traced in the photo's own 1800×1350 coordinates, so the lines land on the building).
+  Shown once per browser session (`sessionStorage` key `mono-intro`); "Skip intro", Esc, scroll or swipe fast-forwards it.
+- **Spaces:** on screens ≥ 900 px wide the seven rooms are a pinned, scroll-scrubbed sequence with snap points, a counter
+  and a clickable rail. On phones (and with reduced motion) they become stacked full-height sections.
+- **Reduced motion / no GSAP:** no intro, no scroll animation, all content visible.
+- Edit projects in the `PROJECTS` array at the top of `app.js`; services, about and contact text live in `index.html`.
 
 ## Order flow (works today)
 1. Every **Order** button (store cards, product page, homepage, demo bar) opens `templates/order.html?id=<template>`.
@@ -108,5 +120,5 @@ filters, case dialog and contact form. Unknown ids (`product.html?id=x`) show a 
 CSS and JS links end in "?v=7". After changing a CSS/JS file, raise that number in the HTML files so visitors' browsers load the new file instead of a cached copy.
 
 Upload the changed files (keep the folder structure) to the `khoka-tech` repository, or `git add . && git commit -m "Update" && git push`.
-New in v5: `demos/` and `assets/images/projects/demo-*.webp`. Earlier: `admin/`, `docs/`, plus `templates/order.html`, `assets/css/admin.css`,
+New in v8: `demos/monolith/`, `assets/images/projects/demo-monolith.webp` (home.css and main.js are now `?v=8`). New in v5: `demos/` and `assets/images/projects/demo-*.webp`. Earlier: `admin/`, `docs/`, plus `templates/order.html`, `assets/css/admin.css`,
 `assets/js/admin-data.js`, `assets/js/admin.js`. Do not upload the local `.claude/` folder.
