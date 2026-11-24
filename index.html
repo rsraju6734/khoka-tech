@@ -3,115 +3,254 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Demo Websites — Project Details | KHOKA TECH</title>
-<meta name="description" content="Six complete demo websites built by KHOKA TECH: restaurant, e-commerce, real estate, education, technology company and an architecture studio — with real photography and working features.">
+<title>KHOKA TECH — Websites, AI tools and digital products</title>
+<meta name="description" content="KHOKA TECH is a digital studio in Narayanganj, Bangladesh that designs and builds websites, online stores, AI tools and custom software. Live demos and ready-made templates available.">
+<meta property="og:title" content="KHOKA TECH — Websites, AI tools and digital products">
+<meta property="og:description" content="We design and build the websites and software your business runs on.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/images/projects/demo-restaurant.webp">
 <meta name="theme-color" content="#EFEBE4">
-<link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Noto+Sans+Bengali:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=7">
-<link rel="stylesheet" href="shared/showcase.css?v=7">
-<link rel="stylesheet" href="../assets/css/theme.css?v=7">
-<script>try{if(localStorage.getItem("kt-theme")==="dark")document.documentElement.classList.add("dark")}catch(e){}</script>
+<link rel="stylesheet" href="assets/css/home.css?v=8">
+<script>try{var th=localStorage.getItem("kt-theme");if(th==="dark")document.documentElement.classList.add("dark");if(!sessionStorage.getItem("kt-intro")&&!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("intro-on")}catch(e){}</script>
 </head>
 <body id="top">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="logo" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#8B5CF6"/><path d="M14 10h8v18l14-18h10L31 30l16 24H36L22 33v21h-8z" fill="#fff"/><path d="M36 10h11L33 26z" fill="#E8DCC4"/></symbol></svg>
-<a class="skip" href="#main">Skip to content</a>
-<header class="nav">
- <div class="wrap nav-in">
-  <a class="brand" href="../index.html" aria-label="KHOKA TECH home"><svg width="32" height="32" aria-hidden="true"><use href="#logo"/></svg><span>KHOKA <b>TECH</b></span></a>
-  <nav class="sc-menu" aria-label="Main"><a href="../index.html#work">Work</a><a href="../templates/">Templates</a><a class="btn primary sm" href="../index.html#contact">Start a project</a></nav>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+<!-- INTRO (once per visit, skipped with reduced motion) -->
+<div class="intro" id="intro" aria-hidden="true">
+ <div class="intro-top"><span><b>KHOKA TECH</b> · <span data-i18n="h_tag">Digital studio</span></span><span data-i18n="intro_r">Web · AI · Products · Software</span></div>
+ <div class="intro-bottom">
+  <div><p class="mono" data-i18n="intro_l">Opening the studio</p><p class="intro-num" id="intro-num">000</p></div>
+  <span class="intro-bar"><i id="intro-bar"></i></span>
+ </div>
+</div>
+
+<!-- TOP BAR -->
+<header class="bar" id="bar">
+ <button class="pill menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu"><span class="ham" aria-hidden="true"><i></i><i></i></span><span class="mono-up" data-i18n="menu">Menu</span></button>
+ <a class="brand" href="#top" aria-label="KHOKA TECH, back to top"><svg width="30" height="30" aria-hidden="true"><use href="#logo"/></svg><span>KHOKA <b>TECH</b></span></a>
+ <div class="bar-r">
+  <p class="pill clock" aria-label="Local time in Bangladesh"><span data-i18n="local">Local time</span> <b id="clock-t">--:--</b><i aria-hidden="true"></i><span id="clock-d"></span></p>
+  <label class="pill lang-pill"><span class="sr" data-i18n="lang_l">Language</span><select id="lang"><option value="en">EN</option><option value="bn">বাংলা</option><option value="hi">हिन्दी</option></select></label>
  </div>
 </header>
+
+<!-- FULL-SCREEN MENU -->
+<div class="menu" id="menu" hidden>
+ <nav class="menu-in" aria-label="Main">
+  <ol class="menu-links">
+   <li><a href="#top"><span class="mono">01</span><span data-i18n="home">Home</span></a></li>
+   <li><a href="#services"><span class="mono">02</span><span data-i18n="services">Services</span></a></li>
+   <li><a href="#work"><span class="mono">03</span><span data-i18n="portfolio">Work</span></a></li>
+   <li><a href="templates/"><span class="mono">04</span><span data-i18n="templates">Templates</span></a></li>
+   <li><a href="#process"><span class="mono">05</span><span data-i18n="process">Process</span></a></li>
+   <li><a href="#contact"><span class="mono">06</span><span data-i18n="contact">Contact</span></a></li>
+  </ol>
+  <div class="menu-side">
+   <p class="mono-up" data-i18n="fc">Contact</p>
+   <a data-c="email" href="mailto:rsraju673@gmail.com">rsraju673@gmail.com</a>
+   <a data-c="wa-phone" href="https://wa.me/8801719531952">+880 1719-531952</a>
+   <a data-c="github" href="https://github.com/rsraju6734">GitHub ↗</a>
+   <p class="muted" data-c="location">Narayanganj, Bangladesh</p>
+   <a class="btn dark" href="#contact"><span data-i18n="cta">Start a project</span><span class="arr" aria-hidden="true">→</span></a>
+  </div>
+ </nav>
+</div>
+
+<!-- PULL CORD: light / dark -->
+<button class="cord" id="cord" aria-pressed="false"><span class="sr" data-i18n="theme">Switch light and dark mode</span><span class="cord-line" aria-hidden="true"></span><span class="cord-knob" aria-hidden="true"></span></button>
+
 <main id="main">
- <section class="dhero"><div class="wrap">
-  <p class="index"><b>KHOKA TECH</b><span>Demo websites</span></p>
-  <h1>Six complete websites, built to show what we can make for you.</h1>
-  <p class="lede">Each demo is a working business website with real photography, realistic content and interactive features. Business names, people, prices and contact details are fictional; forms and checkouts run in demo mode.</p>
-  <nav class="jump" aria-label="Jump to a project"><a href="#restaurant">The Urban Plate</a><a href="#ecommerce">NOVA STORE</a><a href="#real-estate">Horizon Estates</a><a href="#education">LearnSphere Academy</a><a href="#technology">Nexora Technologies</a><a href="#monolith">Monolith Architecture</a></nav>
- </div></section>
- <div class="wrap">
-  <article class="proj" id="restaurant">
-   <div class="proj-pics"><a class="pp" href="restaurant/" target="_blank" rel="noopener" aria-label="Open The Urban Plate live demo"><img src="restaurant/img/hero.webp" alt="The Urban Plate preview" loading="lazy" width="1000" height="667"></a><a class="pp" href="restaurant/" target="_blank" rel="noopener" aria-label="Open The Urban Plate live demo"><img src="restaurant/img/steak2.webp" alt="The Urban Plate preview" loading="lazy" width="1000" height="667"></a><a class="pp" href="restaurant/" target="_blank" rel="noopener" aria-label="Open The Urban Plate live demo"><img src="restaurant/img/dining.webp" alt="The Urban Plate preview" loading="lazy" width="1000" height="667"></a></div>
-   <div class="proj-b">
-    <span class="meta">Restaurant · Premium modern grill & kitchen</span>
-    <h2>The Urban Plate</h2>
-    <p>A full restaurant website for a modern grill in Gulshan: atmospheric photography, a filterable menu with real dishes, the chef&#x27;s monthly special, a lightbox gallery and online table reservations.</p>
-    <h3>What's inside</h3><ul class="feat"><li>Full-screen photographic hero</li><li>Food categories and a filterable photo menu (14 dishes)</li><li>Chef's special section</li><li>Gallery with keyboard-friendly lightbox</li><li>About, opening hours and sample reviews</li><li>Reservation form with date, time and guest validation</li></ul>
-    <dl class="pd"><div><dt>Technology</dt><dd>HTML5, CSS3, vanilla JavaScript · no frameworks · GitHub Pages ready</dd></div><div><dt>Design</dt><dd>DM Serif Display · Inter · charcoal, cream &amp; copper</dd></div><div><dt>Responsive</dt><dd>Desktop, tablet and mobile</dd></div></dl>
-    <div class="proj-act"><a class="btn primary" href="restaurant/" target="_blank" rel="noopener">View live demo ↗</a><a class="btn" href="../index.html#contact">Build one like this</a></div>
+
+<!-- HERO -->
+<section class="hero">
+ <div class="blob b1" aria-hidden="true"></div><div class="blob b2" aria-hidden="true"></div>
+ <div class="wrap hero-grid">
+  <div class="hero-copy">
+   <p class="tag"><i aria-hidden="true"></i><span data-i18n="h_tag2">Digital studio · Narayanganj, Bangladesh</span></p>
+   <h1><span class="l1" data-i18n="hi1">Hi, we're KHOKA TECH.</span><span class="l2" data-i18n="hi2">We build</span></h1>
+   <div class="flip" id="flip" aria-live="polite">
+    <span class="rings" aria-hidden="true"></span>
+    <div class="flip-card"><span class="flip-word" id="flip-word">Websites</span><span class="flip-n mono" id="flip-n">01 / 05</span></div>
+    <div class="flip-under" aria-hidden="true"></div>
    </div>
-  </article>
-  <article class="proj" id="ecommerce">
-   <div class="proj-pics"><a class="pp" href="ecommerce/" target="_blank" rel="noopener" aria-label="Open NOVA STORE live demo"><img src="ecommerce/img/hero.webp" alt="NOVA STORE preview" loading="lazy" width="1000" height="667"></a><a class="pp" href="ecommerce/" target="_blank" rel="noopener" aria-label="Open NOVA STORE live demo"><img src="ecommerce/img/bag1.webp" alt="NOVA STORE preview" loading="lazy" width="1000" height="667"></a><a class="pp" href="ecommerce/" target="_blank" rel="noopener" aria-label="Open NOVA STORE live demo"><img src="ecommerce/img/head1.webp" alt="NOVA STORE preview" loading="lazy" width="1000" height="667"></a></div>
-   <div class="proj-b">
-    <span class="meta">E-commerce · Premium online store</span>
-    <h2>NOVA STORE</h2>
-    <p>A complete storefront for everyday essentials: product search, category filters and sorting, product detail pages, a wishlist, a cart that keeps items between pages and a checkout preview that never asks for payment details.</p>
-    <h3>What's inside</h3><ul class="feat"><li>Hero banner and category tiles</li><li>12 products with real photography</li><li>Search, filters and price sorting</li><li>Product pages with gallery views, sizes and quantity</li><li>Wishlist and cart with free-delivery progress</li><li>Checkout preview clearly marked as demo</li></ul>
-    <dl class="pd"><div><dt>Technology</dt><dd>HTML5, CSS3, vanilla JavaScript · no frameworks · GitHub Pages ready</dd></div><div><dt>Design</dt><dd>Plus Jakarta Sans · white, ink &amp; cobalt</dd></div><div><dt>Responsive</dt><dd>Desktop, tablet and mobile</dd></div></dl>
-    <div class="proj-act"><a class="btn primary" href="ecommerce/" target="_blank" rel="noopener">View live demo ↗</a><a class="btn" href="../index.html#contact">Build one like this</a></div>
+   <p class="lede" data-i18n="hd">Company websites, online shops, AI assistants and custom tools — planned with you, built by hand and looked after once they are live.</p>
+   <div class="actions">
+    <a class="btn dark" href="#contact"><span data-i18n="b1">Start a project</span><span class="arr" aria-hidden="true">→</span></a>
+    <a class="btn ghost" href="#work" data-i18n="b3">See our work</a>
    </div>
-  </article>
-  <article class="proj" id="real-estate">
-   <div class="proj-pics"><a class="pp" href="real-estate/" target="_blank" rel="noopener" aria-label="Open Horizon Estates live demo"><img src="real-estate/img/hero.webp" alt="Horizon Estates preview" loading="lazy" width="1000" height="667"></a><a class="pp" href="real-estate/" target="_blank" rel="noopener" aria-label="Open Horizon Estates live demo"><img src="real-estate/img/p2.webp" alt="Horizon Estates preview" loading="lazy" width="1000" height="667"></a><a class="pp" href="real-estate/" target="_blank" rel="noopener" aria-label="Open Horizon Estates live demo"><img src="real-estate/img/p6a.webp" alt="Horizon Estates preview" loading="lazy" width="1000" height="667"></a></div>
-   <div class="proj-b">
-    <span class="meta">Real estate · Luxury real estate agency</span>
-    <h2>Horizon Estates</h2>
-    <p>A luxury agency website with six fictional listings across Dhaka and Cox&#x27;s Bazar: a property finder, filters, detailed property pages with photo galleries, an EMI calculator, agent profiles and viewing requests.</p>
-    <h3>What's inside</h3><ul class="feat"><li>Photographic hero with property finder</li><li>Featured and searchable listings (sale &amp; rent)</li><li>Property pages with 4-photo galleries and lightbox</li><li>Features, facts and EMI calculator</li><li>Agent profiles (fictional, initials only)</li><li>Viewing request forms</li></ul>
-    <dl class="pd"><div><dt>Technology</dt><dd>HTML5, CSS3, vanilla JavaScript · no frameworks · GitHub Pages ready</dd></div><div><dt>Design</dt><dd>Cormorant Garamond · Jost · ivory, slate &amp; brass</dd></div><div><dt>Responsive</dt><dd>Desktop, tablet and mobile</dd></div></dl>
-    <div class="proj-act"><a class="btn primary" href="real-estate/" target="_blank" rel="noopener">View live demo ↗</a><a class="btn" href="../index.html#contact">Build one like this</a></div>
-   </div>
-  </article>
-  <article class="proj" id="education">
-   <div class="proj-pics"><a class="pp" href="education/" target="_blank" rel="noopener" aria-label="Open LearnSphere Academy live demo"><img src="education/img/hero.webp" alt="LearnSphere Academy preview" loading="lazy" width="1000" height="667"></a><a class="pp" href="education/" target="_blank" rel="noopener" aria-label="Open LearnSphere Academy live demo"><img src="education/img/classroom.webp" alt="LearnSphere Academy preview" loading="lazy" width="1000" height="667"></a><a class="pp" href="education/" target="_blank" rel="noopener" aria-label="Open LearnSphere Academy live demo"><img src="education/img/campus.webp" alt="LearnSphere Academy preview" loading="lazy" width="1000" height="667"></a></div>
-   <div class="proj-b">
-    <span class="meta">Education · Modern learning platform</span>
-    <h2>LearnSphere Academy</h2>
-    <p>A friendly education platform with six courses: hero search, subject and level filters, course pages with curriculum and instructor, a student dashboard preview, campus section, FAQ and an enrolment dialog.</p>
-    <h3>What's inside</h3><ul class="feat"><li>Hero course search</li><li>Course catalogue with filters</li><li>Course pages with outcomes and module accordion</li><li>Student dashboard preview with tabs</li><li>Instructor profiles (fictional)</li><li>Enrolment dialog with validation</li></ul>
-    <dl class="pd"><div><dt>Technology</dt><dd>HTML5, CSS3, vanilla JavaScript · no frameworks · GitHub Pages ready</dd></div><div><dt>Design</dt><dd>Outfit · indigo &amp; sunflower</dd></div><div><dt>Responsive</dt><dd>Desktop, tablet and mobile</dd></div></dl>
-    <div class="proj-act"><a class="btn primary" href="education/" target="_blank" rel="noopener">View live demo ↗</a><a class="btn" href="../index.html#contact">Build one like this</a></div>
-   </div>
-  </article>
-  <article class="proj" id="technology">
-   <div class="proj-pics"><a class="pp" href="technology/" target="_blank" rel="noopener" aria-label="Open Nexora Technologies live demo"><img src="technology/img/hero.webp" alt="Nexora Technologies preview" loading="lazy" width="1000" height="667"></a><a class="pp" href="technology/" target="_blank" rel="noopener" aria-label="Open Nexora Technologies live demo"><img src="technology/img/team.webp" alt="Nexora Technologies preview" loading="lazy" width="1000" height="667"></a><a class="pp" href="technology/" target="_blank" rel="noopener" aria-label="Open Nexora Technologies live demo"><img src="technology/img/server.webp" alt="Nexora Technologies preview" loading="lazy" width="1000" height="667"></a></div>
-   <div class="proj-b">
-    <span class="meta">Technology · Software engineering company</span>
-    <h2>Nexora Technologies</h2>
-    <p>A software company website: services with real office and engineering photography, filterable case studies that open in a detail panel, process, values, team, sample testimonials and a project brief form.</p>
-    <h3>What's inside</h3><ul class="feat"><li>Hero with real office photography</li><li>Service cards and capability list</li><li>Case studies with filters and detail dialog</li><li>About, values and 4-step process</li><li>Team section and clearly labelled sample testimonials</li><li>Project brief form with services and budget</li></ul>
-    <dl class="pd"><div><dt>Technology</dt><dd>HTML5, CSS3, vanilla JavaScript · no frameworks · GitHub Pages ready</dd></div><div><dt>Design</dt><dd>Space Grotesk · Inter · deep navy, blue &amp; mint</dd></div><div><dt>Responsive</dt><dd>Desktop, tablet and mobile</dd></div></dl>
-    <div class="proj-act"><a class="btn primary" href="technology/" target="_blank" rel="noopener">View live demo ↗</a><a class="btn" href="../index.html#contact">Build one like this</a></div>
-   </div>
-  </article>
-  <article class="proj" id="monolith">
-   <div class="proj-pics"><a class="pp" href="monolith/" target="_blank" rel="noopener" aria-label="Open Monolith Architecture live demo"><img src="monolith/img/hero.webp" alt="Monolith Architecture preview" loading="lazy" width="1000" height="667"></a><a class="pp" href="monolith/" target="_blank" rel="noopener" aria-label="Open Monolith Architecture live demo"><img src="monolith/img/s-living.webp" alt="Monolith Architecture preview" loading="lazy" width="1000" height="667"></a><a class="pp" href="monolith/" target="_blank" rel="noopener" aria-label="Open Monolith Architecture live demo"><img src="monolith/img/s-pool.webp" alt="Monolith Architecture preview" loading="lazy" width="1000" height="667"></a></div>
-   <div class="proj-b">
-    <span class="meta">Real Estate &amp; Construction · Architecture studio</span>
-    <h2>Monolith Architecture</h2>
-    <p>A cinematic website for a residential architecture and construction studio. It opens with a technical blueprint that draws itself and turns into the real photograph, then walks visitors through a house — from the street to the garden pool — as they scroll.</p>
-    <h3>What's inside</h3><ul class="feat"><li>Animated blueprint intro that reveals the hero photograph (skippable, shown once per visit)</li><li>Floating pill navigation with active-section indicator and full-screen mobile menu</li><li>Pinned scroll storytelling through seven spaces with clip-path transitions and parallax</li><li>Filterable projects with a detail dialog</li><li>Services accordion with image preview, studio story, principles and animated figures</li><li>Project inquiry form in clearly labelled demo mode</li></ul>
-    <dl class="pd"><div><dt>Technology</dt><dd>HTML5, CSS3, vanilla JavaScript, GSAP + ScrollTrigger (bundled locally) · GitHub Pages ready</dd></div><div><dt>Design</dt><dd>Instrument Serif · Manrope · JetBrains Mono · ink black, navy &amp; blueprint blue</dd></div><div><dt>Responsive</dt><dd>Desktop, tablet and mobile · respects reduced-motion settings</dd></div></dl>
-    <div class="proj-act"><a class="btn primary" href="monolith/" target="_blank" rel="noopener">View live demo ↗</a><a class="btn" href="../index.html#contact">Build one like this</a></div>
-   </div>
-  </article>
+  </div>
+  <div class="hero-art" aria-label="Demo websites built by KHOKA TECH">
+   <a class="shot s3" href="demos/real-estate/" target="_blank" rel="noopener"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><img src="assets/images/projects/demo-real-estate.webp" alt="Horizon Estates demo website" width="800" height="500"></a>
+   <a class="shot s2" href="demos/ecommerce/" target="_blank" rel="noopener"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><img src="assets/images/projects/demo-ecommerce.webp" alt="NOVA STORE demo website" width="800" height="500"></a>
+   <a class="shot s1" href="demos/restaurant/" target="_blank" rel="noopener"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><img src="assets/images/projects/demo-restaurant.webp" alt="The Urban Plate demo website" width="800" height="500"></a>
+   <a class="chip" href="#work"><span data-i18n="chip">6 live demos</span> ↓</a>
+  </div>
  </div>
- <section class="credits" id="credits"><div class="wrap">
-  <p class="index"><b>Credits</b><span>Photography</span></p>
-  <h2>Photo credits</h2>
-  <p class="cred-intro">All photographs are from <a class="link" href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a> and used under the free <a class="link" href="https://unsplash.com/license" target="_blank" rel="noopener">Unsplash License</a>. The people and places shown do not endorse these fictional businesses or KHOKA TECH.</p>
-  <details><summary>The Urban Plate <span class="meta">· 23 photos</span></summary><ul class="cred"><li><span>chef preparing food in a restaurant kitchen</span><a href="https://unsplash.com/photos/man-preparing-food-v3OlBE6-fhU" target="_blank" rel="noopener">Photo by Louis Hansel on Unsplash ↗</a></li><li><span>restaurant dining room with set tables</span><a href="https://unsplash.com/photos/photo-of-pub-set-in-room-during-daytime-poI7DelFiVA" target="_blank" rel="noopener">Photo by Jason Leung on Unsplash ↗</a></li><li><span>people enjoying a variety of dishes at a round table</span><a href="https://unsplash.com/photos/people-enjoying-a-variety-of-dishes-at-a-round-table-EH4Vn4QgZFg" target="_blank" rel="noopener">Photo by Aurela Redenica on Unsplash ↗</a></li><li><span>interior of a modern cafe with artwork on the wall</span><a href="https://unsplash.com/photos/interior-of-a-modern-cafe-with-artwork-on-wall-art-9yQ9rjRge3A" target="_blank" rel="noopener">Photo by abolfazl babaei on Unsplash ↗</a></li><li><span>a burger with fries</span><a href="https://unsplash.com/photos/a-hand-holds-a-delicious-burger-with-fries-Be03rXcBHRQ" target="_blank" rel="noopener">Photo by Diego Arenas de Rodrigo on Unsplash ↗</a></li><li><span>people dining in a restaurant</span><a href="https://unsplash.com/photos/people-in-restaurant-sWEpcc0Rm0U" target="_blank" rel="noopener">Photo by K8 on Unsplash ↗</a></li><li><span>close-up of a hamburger</span><a href="https://unsplash.com/photos/shallow-focus-photo-of-hamburger-pucP6jZSyV4" target="_blank" rel="noopener">Photo by amirali mirhashemian on Unsplash ↗</a></li><li><span>two pizzas</span><a href="https://unsplash.com/photos/selective-focus-photography-of-two-pizzas-exSEmuA7R7k" target="_blank" rel="noopener">Photo by shayan ramesht on Unsplash ↗</a></li><li><span>cappuccino in a mug</span><a href="https://unsplash.com/photos/cappuccino-coffee-in-mug-tA90pRfL2gM" target="_blank" rel="noopener">Photo by Nathan Dumlao on Unsplash ↗</a></li><li><span>pasta dish in a black ceramic bowl</span><a href="https://unsplash.com/photos/pasta-dish-on-black-ceramic-bowl-d9jcPTRD9fo" target="_blank" rel="noopener">Photo by Nicholas Grande on Unsplash ↗</a></li><li><span>sliced steak on a tray</span><a href="https://unsplash.com/photos/cooked-meat-on-tray-NYBnDWeOX2c" target="_blank" rel="noopener">Photo by Loija Nguyen on Unsplash ↗</a></li><li><span>bar counter with chairs</span><a href="https://unsplash.com/photos/a-bar-with-chairs-and-a-bar-counter-jNWm4XNMFTc" target="_blank" rel="noopener">Photo by ASR Design Studio on Unsplash ↗</a></li><li><span>waiter carrying a tray of food</span><a href="https://unsplash.com/photos/a-man-in-a-tuxedo-carrying-a-tray-of-food-H9q_XcRpHNo" target="_blank" rel="noopener">Photo by Roshan Chakkeeri on Unsplash ↗</a></li><li><span>pasta dish in a white bowl</span><a href="https://unsplash.com/photos/pasta-dish-on-white-ceramic-bowl-KJOUnsGXq58" target="_blank" rel="noopener">Photo by Emanuel Ekström on Unsplash ↗</a></li><li><span>bowl of fresh vegetables</span><a href="https://unsplash.com/photos/a-blue-bowl-filled-with-vegetables-and-a-wooden-spoon-yhc4pSbl01A" target="_blank" rel="noopener">Photo by Sonny Mauricio on Unsplash ↗</a></li><li><span>chocolate cake with a slice taken out</span><a href="https://unsplash.com/photos/a-chocolate-cake-with-a-slice-taken-out-of-it-F8RKds2YdqA" target="_blank" rel="noopener">Photo by BraggsDiner on Unsplash ↗</a></li><li><span>cook slicing vegetables</span><a href="https://unsplash.com/photos/person-in-white-shirt-slicing-vegetable-jJIb2e7Jkcs" target="_blank" rel="noopener">Photo by John Fornander on Unsplash ↗</a></li><li><span>pizza on a white plate</span><a href="https://unsplash.com/photos/pizza-on-white-ceramic-plate-e8ULlZbWu0I" target="_blank" rel="noopener">Photo by Kajetan Sumila on Unsplash ↗</a></li><li><span>bowl of vegetable salad</span><a href="https://unsplash.com/photos/bowl-of-vegetable-salads-IGfIGP5ONV0" target="_blank" rel="noopener">Photo by Anna Pelzer on Unsplash ↗</a></li><li><span>light bulbs over a bar area</span><a href="https://unsplash.com/photos/light-bulbs-over-bar-area-S6atLH5Rf0U" target="_blank" rel="noopener">Photo by qui nguyen on Unsplash ↗</a></li><li><span>steak with fries and salad</span><a href="https://unsplash.com/photos/a-perfectly-cooked-steak-with-fries-and-salad-d5EjL94rhZ0" target="_blank" rel="noopener">Photo by meat Adil on Unsplash ↗</a></li><li><span>cake with ice cream</span><a href="https://unsplash.com/photos/a-white-plate-topped-with-a-piece-of-cake-and-ice-cream-8lPKzLSWNgM" target="_blank" rel="noopener">Photo by American Heritage Chocolate on Unsplash ↗</a></li><li><span>dessert topped with strawberries</span><a href="https://unsplash.com/photos/a-dessert-dish-with-a-strawberries-on-top-of-it-_SrCiKojoyM" target="_blank" rel="noopener">Photo by Laura Peruchi on Unsplash ↗</a></li></ul></details>
-<details><summary>NOVA STORE <span class="meta">· 14 photos</span></summary><ul class="cred"><li><span>blue denim button up jacket</span><a href="https://unsplash.com/photos/blue-denim-button-up-jacket-QRN47la37gw" target="_blank" rel="noopener">Photo by Caio Coelho on Unsplash ↗</a></li><li><span>man in blue denim jacket and black fitted cap</span><a href="https://unsplash.com/photos/man-in-blue-denim-jacket-and-black-fitted-cap-sN9BqTtWJIE" target="_blank" rel="noopener">Photo by Brock Wegner on Unsplash ↗</a></li><li><span>black wireless headphones on white table</span><a href="https://unsplash.com/photos/black-wireless-headphones-on-white-table-lUMj2Zv5HUE" target="_blank" rel="noopener">Photo by Luke Peterson on Unsplash ↗</a></li><li><span>black and white photo of headphones</span><a href="https://unsplash.com/photos/black-and-white-photo-of-headphones-oXXc-s5nNy8" target="_blank" rel="noopener">Photo by Sebastian Banasiewcz on Unsplash ↗</a></li><li><span>black sneakers on a white background</span><a href="https://unsplash.com/photos/a-pair-of-black-shoes-hanging-on-a-wall-4rDug1iO8iA" target="_blank" rel="noopener">Photo by Adrian Regeci on Unsplash ↗</a></li><li><span>man in black zip up jacket wearing black sunglasses</span><a href="https://unsplash.com/photos/man-in-black-zip-up-jacket-and-black-pants-wearing-black-sunglasses-mLYusppA05c" target="_blank" rel="noopener">Photo by Nguyen Pham on Unsplash ↗</a></li><li><span>minimalist black wristwatch on river stones</span><a href="https://unsplash.com/photos/black-wristwatch-on-river-stones-tBolmPeAdkI" target="_blank" rel="noopener">Photo by MRS Chimpanzeee on Unsplash ↗</a></li><li><span>black mesh watch next to a laptop keyboard</span><a href="https://unsplash.com/photos/a-watch-sitting-on-top-of-a-computer-keyboard-x6uZWifxmxs" target="_blank" rel="noopener">Photo by Adrian Regeci on Unsplash ↗</a></li><li><span>brown leather handbag on a white background</span><a href="https://unsplash.com/photos/a-brown-leather-handbag-on-a-white-background-IFlg3kFbR0E" target="_blank" rel="noopener">Photo by personalgraphic.com on Unsplash ↗</a></li><li><span>brown leather handbag on white table</span><a href="https://unsplash.com/photos/brown-leather-handbag-on-white-table-XwjrPFW7xw0" target="_blank" rel="noopener">Photo by Ugluk Potroshitel on Unsplash ↗</a></li><li><span>grey leather satchel with gold buckles</span><a href="https://unsplash.com/photos/grey-leather-satchel-with-gold-buckles-J4DnKxz_3sA" target="_blank" rel="noopener">Photo by mostafa mahmoudi on Unsplash ↗</a></li><li><span>black framed sunglasses on white table</span><a href="https://unsplash.com/photos/black-framed-sunglasses-on-white-table-3xtCeUhqZWE" target="_blank" rel="noopener">Photo by Lucas George Wendt on Unsplash ↗</a></li><li><span>black framed sunglasses on white surface</span><a href="https://unsplash.com/photos/black-framed-sunglasses-on-white-surface-lSl94SZHRgA" target="_blank" rel="noopener">Photo by Kiran CK on Unsplash ↗</a></li><li><span>person holding a black backpack</span><a href="https://unsplash.com/photos/person-in-black-jacket-holding-black-backpack-8TSqJoI-NVs" target="_blank" rel="noopener">Photo by Luis Quintero on Unsplash ↗</a></li></ul></details>
-<details><summary>Horizon Estates <span class="meta">· 26 photos</span></summary><ul class="cred"><li><span>modern villa with an infinity pool by the sea</span><a href="https://unsplash.com/photos/brown-concrete-building-near-body-of-water-during-daytime-Ujn77KM2AGc" target="_blank" rel="noopener">Photo by Grgur Vučkov on Unsplash ↗</a></li><li><span>modern house exterior lit at dusk</span><a href="https://unsplash.com/photos/modern-house-exterior-glows-with-lights-4vioYQ9Nn9Y" target="_blank" rel="noopener">Photo by Arthur BAUDRY on Unsplash ↗</a></li><li><span>white and brown living room</span><a href="https://unsplash.com/photos/white-and-brown-living-room-set-9M66C_w_ToM" target="_blank" rel="noopener">Photo by Spacejoy on Unsplash ↗</a></li><li><span>dark modern kitchen</span><a href="https://unsplash.com/photos/a-kitchen-with-a-sink-and-cabinets-Az9uF9Q85qc" target="_blank" rel="noopener">Photo by Bilal Mansuri on Unsplash ↗</a></li><li><span>modern bathroom with mirror</span><a href="https://unsplash.com/photos/a-bathroom-with-a-toilet-sink-and-mirror-G9tpRhcdeco" target="_blank" rel="noopener">Photo by Ali Moradi on Unsplash ↗</a></li><li><span>white modern house with pool</span><a href="https://unsplash.com/photos/white-concrete-building-under-blue-sky-during-daytime-mR1CIDduGLc" target="_blank" rel="noopener">Photo by Frames For Your Heart on Unsplash ↗</a></li><li><span>grey chaise sofa beside a window</span><a href="https://unsplash.com/photos/gray-padded-chaise-couch-beside-window-rEJxpBskj3Q" target="_blank" rel="noopener">Photo by Roberto Nickson on Unsplash ↗</a></li><li><span>bedroom with a bed and a desk</span><a href="https://unsplash.com/photos/a-bedroom-with-a-bed-and-a-desk-b0DHABrkRcM" target="_blank" rel="noopener">Photo by Naksha Banwao on Unsplash ↗</a></li><li><span>white kitchen island near glass doors</span><a href="https://unsplash.com/photos/white-wooden-kitchen-island-and-cupboard-cabinets-near-glass-panel-door-AQl-J19ocWE" target="_blank" rel="noopener">Photo by Jason Briscoe on Unsplash ↗</a></li><li><span>white and wood modern house with pool</span><a href="https://unsplash.com/photos/white-and-brown-concrete-building-under-blue-sky-during-daytime-_TPTXZd9mOo" target="_blank" rel="noopener">Photo by Ярослав Алексеенко on Unsplash ↗</a></li><li><span>beige sofa and armchair</span><a href="https://unsplash.com/photos/beige-couch-and-armchair-tHkJAMcO3QE" target="_blank" rel="noopener">Photo by Francesca Tosolini on Unsplash ↗</a></li><li><span>wooden dining table with chairs</span><a href="https://unsplash.com/photos/brown-wooden-table-with-chairs-v9096DgeVeA" target="_blank" rel="noopener">Photo by Collov Home Design on Unsplash ↗</a></li><li><span>white sofa with a red cushion</span><a href="https://unsplash.com/photos/red-throw-pillow-on-white-sofa-f9O-1eKGlQM" target="_blank" rel="noopener">Photo by Amira Aboalnaga on Unsplash ↗</a></li><li><span>modern apartment building</span><a href="https://unsplash.com/photos/low-angle-photo-of-high-rise-apartment-building-5q1KnUjtjaM" target="_blank" rel="noopener">Photo by Marlene Céline Nordvik on Unsplash ↗</a></li><li><span>living room with a large window</span><a href="https://unsplash.com/photos/a-living-room-filled-with-furniture-and-a-large-window-OtXADkUh3-I" target="_blank" rel="noopener">Photo by Minh Pham on Unsplash ↗</a></li><li><span>white and wood kitchen</span><a href="https://unsplash.com/photos/white-and-brown-kitchen-cabinet--aDGbdTsBZg" target="_blank" rel="noopener">Photo by Collov Home Design on Unsplash ↗</a></li><li><span>bedroom with a bed and a chair</span><a href="https://unsplash.com/photos/a-bedroom-with-a-bed-and-a-chair-ErDrzSvSNv4" target="_blank" rel="noopener">Photo by Le Quan on Unsplash ↗</a></li><li><span>garden villa pool terrace</span><a href="https://unsplash.com/photos/a-pool-with-a-table-and-chairs-next-to-it-A7Z5U6LyacA" target="_blank" rel="noopener">Photo by Shawn on Unsplash ↗</a></li><li><span>white sofa near a fireplace</span><a href="https://unsplash.com/photos/white-sofa-chair-near-fireplace-H-1j_s0dhCw" target="_blank" rel="noopener">Photo by Collov Home Design on Unsplash ↗</a></li><li><span>wooden dining set</span><a href="https://unsplash.com/photos/brown-and-black-wooden-5-piece-dining-set-qnSTxcs0EEs" target="_blank" rel="noopener">Photo by Francesca Tosolini on Unsplash ↗</a></li><li><span>bathroom with a sink and mirror</span><a href="https://unsplash.com/photos/a-bathroom-with-a-sink-and-a-mirror-f61KO4nDeJA" target="_blank" rel="noopener">Photo by Alona Gross on Unsplash ↗</a></li><li><span>city apartment building</span><a href="https://unsplash.com/photos/brown-concrete-building-during-daytime-XCCAVA3BjhM" target="_blank" rel="noopener">Photo by Seyi Ariyo on Unsplash ↗</a></li><li><span>modern living room with a sectional sofa</span><a href="https://unsplash.com/photos/modern-living-room-with-sectional-sofa-and-large-window-yxO8YG082v8" target="_blank" rel="noopener">Photo by Aalo Lens on Unsplash ↗</a></li><li><span>wooden kitchen cabinets</span><a href="https://unsplash.com/photos/brown-wooden-kitchen-cabinet-JDBVXignFdA" target="_blank" rel="noopener">Photo by Frames For Your Heart on Unsplash ↗</a></li><li><span>bedroom with a large bed</span><a href="https://unsplash.com/photos/a-bedroom-with-a-large-bed-and-a-chair-vz9IbCAXHKQ" target="_blank" rel="noopener">Photo by Ali Moradi on Unsplash ↗</a></li><li><span>two-storey house with balconies</span><a href="https://unsplash.com/photos/a-two-story-house-with-a-lot-of-windows-and-balconies-3ddHcjHmiGw" target="_blank" rel="noopener">Photo by Naksha Banwao on Unsplash ↗</a></li></ul></details>
-<details><summary>LearnSphere Academy <span class="meta">· 11 photos</span></summary><ul class="cred"><li><span>group of students collaborating around a laptop</span><a href="https://unsplash.com/photos/diverse-group-of-students-collaborating-around-a-laptop--X4Qx4_4iMU" target="_blank" rel="noopener">Photo by Vitaly Gariev on Unsplash ↗</a></li><li><span>library with tall windows and bookshelves</span><a href="https://unsplash.com/photos/library-interior-with-bookshelves-and-tables-n4y3eiQSIoc" target="_blank" rel="noopener">Photo by Drahomír Hugo Posteby-Mach on Unsplash ↗</a></li><li><span>students in a classroom with a teacher presenting</span><a href="https://unsplash.com/photos/students-in-classroom-with-teacher-presenting-zFSo6bnZJTw" target="_blank" rel="noopener">Photo by Quilia on Unsplash ↗</a></li><li><span>instructor pointing at code on a screen</span><a href="https://unsplash.com/photos/man-pointing-at-code-workspace-b9-odQi5oDo" target="_blank" rel="noopener">Photo by Wonderlane on Unsplash ↗</a></li><li><span>man working on a laptop at a desk</span><a href="https://unsplash.com/photos/man-working-on-a-laptop-at-a-desk-l_pGKO3rVx4" target="_blank" rel="noopener">Photo by Vitaly Gariev on Unsplash ↗</a></li><li><span>analytics charts on a laptop screen</span><a href="https://unsplash.com/photos/graphs-of-performance-analytics-on-a-laptop-screen-JKUTrJ4vK00" target="_blank" rel="noopener">Photo by Luke Chesser on Unsplash ↗</a></li><li><span>woman presenting in front of a group</span><a href="https://unsplash.com/photos/woman-in-black-sleeveless-top-h6gCRTCxM7o" target="_blank" rel="noopener">Photo by ThisisEngineering on Unsplash ↗</a></li><li><span>team reviewing work on a laptop</span><a href="https://unsplash.com/photos/men-and-women-sitting-and-standing-while-staring-at-laptop-p74ndnYWRY4" target="_blank" rel="noopener">Photo by Windows on Unsplash ↗</a></li><li><span>students talking in a lecture hall</span><a href="https://unsplash.com/photos/students-talking-and-laughing-in-a-lecture-hall-TB5HpfJf7mA" target="_blank" rel="noopener">Photo by Vitaly Gariev on Unsplash ↗</a></li><li><span>students in front of a chalkboard</span><a href="https://unsplash.com/photos/student-sitting-on-chairs-in-front-of-chalkboard-Z-fq3wBVfMU" target="_blank" rel="noopener">Photo by Shubham Sharan on Unsplash ↗</a></li><li><span>group of students studying together</span><a href="https://unsplash.com/photos/a-group-of-friends-at-a-coffee-shop--uHVRvDr7pg" target="_blank" rel="noopener">Photo by Brooke Cagle on Unsplash ↗</a></li></ul></details>
-<details><summary>Nexora Technologies <span class="meta">· 10 photos</span></summary><ul class="cred"><li><span>two colleagues working at a computer in an office</span><a href="https://unsplash.com/photos/man-standing-beside-another-sitting-man-using-computer-l90zRbWvCoE" target="_blank" rel="noopener">Photo by Proxyclick Visitor Management System on Unsplash ↗</a></li><li><span>modern office meeting area</span><a href="https://unsplash.com/photos/photo-of-dining-table-and-chairs-inside-room-eHD8Y1Znfpk" target="_blank" rel="noopener">Photo by Nastuh Abootalebi on Unsplash ↗</a></li><li><span>team planning together at a whiteboard</span><a href="https://unsplash.com/photos/man-in-blue-dress-shirt-and-woman-in-black-long-sleeve-shirt-p5wrlynJR4A" target="_blank" rel="noopener">Photo by ThisisEngineering on Unsplash ↗</a></li><li><span>business team collaborating in a modern office</span><a href="https://unsplash.com/photos/diverse-business-team-collaborating-in-a-modern-office-_4tpElFQemQ" target="_blank" rel="noopener">Photo by Vitaly Gariev on Unsplash ↗</a></li><li><span>code on a computer screen</span><a href="https://unsplash.com/photos/a-computer-screen-with-a-bunch-of-code-on-it-ieic5Tq8YMk" target="_blank" rel="noopener">Photo by Chris Ried on Unsplash ↗</a></li><li><span>data centre hallway</span><a href="https://unsplash.com/photos/a-long-hallway-with-glass-doors-leading-to-another-room-s0XabTAKvak" target="_blank" rel="noopener">Photo by Paul Hanaoka on Unsplash ↗</a></li><li><span>engineer working at a whiteboard</span><a href="https://unsplash.com/photos/woman-in-black-shirt-holding-white-smartphone-DbLlKd8u2Rw" target="_blank" rel="noopener">Photo by ThisisEngineering on Unsplash ↗</a></li><li><span>workspace with laptop, monitor and keyboard</span><a href="https://unsplash.com/photos/home-office-workspace-with-wooden-desk-TlRQin0iwjE" target="_blank" rel="noopener">Photo by Max Andrey on Unsplash ↗</a></li><li><span>sticky notes from a planning session</span><a href="https://unsplash.com/photos/assorted-color-sticky-notes-qFpnvZ_j9HU" target="_blank" rel="noopener">Photo by Hugo Rocha on Unsplash ↗</a></li><li><span>glass office building interior</span><a href="https://unsplash.com/photos/clear-glass-building-interior-during-daytime-aKij95Mmus8" target="_blank" rel="noopener">Photo by LYCS Architecture on Unsplash ↗</a></li></ul></details>
-<details><summary>Monolith Architecture <span class="meta">· 21 photos</span></summary><ul class="cred"><li><span>concrete house with timber slat screens</span><a href="https://unsplash.com/photos/modern-concrete-and-wood-house-with-trees-F-slnkFvcag" target="_blank" rel="noopener">Photo by POOJAN THANEKAR on Unsplash ↗</a></li><li><span>modern house with a tree in front</span><a href="https://unsplash.com/photos/a-house-with-a-tree-in-front-of-it-4KXEQrDUizs" target="_blank" rel="noopener">Photo by Meri Vasilevski on Unsplash ↗</a></li><li><span>dark modern living room</span><a href="https://unsplash.com/photos/modern-living-room-with-dark-furniture-and-planetary-art-7-9QPJAB6es" target="_blank" rel="noopener">Photo by Joao Vitor Torres on Unsplash ↗</a></li><li><span>black kitchen island with light wood cabinets</span><a href="https://unsplash.com/photos/modern-black-kitchen-island-with-light-wood-cabinets-j6MCxix3o2c" target="_blank" rel="noopener">Photo by krishna kumar c on Unsplash ↗</a></li><li><span>contemporary bedroom with a dark panelled wall</span><a href="https://unsplash.com/photos/black-and-white-bed-linen-tAuc4H7Qf9s" target="_blank" rel="noopener">Photo by Spacejoy on Unsplash ↗</a></li><li><span>concrete gallery with a tree framed by a window</span><a href="https://unsplash.com/photos/modern-art-gallery-with-a-large-tree-visible-through-window-ZXi_RdPSF3A" target="_blank" rel="noopener">Photo by Ye Sichen on Unsplash ↗</a></li><li><span>Japanese room with a garden view</span><a href="https://unsplash.com/photos/traditional-japanese-room-with-garden-view-sqH6pOCVAf4" target="_blank" rel="noopener">Photo by Yosuke Ota on Unsplash ↗</a></li><li><span>swimming pool surrounded by greenery</span><a href="https://unsplash.com/photos/a-house-with-a-swimming-pool-surrounded-by-greenery-ksa5r_xt8cg" target="_blank" rel="noopener">Photo by Sanju Pandita on Unsplash ↗</a></li><li><span>modern house with a concrete facade at dusk</span><a href="https://unsplash.com/photos/modern-house-with-concrete-facade-olIi_yUXHW8" target="_blank" rel="noopener">Photo by nad Assa on Unsplash ↗</a></li><li><span>modern house with large windows and a lawn</span><a href="https://unsplash.com/photos/modern-house-with-large-windows-and-a-green-lawn-d2hYqpR0YS0" target="_blank" rel="noopener">Photo by Alef Morais on Unsplash ↗</a></li><li><span>contemporary stone house</span><a href="https://unsplash.com/photos/contemporary-stone-house-with-large-windows-and-a-green-lawn-hWJtyX_ZWvo" target="_blank" rel="noopener">Photo by Salvo Media LLC on Unsplash ↗</a></li><li><span>house with a wooden facade and stone accents</span><a href="https://unsplash.com/photos/modern-house-with-wooden-facade-and-stone-accents-emnfe1YR6io" target="_blank" rel="noopener">Photo by Alef Morais on Unsplash ↗</a></li><li><span>modern building on a green hillside</span><a href="https://unsplash.com/photos/modern-building-on-a-hillside-with-flowers-and-green-mountains-EuCI8uZTaGQ" target="_blank" rel="noopener">Photo by Lachlan Wang on Unsplash ↗</a></li><li><span>modern house with a pergola roof</span><a href="https://unsplash.com/photos/a-modern-house-with-a-pergolated-roof-0n94KqRz6rQ" target="_blank" rel="noopener">Photo by juan verdaguer aguerrebehere on Unsplash ↗</a></li><li><span>glass house behind a tree</span><a href="https://unsplash.com/photos/a-building-with-a-tree-in-front-of-it-s5dBQmg_9Tk" target="_blank" rel="noopener">Photo by Alex Zhao on Unsplash ↗</a></li><li><span>neutral modern living room</span><a href="https://unsplash.com/photos/modern-living-room-with-a-chic-neutral-color-scheme--jk2BBoQxSk" target="_blank" rel="noopener">Photo by POOJAN THANEKAR on Unsplash ↗</a></li><li><span>building under construction</span><a href="https://unsplash.com/photos/construction-of-a-building-in-progress-3GdHDDtHJ-4" target="_blank" rel="noopener">Photo by Salvador Rios on Unsplash ↗</a></li><li><span>stone garden path among trees</span><a href="https://unsplash.com/photos/a-stone-walkway-surrounded-by-lush-green-trees-sxCsPAv8RFQ" target="_blank" rel="noopener">Photo by Naoki Suzuki on Unsplash ↗</a></li><li><span>room under renovation</span><a href="https://unsplash.com/photos/room-renovation-with-metal-support-poles-biRt6RXejuk" target="_blank" rel="noopener">Photo by Stefan Lehner on Unsplash ↗</a></li><li><span>architect drawing a plan by hand</span><a href="https://unsplash.com/photos/an-architect-working-on-a-draft-with-a-pencil-and-ruler-HtBlQdxfG9k" target="_blank" rel="noopener">Photo by Daniel McCullough on Unsplash ↗</a></li><li><span>black and white concrete wall</span><a href="https://unsplash.com/photos/a-black-and-white-photo-of-a-concrete-wall-DrQ_An-GwOw" target="_blank" rel="noopener">Photo by Bjørn-Magnus Kristiansen on Unsplash ↗</a></li></ul></details>
- </div></section>
+ <div class="wrap hero-foot">
+  <span class="mono-up"><i class="live" aria-hidden="true"></i><span data-i18n="avail">Available for new projects</span></span>
+  <span class="mono-up hide-sm" data-i18n="remote">Bangladesh & worldwide · Replies within a day</span>
+  <a class="mono-up" href="#services"><span data-i18n="scroll">Scroll to explore</span> ↓</a>
+ </div>
+</section>
+
+<!-- SERVICES: one door per service -->
+<section class="sec doors-sec" id="services">
+ <div class="wrap">
+  <div class="sec-head rv">
+   <p class="tag"><i aria-hidden="true"></i><span data-i18n="services">Services</span></p>
+   <h2 data-i18n="doors_h">Four doors. Pick the one you need.</h2>
+   <p class="muted" data-i18n="doors_p">Each door is one kind of work. Open one to see what is inside — most projects end up using two.</p>
+  </div>
+ </div>
+ <div class="hall">
+  <div class="wrap doors" role="tablist" aria-label="Services">
+   <button class="door d1" id="s-web" role="tab" aria-selected="true" aria-controls="room" data-door="1"><span class="leaf"><span class="plate" data-i18n="s1">Web development</span><span class="knob" aria-hidden="true"></span></span></button>
+   <button class="door d2" id="s-ai" role="tab" aria-selected="false" aria-controls="room" data-door="2"><span class="leaf"><span class="plate" data-i18n="s2">AI solutions</span><span class="knob" aria-hidden="true"></span></span></button>
+   <button class="door d3" id="s-prod" role="tab" aria-selected="false" aria-controls="room" data-door="3"><span class="leaf"><span class="plate" data-i18n="s3">Digital products</span><span class="knob" aria-hidden="true"></span></span></button>
+   <button class="door d4" id="s-soft" role="tab" aria-selected="false" aria-controls="room" data-door="4"><span class="leaf"><span class="plate" data-i18n="s4">Custom software</span><span class="knob" aria-hidden="true"></span></span></button>
+  </div>
+ </div>
+ <div class="wrap">
+  <div class="room" id="room" role="tabpanel" aria-live="polite">
+   <div><p class="mono-up" id="room-n">01 / 04</p><h3 id="room-h"></h3></div>
+   <div><p id="room-p"></p><ul class="ticks" id="room-ul"></ul><a class="link" href="#contact"><span data-i18n="discuss">Discuss this with us</span> →</a></div>
+  </div>
+ </div>
+</section>
+
+<!-- WORK -->
+<section class="sec" id="work">
+ <div class="wrap">
+  <div class="sec-head split rv">
+   <div><p class="tag"><i aria-hidden="true"></i><span data-i18n="portfolio">Work</span></p><h2 data-i18n="pt">Selected work</h2></div>
+   <p class="muted" data-i18n="ps">A live project first, followed by work in progress.</p>
+  </div>
+
+  <article class="feat rv" aria-labelledby="sl-title">
+   <a class="feat-pic" href="https://shikbolab.netlify.app/" target="_blank" rel="noopener" aria-label="ShikboLab — open the live site"><span class="dots" aria-hidden="true"><i></i><i></i><i></i><em>shikbolab.netlify.app</em></span><img src="assets/images/projects/shikbolab.svg" alt="ShikboLab homepage, a Bangla science learning website" width="640" height="400" loading="lazy"></a>
+   <div class="feat-copy">
+    <p class="mono-up"><i class="live" aria-hidden="true"></i><span data-i18n="sl_kind">Live · Education platform</span></p>
+    <h3 id="sl-title">ShikboLab</h3>
+    <p class="feat-tag" lang="bn">“বই পড়ে নয়, নিজে করে বিজ্ঞান শেখো”</p>
+    <p data-i18n="sl_desc">A free science learning website in Bangla for school students.</p>
+    <dl class="facts">
+     <div><dt>4</dt><dd data-i18n="sl_f1">subjects</dd></div>
+     <div><dt>54</dt><dd data-i18n="sl_f2">chapters</dd></div>
+     <div><dt>9</dt><dd data-i18n="sl_f3">bonus labs</dd></div>
+     <div><dt>100%</dt><dd data-i18n="sl_f4">free</dd></div>
+    </dl>
+    <p class="muted small" data-i18n="sl_stack">Our role: design and development · Hosted on Netlify</p>
+    <a class="btn dark" href="https://shikbolab.netlify.app/" target="_blank" rel="noopener"><span data-i18n="sl_visit">Visit ShikboLab</span><span class="arr" aria-hidden="true">↗</span></a>
+   </div>
+  </article>
+
+  <div class="sub-head">
+   <div><h3 data-i18n="dm_h">Demo websites</h3><p class="muted" data-i18n="dm_p"></p></div>
+   <a class="link" href="demos/"><span data-i18n="dm_all">Project details</span> →</a>
+  </div>
+  <div class="demo-grid" id="demos"></div>
+
+  <h3 class="rows-h" data-i18n="dm_more">Other projects</h3>
+  <ol class="rows" id="prj"></ol>
+ </div>
+</section>
+
+<!-- TEMPLATES -->
+<section class="sec tpl-sec" id="templates">
+ <div class="wrap">
+  <div class="sec-head split rv">
+   <div><p class="tag"><i aria-hidden="true"></i><span data-i18n="templates">Templates</span></p><h2 data-i18n="tt">Start from a finished design</h2></div>
+   <p class="muted" data-i18n="ts"></p>
+  </div>
+  <div class="tpl-grid" id="tpl"></div>
+  <p class="tpl-all"><a class="btn ghost" href="templates/"><span data-i18n="all">Browse all templates</span><span class="arr" aria-hidden="true">→</span></a></p>
+ </div>
+</section>
+
+<!-- PROCESS: sticky timeline -->
+<section class="sec process" id="process">
+ <div class="wrap proc-grid">
+  <div class="proc-stick">
+   <p class="tag"><i aria-hidden="true"></i><span data-i18n="process">Process</span></p>
+   <h2 data-i18n="ht">How a project runs</h2>
+   <p class="proc-big" id="proc-big">01</p>
+   <p class="mono-up" id="proc-lab" data-i18n="h1w">Week 1</p>
+   <div class="proc-meter"><span class="mono"><b id="proc-i">01</b> / 04</span><span class="meter"><i id="proc-bar"></i></span></div>
+  </div>
+  <ol class="proc-list" id="proc-list">
+   <li data-step="01"><p class="mono-up" data-i18n="h1w">Week 1</p><h3 data-i18n="h1t">Conversation</h3><p data-i18n="h1x"></p></li>
+   <li data-step="02"><p class="mono-up" data-i18n="h2w">Week 1–2</p><h3 data-i18n="h2t">Design</h3><p data-i18n="h2x"></p></li>
+   <li data-step="03"><p class="mono-up" data-i18n="h3w">Week 2–4</p><h3 data-i18n="h3t">Build</h3><p data-i18n="h3x"></p></li>
+   <li data-step="04"><p class="mono-up" data-i18n="h4w">Launch day and after</p><h3 data-i18n="h4t">Launch & support</h3><p data-i18n="h4x"></p></li>
+  </ol>
+ </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec about" id="about">
+ <div class="wrap">
+  <p class="tag rv"><i aria-hidden="true"></i><span data-i18n="about">About</span></p>
+  <p class="statement rv" data-i18n-html="ad"></p>
+  <div class="about-grid">
+   <p class="muted rv" data-i18n="ad2"></p>
+   <div class="rv"><h3 data-i18n="wt">What you can expect</h3><ul class="ticks"><li data-i18n="w1"></li><li data-i18n="w2"></li><li data-i18n="w3"></li><li data-i18n="w4"></li><li data-i18n="w5"></li></ul></div>
+  </div>
+ </div>
+</section>
+
+<!-- CONTACT + FOOTER (dark) -->
+<section class="dark-zone" id="contact">
+ <div class="wrap">
+  <p class="mono-up"><i class="live" aria-hidden="true"></i><span data-i18n="avail2">Available for new work</span></p>
+  <h2 class="cta-h"><span data-i18n="cta1">Need something built?</span><span class="dim" data-i18n="cta2">Let's make it happen.</span></h2>
+  <div class="contact-grid">
+   <div class="contact-info">
+    <p data-i18n="cs"></p>
+    <dl>
+     <div><dt data-i18n="c_email">Email</dt><dd><a data-c="email" href="mailto:rsraju673@gmail.com">rsraju673@gmail.com</a></dd></div>
+     <div><dt data-i18n="c_wa">WhatsApp</dt><dd><a data-c="wa-phone" href="https://wa.me/8801719531952">+880 1719-531952</a></dd></div>
+     <div><dt data-i18n="c_loc">Location</dt><dd data-c="location">Narayanganj, Bangladesh</dd></div>
+     <div><dt data-i18n="c_hours">Availability</dt><dd data-c="hours">Available 24/7</dd></div>
+     <div><dt data-i18n="c_lang">Languages</dt><dd>English · বাংলা · हिन्दी</dd></div>
+    </dl>
+    <div class="actions">
+     <a class="btn light" data-c="wa" href="https://wa.me/8801719531952"><span data-i18n="wa_btn">Chat on WhatsApp</span><span class="arr" aria-hidden="true">→</span></a>
+     <a class="btn ghost-l" data-c="github" href="https://github.com/rsraju6734">GitHub ↗</a>
+    </div>
+   </div>
+   <form class="contact-form" id="form" novalidate>
+    <p class="notice" data-i18n="demonote"></p>
+    <div class="two">
+     <label><span data-i18n="fn">Name</span><input name="name" autocomplete="name" required><small class="err"></small></label>
+     <label><span data-i18n="fe">Email</span><input name="email" type="email" autocomplete="email" required><small class="err"></small></label>
+    </div>
+    <label><span data-i18n="fp">Project type</span><select name="type"><option data-i18n="s1">Web development</option><option data-i18n="s2">AI solutions</option><option data-i18n="s3">Digital products</option><option data-i18n="s4">Custom software</option><option data-i18n="tpl_opt">Template customisation</option></select></label>
+    <label><span data-i18n="fm">Message</span><textarea name="msg" rows="5" required></textarea><small class="err"></small></label>
+    <div><button class="btn light" type="submit"><span data-i18n="sub_btn">Send message</span><span class="arr" aria-hidden="true">→</span></button></div>
+    <div id="status" role="status" aria-live="polite"></div>
+   </form>
+  </div>
+
+  <footer class="foot">
+   <div class="fcol"><p class="mono-up" data-i18n="portfolio">Work</p><a href="#s-web" data-door-link="1" data-i18n="s1"></a><a href="#s-ai" data-door-link="2" data-i18n="s2"></a><a href="#s-prod" data-door-link="3" data-i18n="s3"></a><a href="#s-soft" data-door-link="4" data-i18n="s4"></a></div>
+   <div class="fcol"><p class="mono-up" data-i18n="templates">Templates</p><div id="foot-tpl"></div></div>
+   <div class="fcol"><p class="mono-up" data-i18n="nav">Navigate</p><a href="#top" data-i18n="home">Home</a><a href="#work" data-i18n="portfolio">Work</a><a href="demos/" data-i18n="dm_h">Demo websites</a><a href="#process" data-i18n="process">Process</a><a href="#about" data-i18n="about">About</a></div>
+   <div class="fcol"><p class="mono-up" data-i18n="status_h">Status</p><span data-i18n="avail">Available for new projects</span><span data-i18n="remote_s">Remote · Bangladesh & worldwide</span><span><span data-i18n="local">Local time</span> <b id="clock-f">--:--</b></span></div>
+  </footer>
+  <div class="copy"><span>© <span id="year">2026</span> KHOKA TECH. <span data-i18n="credit">Designed and developed by KHOKA TECH.</span></span><a href="#top"><span data-i18n="top">Back to top</span> ↑</a></div>
+ </div>
+</section>
 </main>
-<footer class="site"><div class="wrap"><div class="copy"><span>© <span class="num" id="year">2026</span> KHOKA TECH</span><a class="link" href="../index.html">Back to KHOKA TECH</a></div></div></footer>
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-<script src="../assets/js/site.js?v=7"></script>
+
+<a class="to-top" id="to-top" href="#top" aria-label="Back to top"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" class="ring-bg"/><circle cx="24" cy="24" r="22" class="ring" id="ring"/></svg><span aria-hidden="true">↑</span></a>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/contact.js?v=7"></script>
+<script src="assets/js/templates-data.js?v=7"></script>
+<script src="assets/js/main.js?v=8"></script>
 </body>
 </html>
