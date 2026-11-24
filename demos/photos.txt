@@ -82,3 +82,24 @@ technology|whiteboard|1580894723150-0ff6e9b907ea|ThisisEngineering|woman-in-blac
 technology|workstation|1575318634028-6a0cfcb60c59|Max Andrey|home-office-workspace-with-wooden-desk-TlRQin0iwjE|workspace with laptop, monitor and keyboard
 technology|sticky|1568219557405-376e23e4f7cf|Hugo Rocha|assorted-color-sticky-notes-qFpnvZ_j9HU|sticky notes from a planning session
 technology|building|1531972111231-7482a960e109|LYCS Architecture|clear-glass-building-interior-during-daytime-aKij95Mmus8|glass office building interior
+monolith|hero|1756706718604-ef4af3970e33|POOJAN THANEKAR|modern-concrete-and-wood-house-with-trees-F-slnkFvcag|concrete house with timber slat screens
+monolith|s-exterior|1690731987727-ab5daed3620b|Meri Vasilevski|a-house-with-a-tree-in-front-of-it-4KXEQrDUizs|modern house with a tree in front
+monolith|s-living|1774551351897-c64cd76a7c22|Joao Vitor Torres|modern-living-room-with-dark-furniture-and-planetary-art-7-9QPJAB6es|dark modern living room
+monolith|s-kitchen|1778272618522-665a8af7382e|krishna kumar c|modern-black-kitchen-island-with-light-wood-cabinets-j6MCxix3o2c|black kitchen island with light wood cabinets
+monolith|s-bedroom|1617104678098-de229db51175|Spacejoy|black-and-white-bed-linen-tAuc4H7Qf9s|contemporary bedroom with a dark panelled wall
+monolith|s-concrete|1779027452120-d4303d77fbb4|Ye Sichen|modern-art-gallery-with-a-large-tree-visible-through-window-ZXi_RdPSF3A|concrete gallery with a tree framed by a window
+monolith|s-japanese|1764445274424-47bbc216073b|Yosuke Ota|traditional-japanese-room-with-garden-view-sqH6pOCVAf4|Japanese room with a garden view
+monolith|s-pool|1721989519334-40923a0ee1c0|Sanju Pandita|a-house-with-a-swimming-pool-surrounded-by-greenery-ksa5r_xt8cg|swimming pool surrounded by greenery
+monolith|p-pavilion|1790213680570-79cb3f02d4d2|nad Assa|modern-house-with-concrete-facade-olIi_yUXHW8|modern house with a concrete facade at dusk
+monolith|p-lawn|1766603636700-e9d80473f40f|Alef Morais|modern-house-with-large-windows-and-a-green-lawn-d2hYqpR0YS0|modern house with large windows and a lawn
+monolith|p-stone|1783125127229-0850d689e014|Salvo Media LLC|contemporary-stone-house-with-large-windows-and-a-green-lawn-hWJtyX_ZWvo|contemporary stone house
+monolith|p-timber|1766603636562-531bb3e1dda8|Alef Morais|modern-house-with-wooden-facade-and-stone-accents-emnfe1YR6io|house with a wooden facade and stone accents
+monolith|p-hillside|1782795799303-cf81a5d47c70|Lachlan Wang|modern-building-on-a-hillside-with-flowers-and-green-mountains-EuCI8uZTaGQ|modern building on a green hillside
+monolith|p-pergola|1633354747567-e0682586f082|juan verdaguer aguerrebehere|a-modern-house-with-a-pergolated-roof-0n94KqRz6rQ|modern house with a pergola roof
+monolith|sv-residential|1712799430351-8baa17927177|Alex Zhao|a-building-with-a-tree-in-front-of-it-s5dBQmg_9Tk|glass house behind a tree
+monolith|sv-interior|1745429523617-0d837856ca35|POOJAN THANEKAR|modern-living-room-with-a-chic-neutral-color-scheme--jk2BBoQxSk|neutral modern living room
+monolith|sv-construction|1741916540995-f9ea8ba16253|Salvador Rios|construction-of-a-building-in-progress-3GdHDDtHJ-4|building under construction
+monolith|sv-landscape|1722953529218-7ade56b81293|Naoki Suzuki|a-stone-walkway-surrounded-by-lush-green-trees-sxCsPAv8RFQ|stone garden path among trees
+monolith|sv-renovation|1634586648651-f1fb9ec10d90|Stefan Lehner|room-renovation-with-metal-support-poles-biRt6RXejuk|room under renovation
+monolith|about|1503387762-592deb58ef4e|Daniel McCullough|an-architect-working-on-a-draft-with-a-pencil-and-ruler-HtBlQdxfG9k|architect drawing a plan by hand
+monolith|contact|1635074155443-6cbf74711dd2|Bjørn-Magnus Kristiansen|a-black-and-white-photo-of-a-concrete-wall-DrQ_An-GwOw|black and white concrete wall
